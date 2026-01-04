@@ -55,6 +55,7 @@
             color: var(--dark-gray);
             background-color: var(--light-gray);
             transition: all 0.3s ease;
+            padding-top: 70px;
         }
 
         body.english {
@@ -76,15 +77,19 @@
         flex-direction: column;
     }
 }
-        /* رأس الصفحة */
-        header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: var(--white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+       /* رأس الصفحة */
+header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;    /* ⬅️ غير من sticky إلى fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;       /* ⬅️ خفض من 1000 إلى 100 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
         }
 
         .container {
