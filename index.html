@@ -86,7 +86,67 @@
         flex-direction: column;
     }
 }
+/* إصلاح مشكلة الخلفية على الجوال */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh !important; /* تقليل ارتفاع القسم */
+        padding: 40px 15px !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+                    url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp') !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll !important; /* تغيير من fixed لـ scroll */
+    }
+    
+    .hero::before {
+        display: none !important; /* إزالة التأثير الإضافي إذا موجود */
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem !important;
+        margin-top: 20px !important;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.9) !important;
+        background: rgba(0,0,0,0.5) !important;
+        padding: 10px 15px !important;
+        border-radius: 10px !important;
+        display: inline-block !important;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+        background: rgba(0,0,0,0.5) !important;
+        padding: 10px 15px !important;
+        border-radius: 10px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .company-alias {
+        background: rgba(0,0,0,0.6) !important;
+        padding: 8px 12px !important;
+        margin: 10px auto !important;
+        border-radius: 8px !important;
+        font-size: 0.9rem !important;
+    }
+}
 
+@media (max-width: 576px) {
+    .hero {
+        min-height: 50vh !important;
+        padding: 30px 10px !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), 
+                    url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp') !important;
+    }
+    
+    .hero h2 {
+        font-size: 1.3rem !important;
+        padding: 8px 12px !important;
+    }
+    
+    .hero p {
+        font-size: 0.9rem !important;
+        padding: 8px 12px !important;
+    }
+}
        /* رأس الصفحة */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
