@@ -217,7 +217,140 @@ header {
             margin-right: 8px;
             margin-left: 0;
         }
+        /* قسم تفاصيل الخدمات */
+.service-detail {
+    background-color: var(--white);
+    padding: 80px 0;
+}
 
+.detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.tech-item {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+}
+
+.tech-item i {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.tech-item h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.quality-standards {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border-right: 4px solid #2ecc71;
+}
+
+body.english .quality-standards {
+    border-right: none;
+    border-left: 4px solid #2ecc71;
+}
+
+.quality-standards h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.quality-standards ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quality-standards li {
+    padding: 10px 0;
+    padding-right: 25px;
+    position: relative;
+    color: #555;
+}
+
+.quality-standards li:before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+body.english .quality-standards li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+body.english .quality-standards li:before {
+    right: auto;
+    left: 0;
+}
+
+.project-showcase {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.project-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    padding: 25px 35px;
+    border-radius: 10px;
+    min-width: 180px;
+}
+
+.stat .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .stat {
+        width: 80%;
+    }
+}
         /* قسم البطل */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
@@ -906,7 +1039,7 @@ header {
                         <li><a href="#equipment" data-ar="المعدات" data-en="Equipment">المعدات</a></li>
                         <li><a href="#drilling-tools" data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</a></li>
                        <li><a href="#casing-pipes" data-ar="أنابيب التغليف" data-en="Casing Pipes">أنابيب التغليف</a></li>
-                  
+                  <li><a href="#water-drilling-detail" data-ar="حفر الآبار المائية" data-en="Water Well Drilling">حفر الآبار المائية</a></li>
                         <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
                     </ul>
                 </nav>
@@ -987,6 +1120,64 @@ header {
             </div>
         </div>
     </section>
+    <!-- قسم حفر الآبار المائية المتقدم -->
+<section class="service-detail" id="water-drilling-detail">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-ar="تقنيات حفر آبار المياه المتقدمة" data-en="Advanced Water Well Drilling Technologies">تقنيات حفر آبار المياه المتقدمة</h2>
+        </div>
+        
+        <div class="detail-content">
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fas fa-water"></i>
+                    <h3 data-ar="استكشاف المياه الجوفية" data-en="Groundwater Exploration">استكشاف المياه الجوفية</h3>
+                    <p data-ar="نستخدم أحدث تقنيات المسح الجيوفيزيائي والاستشعار عن بعد لتحديد مواقع المياه الجوفية بدقة." data-en="We use the latest geophysical survey and remote sensing technologies to accurately locate groundwater sources.">نستخدم أحدث تقنيات المسح الجيوفيزيائي والاستشعار عن بعد لتحديد مواقع المياه الجوفية بدقة.</p>
+                </div>
+                
+                <div class="tech-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3 data-ar="الحفر الدوراني المتطور" data-en="Advanced Rotary Drilling">الحفر الدوراني المتطور</h3>
+                    <p data-ar="منصات حفر متطورة قادرة على الوصول لأعماق تصل إلى 1500 متر مع الحفاظ على جودة المياه." data-en="Advanced drilling rigs capable of reaching depths up to 1500 meters while preserving water quality.">منصات حفر متطورة قادرة على الوصول لأعماق تصل إلى 1500 متر مع الحفاظ على جودة المياه.</p>
+                </div>
+                
+                <div class="tech-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-ar="أنظمة التغليف المتكاملة" data-en="Integrated Casing Systems">أنظمة التغليف المتكاملة</h3>
+                    <p data-ar="أنابيب تغليف مقاومة للتآكل تضمن عدم تلوث المياه الجوفية وحماية البئر من الانهيار." data-en="Corrosion-resistant casing pipes ensure groundwater purity and well structural integrity.">أنابيب تغليف مقاومة للتآكل تضمن عدم تلوث المياه الجوفية وحماية البئر من الانهيار.</p>
+                </div>
+            </div>
+            
+            <div class="quality-standards">
+                <h3 data-ar="معايير الجودة العالمية" data-en="International Quality Standards">معايير الجودة العالمية</h3>
+                <ul>
+                    <li data-ar="مطابقة معايير منظمة الصحة العالمية WHO لجودة المياه" data-en="Compliance with WHO water quality standards">مطابقة معايير منظمة الصحة العالمية WHO لجودة المياه</li>
+                    <li data-ar="استخدام مواد مصرح بها للشرب من قبل الهيئات الصحية" data-en="Use of health-approved drinking water materials">استخدام مواد مصرح بها للشرب من قبل الهيئات الصحية</li>
+                    <li data-ar="فحص المياه معملياً قبل التسليم" data-en="Laboratory water testing before delivery">فحص المياه معملياً قبل التسليم</li>
+                    <li data-ar="شهادات ضمان لمكونات البئر" data-en="Well component warranty certificates">شهادات ضمان لمكونات البئر</li>
+                </ul>
+            </div>
+            
+            <div class="project-showcase">
+                <h3 data-ar="مشاريع مميزة" data-en="Featured Projects">مشاريع مميزة</h3>
+                <div class="project-stats">
+                    <div class="stat">
+                        <span class="number">3,689+</span>
+                        <span data-ar="بئر ماء منجز" data-en="Wells Completed">بئر ماء منجز</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">98%</span>
+                        <span data-ar="معدل نجاح" data-en="Success Rate">معدل نجاح</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">40+</span>
+                        <span data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- قسم التجارة (الاستيراد والتصدير) -->
     <section class="trade" id="trade">
