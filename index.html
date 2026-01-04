@@ -66,6 +66,15 @@
         body.english .logo h1 {
             font-family: 'Montserrat', sans-serif;
         }
+        /* تأثير اختفاء عند التمرير */
+.hero {
+    transition: all 0.5s ease;
+}
+
+.hero.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+}
                 /* ترتيب معكوس */
 .tool-item.reverse {
     flex-direction: row-reverse;
