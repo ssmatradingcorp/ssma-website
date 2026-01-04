@@ -479,7 +479,32 @@
             margin-bottom: 10px;
             font-weight: 700;
         }
-
+        <!-- قسم أدوات الحفر -->
+<section class="drilling-tools" id="drilling-tools">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</h2>
+        </div>
+        
+        <div class="tools-container">
+            <!-- أداة 1 -->
+            <div class="tool-item">
+                <div class="tool-image">
+                    <img src="f5e0638810103836021be46fc53b745b.jpg" alt="أدوات حفر متعددة">
+                </div>
+                <div class="tool-content">
+                    <h3 data-ar="أدوات الحفر الاحترافية" data-en="Professional Drilling Tools">أدوات الحفر الاحترافية</h3>
+                    <p data-ar="استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة 'اصنعها بنفسك'، تضمن أداءً موثوقاً في تطبيقات متنوعة. ارتقِ بمشاريعك مع الأفضل في المجال." 
+                       data-en="Explore our high-quality drilling tools, engineered for durability and precision. Designed for both professionals and DIY enthusiasts, they ensure reliable performance in various applications. Elevate your projects with the best in the industry.">
+                        استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة 'اصنعها بنفسك'، تضمن أداءً موثوقاً في تطبيقات متنوعة. ارتقِ بمشاريعك مع الأفضل في المجال.
+                    </p>
+                    <div class="tool-divider"></div>
+                    <a href="#contact" class="tool-btn" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         /* قسم الإحصائيات */
         .stats {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
@@ -671,7 +696,111 @@
             color: #aaa;
             font-size: 0.95rem;
         }
+            /* قسم أدوات الحفر */
+.drilling-tools {
+    background-color: var(--white);
+    padding: 80px 0;
+}
 
+.tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool-item {
+    display: flex;
+    background: var(--light-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.tool-image {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.tool-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tool-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tool-content h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.tool-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tool-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-red);
+    margin: 20px 0;
+}
+
+.tool-btn {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+}
+
+.tool-btn:hover {
+    background: var(--accent-red);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* للتجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .tool-item {
+        flex-direction: column;
+    }
+    
+    .tool-image, .tool-content {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .tool-content {
+        padding-top: 20px;
+    }
+    
+    .tool-content h3 {
+        font-size: 1.6rem;
+    }
+}
         /* التجاوب */
         @media (max-width: 1200px) {
             .header-content {
@@ -783,6 +912,7 @@
                         <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
                         <li><a href="#trade" data-ar="التجارة" data-en="Trade">التجارة</a></li>
                         <li><a href="#equipment" data-ar="المعدات" data-en="Equipment">المعدات</a></li>
+                        <li><a href="#drilling-tools" data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</a></li>
                         <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
                     </ul>
                 </nav>
