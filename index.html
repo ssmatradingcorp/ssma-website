@@ -6,31 +6,31 @@
     <title>SSMA Corporation | Integrated Drilling & Contracting Solutions</title>
     <meta name="keywords" content="SSMATradingCorp, SSMA Trading Corporation, SSMA Yemen">
     <meta name="keywords" content="حفر آبار, حفر آبار اليمن, شركة حفر, SSMA, SSMA Yemen, حفر آبار صنعاء, آبار مياه, مقاولات حفر, حفر آبار عميقة, DTH hammer">
-<meta name="description" content="SSMATradingCorp - شركة SSMA للتجارة والمقاولات | حفر الآبار والمقاولات في اليمن">
+    <meta name="description" content="SSMATradingCorp - شركة SSMA للتجارة والمقاولات | حفر الآبار والمقاولات في اليمن">
     <meta name="description" content="شركة SSMA اليمنية - خبرة 40+ عام في حفر الآبار والمقاولات. نقدم حلول مياه متكاملة، حفر آبار عميقة، مقاولات عامة. تواصل: +967777766695">
     <title>SSMA Yemen | حفر الآبار والمقاولات | أفضل شركة حفر آبار في اليمن | SSMATradingCorp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-            .company-alias {
-    font-size: 1.2rem;
-    color: #4dabf7;
-    margin-top: 10px;
-    font-weight: 700;
-}
+        .company-alias {
+            font-size: 1.2rem;
+            color: #4dabf7;
+            margin-top: 10px;
+            font-weight: 700;
+        }
 
-.footer-tradenames {
-    text-align: center;
-    padding: 15px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+        .footer-tradenames {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-.footer-tradenames p {
-    margin: 5px 0;
-    color: #aaa;
-}
+        .footer-tradenames p {
+            margin: 5px 0;
+            color: #aaa;
+        }
         :root {
             --primary-blue: #1a3a5f;
             --secondary-blue: #2c5282;
@@ -147,7 +147,7 @@
         padding: 8px 12px !important;
     }
 }
-       /* رأس الصفحة */
+       /* رأس الصفحة - التعديل الجديد */
 /* رأس الصفحة */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
@@ -157,7 +157,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
@@ -286,8 +286,85 @@ header {
             margin-right: 8px;
             margin-left: 0;
         }
+        /* زر القائمة للجوال */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            order: 2;
+        }
         /* تحسين الترتيب على الجوال */
 @media (max-width: 768px) {
+    /* زر القائمة */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* إخفاء القائمة الأصلية */
+    nav ul {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--primary-blue);
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        z-index: 999;
+        border-top: 2px solid var(--accent-red);
+    }
+    
+    /* عندما تكون القائمة مفتوحة */
+    nav ul.active {
+        display: flex !important;
+    }
+    
+    nav ul li {
+        width: 100%;
+        margin: 5px 0 !important;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* ترتيب العناصر في الهيدر */
+    .header-content {
+        position: relative;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .menu-toggle {
+        order: 2;
+    }
+    
+    .language-switcher {
+        order: 3;
+        margin: 10px 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .contact-header {
+        order: 4;
+        margin-top: 10px;
+    }
+    
+    nav {
+        order: 5;
+        width: 100%;
+    }
     /* ترتيب عام */
     .container {
         padding: 0 15px !important;
@@ -475,36 +552,6 @@ body.english .quality-standards li:before {
     .tech-grid {
         grid-template-columns: 1fr;
     }
-     header {
-        padding: 0.8rem 0;
-    }
-    
-    .header-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    nav ul {
-        order: 3;
-        margin-top: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    nav ul li {
-        margin: 5px 8px;
-    }
-    
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-    
-    .contact-header {
-        order: 2;
-        font-size: 0.9rem;
-        padding: 6px 15px;
-    }
 
     .project-stats {
         flex-direction: column;
@@ -515,7 +562,7 @@ body.english .quality-standards li:before {
     .stat {
         width: 80%;
     }
-
+}
         /* قسم البطل */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
@@ -1182,7 +1229,7 @@ body.english .quality-standards li:before {
     </style>
 </head>
 <body>
-    <!-- رأس الصفحة -->
+    <!-- رأس الصفحة الجديد -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -1190,13 +1237,18 @@ body.english .quality-standards li:before {
                     <h1><span>SSMA</span> CORPORATION</h1>
                 </div>
                 
+                <!-- زر القائمة للجوال -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
                 <div class="language-switcher">
                     <button class="lang-btn active" data-lang="ar">العربية</button>
                     <button class="lang-btn" data-lang="en">English</button>
                 </div>
                 
                 <nav>
-                    <ul>
+                    <ul id="mainMenu">
                         <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
                         <li><a href="#about" data-ar="عن الشركة" data-en="About">عن الشركة</a></li>
                         <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
@@ -1216,6 +1268,7 @@ body.english .quality-standards li:before {
         </div>
     </header>
 
+    <!-- باقي الموقع كما هو -->
     <!-- قسم البطل -->
     <section class="hero" id="home">
         <div class="container">
@@ -1732,135 +1785,167 @@ body.english .quality-standards li:before {
     </footer>
 
     <script>
-        // كائن يحتوي على جميع النصوص ثنائية اللغة
-        const translations = {
-            ar: {
-                // العناوين الرئيسية
-                "home": "الرئيسية",
-                "about": "عن الشركة",
-                "services": "خدماتنا",
-                "trade": "التجارة",
-                "equipment": "المعدات",
-                "contact": "اتصل بنا",
-                "callNow": "اتصل بنا الآن",
-                "exploreServices": "استكشف خدماتنا",
-                "freeConsultation": "طلب استشارة مجانية",
-                
-                // النصوص الأخرى
-                "companyHistory": "تاريخ الشركة",
-                "companyEstablishment": "تأسيس الشركة وتطورها",
-                "mainServices": "خدماتنا الرئيسية",
-                "importExport": "الاستيراد والتصدير",
-                "ourEquipment": "معداتنا وخدمات الحفر",
-                "contactInfo": "معلومات الاتصال",
-                "sendMessage": "أرسل رسالة",
-                "fullName": "الاسم الكامل",
-                "emailAddress": "البريد الإلكتروني",
-                "phoneNumber": "رقم الهاتف",
-                "subject": "الموضوع",
-                "message": "الرسالة",
-                "address": "العنوان:",
-                "mobile": "الهاتف المحمول:",
-                "fax": "الفاكس:",
-                "email": "البريد الإلكتروني:",
-                "website": "الموقع الإلكتروني:",
-                "quickLinks": "روابط سريعة",
-                "ourServices": "خدماتنا",
-                "allRights": "جميع الحقوق محفوظة",
-                "yearsExperience": "سنة من الخبرة",
-                "waterWellsDrilled": "بئر ماء تم حفرها",
-                "projectsCompleted": "مشروع مكتمل",
-                "yearsInDrilling": "سنة في حفر الآبار"
-            },
-            en: {
-                // Main headings
-                "home": "Home",
-                "about": "About",
-                "services": "Services",
-                "trade": "Trade",
-                "equipment": "Equipment",
-                "contact": "Contact",
-                "callNow": "Call Now",
-                "exploreServices": "Explore Our Services",
-                "freeConsultation": "Free Consultation",
-                
-                // Other texts
-                "companyHistory": "Company History",
-                "companyEstablishment": "Company Establishment & Development",
-                "mainServices": "Our Main Services",
-                "importExport": "Import & Export",
-                "ourEquipment": "Our Equipment & Drilling Services",
-                "contactInfo": "Contact Information",
-                "sendMessage": "Send Message",
-                "fullName": "Full Name",
-                "emailAddress": "Email Address",
-                "phoneNumber": "Phone Number",
-                "subject": "Subject",
-                "message": "Message",
-                "address": "Address:",
-                "mobile": "Mobile:",
-                "fax": "Fax:",
-                "email": "Email:",
-                "website": "Website:",
-                "quickLinks": "Quick Links",
-                "ourServices": "Our Services",
-                "allRights": "All Rights Reserved",
-                "yearsExperience": "Years of Experience",
-                "waterWellsDrilled": "Water Wells Drilled",
-                "projectsCompleted": "Projects Completed",
-                "yearsInDrilling": "Years in Well Drilling"
-            }
-        };
-
-        // وظيفة تبديل اللغة
-        function switchLanguage(lang) {
-            // تغيير اتجاه الصفحة
-            if (lang === 'en') {
-                document.body.classList.add('english');
-                document.documentElement.setAttribute('dir', 'ltr');
-                document.documentElement.setAttribute('lang', 'en');
-            } else {
-                document.body.classList.remove('english');
-                document.documentElement.setAttribute('dir', 'rtl');
-                document.documentElement.setAttribute('lang', 'ar');
-            }
-            
-            // تحديث أزرار اللغة
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-            
-            // تحديث جميع النصوص ذات السمة data-ar و data-en
-            document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    // لحقول الإدخال، نغير placeholder إذا كان موجودًا
-                    if (element.hasAttribute('data-ar') && element.hasAttribute('data-en')) {
-                        element.setAttribute('placeholder', lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en'));
-                    }
-                } else if (element.tagName === 'OPTION') {
-                    // خيارات القائمة
-                    element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-                } else {
-                    // جميع العناصر الأخرى
-                    element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-                }
-            });
-            
-            // تحديث عنوان الصفحة
-            document.title = lang === 'ar' 
-                ? "شركة SSMA | حلول متكاملة لحفر الآبار والمقاولات" 
-                : "SSMA Corporation | Integrated Drilling & Contracting Solutions";
-            
-            // حفظ اللغة في التخزين المحلي
-            localStorage.setItem('preferredLanguage', lang);
-        }
-
-        // استرجاع اللغة المحفوظة عند تحميل الصفحة
+        // ⬇⬇⬇ الكود الجديد للقائمة في الجوال ⬇⬇⬇
+        // تحكم في قائمة الجوال
         document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    mainMenu.classList.toggle('active');
+                    
+                    // تغيير الأيقونة
+                    const icon = this.querySelector('i');
+                    if (mainMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                
+                // إغلاق القائمة عند النقر على رابط
+                mainMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mainMenu.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            }
+            
+            // ⬇⬇⬇ باقي JavaScript القديم ⬇⬇⬇
+            // كائن يحتوي على جميع النصوص ثنائية اللغة
+            const translations = {
+                ar: {
+                    // العناوين الرئيسية
+                    "home": "الرئيسية",
+                    "about": "عن الشركة",
+                    "services": "خدماتنا",
+                    "trade": "التجارة",
+                    "equipment": "المعدات",
+                    "contact": "اتصل بنا",
+                    "callNow": "اتصل بنا الآن",
+                    "exploreServices": "استكشف خدماتنا",
+                    "freeConsultation": "طلب استشارة مجانية",
+                    
+                    // النصوص الأخرى
+                    "companyHistory": "تاريخ الشركة",
+                    "companyEstablishment": "تأسيس الشركة وتطورها",
+                    "mainServices": "خدماتنا الرئيسية",
+                    "importExport": "الاستيراد والتصدير",
+                    "ourEquipment": "معداتنا وخدمات الحفر",
+                    "contactInfo": "معلومات الاتصال",
+                    "sendMessage": "أرسل رسالة",
+                    "fullName": "الاسم الكامل",
+                    "emailAddress": "البريد الإلكتروني",
+                    "phoneNumber": "رقم الهاتف",
+                    "subject": "الموضوع",
+                    "message": "الرسالة",
+                    "address": "العنوان:",
+                    "mobile": "الهاتف المحمول:",
+                    "fax": "الفاكس:",
+                    "email": "البريد الإلكتروني:",
+                    "website": "الموقع الإلكتروني:",
+                    "quickLinks": "روابط سريعة",
+                    "ourServices": "خدماتنا",
+                    "allRights": "جميع الحقوق محفوظة",
+                    "yearsExperience": "سنة من الخبرة",
+                    "waterWellsDrilled": "بئر ماء تم حفرها",
+                    "projectsCompleted": "مشروع مكتمل",
+                    "yearsInDrilling": "سنة في حفر الآبار"
+                },
+                en: {
+                    // Main headings
+                    "home": "Home",
+                    "about": "About",
+                    "services": "Services",
+                    "trade": "Trade",
+                    "equipment": "Equipment",
+                    "contact": "Contact",
+                    "callNow": "Call Now",
+                    "exploreServices": "Explore Our Services",
+                    "freeConsultation": "Free Consultation",
+                    
+                    // Other texts
+                    "companyHistory": "Company History",
+                    "companyEstablishment": "Company Establishment & Development",
+                    "mainServices": "Our Main Services",
+                    "importExport": "Import & Export",
+                    "ourEquipment": "Our Equipment & Drilling Services",
+                    "contactInfo": "Contact Information",
+                    "sendMessage": "Send Message",
+                    "fullName": "Full Name",
+                    "emailAddress": "Email Address",
+                    "phoneNumber": "Phone Number",
+                    "subject": "Subject",
+                    "message": "Message",
+                    "address": "Address:",
+                    "mobile": "Mobile:",
+                    "fax": "Fax:",
+                    "email": "Email:",
+                    "website": "Website:",
+                    "quickLinks": "Quick Links",
+                    "ourServices": "Our Services",
+                    "allRights": "All Rights Reserved",
+                    "yearsExperience": "Years of Experience",
+                    "waterWellsDrilled": "Water Wells Drilled",
+                    "projectsCompleted": "Projects Completed",
+                    "yearsInDrilling": "Years in Well Drilling"
+                }
+            };
+
+            // وظيفة تبديل اللغة
+            function switchLanguage(lang) {
+                // تغيير اتجاه الصفحة
+                if (lang === 'en') {
+                    document.body.classList.add('english');
+                    document.documentElement.setAttribute('dir', 'ltr');
+                    document.documentElement.setAttribute('lang', 'en');
+                } else {
+                    document.body.classList.remove('english');
+                    document.documentElement.setAttribute('dir', 'rtl');
+                    document.documentElement.setAttribute('lang', 'ar');
+                }
+                
+                // تحديث أزرار اللغة
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    if (btn.dataset.lang === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                
+                // تحديث جميع النصوص ذات السمة data-ar و data-en
+                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        // لحقول الإدخال، نغير placeholder إذا كان موجودًا
+                        if (element.hasAttribute('data-ar') && element.hasAttribute('data-en')) {
+                            element.setAttribute('placeholder', lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en'));
+                        }
+                    } else if (element.tagName === 'OPTION') {
+                        // خيارات القائمة
+                        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                    } else {
+                        // جميع العناصر الأخرى
+                        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                    }
+                });
+                
+                // تحديث عنوان الصفحة
+                document.title = lang === 'ar' 
+                    ? "شركة SSMA | حلول متكاملة لحفر الآبار والمقاولات" 
+                    : "SSMA Corporation | Integrated Drilling & Contracting Solutions";
+                
+                // حفظ اللغة في التخزين المحلي
+                localStorage.setItem('preferredLanguage', lang);
+            }
+
+            // استرجاع اللغة المحفوظة عند تحميل الصفحة
             const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
             switchLanguage(savedLang);
             
@@ -1930,13 +2015,13 @@ body.english .quality-standards li:before {
             }, observerOptions);
 
             // تطبيق تأثير الظهور على العناصر
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(section);
-});
-     
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 </html>
