@@ -227,6 +227,72 @@ header {
             margin-right: 8px;
             margin-left: 0;
         }
+        /* تحسين الترتيب على الجوال */
+@media (max-width: 768px) {
+    /* ترتيب عام */
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    /* ترتيب الأقسام */
+    section {
+        padding: 50px 0 !important;
+    }
+    
+    /* العناوين */
+    .section-title h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* البطاقات */
+    .service-card, .equipment-item {
+        margin-bottom: 20px !important;
+    }
+    
+    /* القوائم */
+    .trade-list li {
+        font-size: 1rem !important;
+        padding: 10px 0 !important;
+    }
+    
+    /* الفوتر */
+    .footer-column {
+        margin-bottom: 30px !important;
+    }
+    
+    /* النماذج */
+    .form-control {
+        font-size: 16px !important; /* منع التكبير في iOS */
+    }
+}
+
+/* هواتف صغيرة */
+@media (max-width: 576px) {
+    .hero h2 {
+        font-size: 1.6rem !important;
+        padding: 0 10px;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+        padding: 0 10px;
+    }
+    
+    .btn {
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px !important;
+    }
+}
         /* قسم تفاصيل الخدمات */
 .service-detail {
     background-color: var(--white);
