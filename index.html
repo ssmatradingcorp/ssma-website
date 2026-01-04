@@ -148,20 +148,19 @@
     }
 }
        /* رأس الصفحة */
+/* رأس الصفحة */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
     color: var(--white);
     padding: 1rem 0;
-    position: fixed;    /* ⬅️ غير من sticky إلى fixed */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;       /* ⬅️ خفض من 1000 إلى 100 */
+    z-index: 100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-
-        }
-
+}
         .container {
             width: 90%;
             max-width: 1200px;
@@ -476,7 +475,37 @@ body.english .quality-standards li:before {
     .tech-grid {
         grid-template-columns: 1fr;
     }
+     header {
+        padding: 0.8rem 0;
+    }
     
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul {
+        order: 3;
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 5px 8px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    
+    .contact-header {
+        order: 2;
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
     .project-stats {
         flex-direction: column;
         align-items: center;
@@ -486,7 +515,7 @@ body.english .quality-standards li:before {
     .stat {
         width: 80%;
     }
-}
+
         /* قسم البطل */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
@@ -1901,13 +1930,13 @@ body.english .quality-standards li:before {
             }, observerOptions);
 
             // تطبيق تأثير الظهور على العناصر
-            document.querySelectorAll('section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(section);
-            });
-        });
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(section);
+});
+     
     </script>
 </body>
 </html>
