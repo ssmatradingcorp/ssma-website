@@ -807,6 +807,11 @@
                 font-size: var(--font-size-sm);
             }
         }
+        
+        /* ===== إضافة واحدة فقط للصفحة الواحدة ===== */
+        .page-section {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -843,20 +848,20 @@
                 </button>
 
                 <nav class="nav-menu" id="navMenu">
-    <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-    <a href="about.html" class="nav-link" data-ar="عن الشركة" data-en="About">عن الشركة</a>
-    <a href="partners.html" class="nav-link" data-ar="شركاؤنا" data-en="Partners">شركاؤنا</a>
-    <a href="products.html" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
-    <a href="services.html" class="nav-link" data-ar="الخدمات" data-en="Services">الخدمات</a>
-    <a href="solar.html" class="nav-link" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
-    <a href="contact.html" class="nav-cta" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-</nav>
+                    <a href="#" class="nav-link active" onclick="showSection('home'); return false;" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="#" class="nav-link" onclick="showSection('about'); return false;" data-ar="عن الشركة" data-en="About">عن الشركة</a>
+                    <a href="#" class="nav-link" onclick="showSection('partners'); return false;" data-ar="شركاؤنا" data-en="Partners">شركاؤنا</a>
+                    <a href="#" class="nav-link" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
+                    <a href="#" class="nav-link" onclick="showSection('services'); return false;" data-ar="الخدمات" data-en="Services">الخدمات</a>
+                    <a href="#" class="nav-link" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                    <a href="#" class="nav-cta" onclick="showSection('contact'); return false;" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                </nav>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero page-section" id="home">
         <div class="container">
             <h1 data-ar="شركة SSMA - الحلول المتكاملة لحفر الآبار والمقاولات منذ 1982" 
     data-en="SSMA Corporation - Integrated Drilling & Contracting Solutions Since 1982">
@@ -867,12 +872,12 @@
    data-en="Leaders in groundwater solutions and contracting with over 40 years of experience. We provide integrated services in well drilling, general contracting, solar energy, and import-export.">
    قادة في مجال حلول المياه الجوفية والمقاولات مع خبرة تمتد لأكثر من 40 عام. نقدم خدمات متكاملة في حفر الآبار، المقاولات العامة، الطاقة الشمسية، والاستيراد والتصدير.
 </p>
-            <a href="#about" class="btn btn-yellow" data-ar="تعرف على SSMA" data-en="About SSMA">تعرف على SSMA</a>
+            <a href="#" class="btn btn-yellow" onclick="showSection('about'); return false;" data-ar="تعرف على SSMA" data-en="About SSMA">تعرف على SSMA</a>
         </div>
     </section>
 
     <!-- Announcement Banner -->
-    <section class="announcement-banner">
+    <section class="announcement-banner page-section" id="announcement">
         <div class="container announcement-content">
             <div class="announcement-text">
                 <div class="announcement-text">
@@ -885,12 +890,12 @@
        شركة SSMA توفر حزمة متكاملة من الخدمات: حفر آبار المياه، المقاولات العامة، حلول الطاقة الشمسية، واستيراد وتصدير المعدات المتخصصة بخبرة 40+ عام.
     </p>
         </div>
-            <a href="#" class="btn btn-black" data-ar="عرض البيان" data-en="View Release">عرض البيان</a>
+            <a href="#" class="btn btn-black" onclick="showSection('services'); return false;" data-ar="عرض البيان" data-en="View Release">عرض البيان</a>
         </div>
     </section>
 
     <!-- Stats -->
-    <section class="stats">
+    <section class="stats page-section" id="stats">
         <div class="container stats-grid">
             <div class="stat-item">
                 <span class="number">40+</span>
@@ -912,7 +917,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about page-section" id="about" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="شركة SSMA للتجارة والمقاولات" data-en="SSMA Trading & Contracting Corporation">شركة SSMA للتجارة والمقاولات</h2>
@@ -933,7 +938,7 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="partners" id="partners">
+    <section class="partners page-section" id="partners" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="شركاؤنا الاستراتيجيون" data-en="Our Strategic Partners">شركاؤنا الاستراتيجيون</h2>
@@ -973,7 +978,7 @@
     </section>
 
     <!-- Products Section -->
-    <section id="products">
+    <section id="products" class="page-section" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="منتجاتنا الرئيسية" data-en="Our Main Products">منتجاتنا الرئيسية</h2>
@@ -1002,7 +1007,7 @@
                                 <span class="spec-label" data-ar="النظام" data-en="System">النظام</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
                     </div>
                 </div>
                 
@@ -1028,7 +1033,7 @@
                                 <span class="spec-label" data-ar="التآكل" data-en="Corrosion">التآكل</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
                     </div>
                 </div>
                 
@@ -1054,7 +1059,7 @@
                                 <span class="spec-label" data-ar="نطاق العمل" data-en="Working Range">نطاق العمل</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
                     </div>
                 </div>
 
@@ -1080,7 +1085,7 @@
                                 <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="طلب تفاصيل" data-en="Request Details">طلب تفاصيل</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب تفاصيل" data-en="Request Details">طلب تفاصيل</a>
                     </div>
                 </div>
 
@@ -1106,7 +1111,7 @@
                                 <span class="spec-label" data-ar="الدقة" data-en="Precision">الدقة</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
                     </div>
                 </div>
 
@@ -1132,7 +1137,7 @@
                                 <span class="spec-label" data-ar="التصميم" data-en="Design">التصميم</span>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-yellow" data-ar="استفسر الآن" data-en="Inquire Now">استفسر الآن</a>
+                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="استفسر الآن" data-en="Inquire Now">استفسر الآن</a>
                     </div>
                 </div>
             </div>
@@ -1140,7 +1145,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services page-section" id="services" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
@@ -1180,7 +1185,7 @@
     </section>
 
     <!-- Solar Energy Section -->
-    <section class="solar-section" id="solar">
+    <section class="solar-section page-section" id="solar" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="الطاقة الشمسية والنقل الكهربائي" data-en="Solar Energy & Electric Transportation">الطاقة الشمسية والنقل الكهربائي</h2>
@@ -1195,14 +1200,14 @@
                     <p data-ar="بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل." data-en="Building on our deep expertise in clean energy integration and large-scale project management, we are formally launching a dedicated new division focused on the future of transportation.">بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل.</p>
                     <p data-ar="مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية." data-en="Our Mission: To become the leading provider of integrated e-mobility solutions in the region by seamlessly connecting premium electric vehicles with solar-powered charging infrastructure.">مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية.</p>
                     <p data-ar="نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة." data-en="We seek a strategic partnership where we act as your project-based, integrated mobility partner, selling EVs as the core component of a custom 'Green Solar' package.">نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة.</p>
-                    <a href="#contact" class="btn btn-yellow" data-ar="تعرف على المزيد" data-en="Learn More">تعرف على المزيد</a>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="تعرف على المزيد" data-en="Learn More">تعرف على المزيد</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Trade Section -->
-    <section>
+    <section class="page-section" id="trade" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="الاستيراد والتصدير" data-en="Import & Export">الاستيراد والتصدير</h2>
@@ -1235,7 +1240,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact page-section" id="contact" style="display:none;">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
@@ -1324,10 +1329,10 @@
                 <div class="footer-column">
                     <h4 data-ar="الشركة" data-en="Company">الشركة</h4>
                     <div class="footer-links">
-                        <a href="#about" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
-                        <a href="#partners" data-ar="شركاؤنا" data-en="Our Partners">شركاؤنا</a>
-                        <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
-                        <a href="#solar" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                        <a href="#" onclick="showSection('about'); return false;" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
+                        <a href="#" onclick="showSection('partners'); return false;" data-ar="شركاؤنا" data-en="Our Partners">شركاؤنا</a>
+                        <a href="#" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
+                        <a href="#" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1356,6 +1361,38 @@
     </footer>
 
     <script>
+        // دالة عرض وإخفاء الأقسام
+        function showSection(sectionId) {
+            // إخفاء جميع الأقسام
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // إظهار القسم المطلوب
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+            
+            // التمرير للأعلى
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // تحديث القائمة النشطة
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // إغلاق القائمة المتنقلة
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('menuToggle');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+            
+            return false;
+        }
+
         // Language Switching
         const langButtons = document.querySelectorAll('.lang-btn');
         const body = document.body;
@@ -1418,28 +1455,6 @@
             menuToggle.innerHTML = navMenu.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
         });
 
         // Contact Form
