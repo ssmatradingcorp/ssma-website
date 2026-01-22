@@ -4,1714 +4,1285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSMA Corporation | Integrated Drilling & Contracting Solutions</title>
-    <meta name="keywords" content="SSMATradingCorp, SSMA Trading Corporation, SSMA Yemen">
-    <meta name="keywords" content="حفر آبار, حفر آبار اليمن, شركة حفر, SSMA, SSMA Yemen, حفر آبار صنعاء, آبار مياه, مقاولات حفر, حفر آبار عميقة, DTH hammer">
-    <meta name="description" content="SSMATradingCorp - شركة SSMA للتجارة والمقاولات | حفر الآبار والمقاولات في اليمن">
-    <meta name="description" content="شركة SSMA اليمنية - خبرة 40+ عام في حفر الآبار والمقاولات. نقدم حلول مياه متكاملة، حفر آبار عميقة، مقاولات عامة. تواصل: +967777766695">
-    <title>SSMA Yemen | حفر الآبار والمقاولات | أفضل شركة حفر آبار في اليمن | SSMATradingCorp</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SSMA Corporation - Leading provider of drilling equipment, casing pipes, and contracting services in Yemen and the Middle East since 1982.">
+    <meta name="keywords" content="SSMA, drilling equipment, casing pipes, water wells, Yemen, contractors, WSSMA Trading, Atlas Mec, TSMC, Kyan Canon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        .company-alias {
-            font-size: 1.2rem;
-            color: #4dabf7;
-            margin-top: 10px;
-            font-weight: 700;
-        }
-
-        .footer-tradenames {
-            text-align: center;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .footer-tradenames p {
-            margin: 5px 0;
-            color: #aaa;
-        }
+        /* ===== CATERPILLAR STYLE VARIABLES ===== */
         :root {
-            --primary-blue: #1a3a5f;
-            --secondary-blue: #2c5282;
-            --accent-red: #e63946;
-            --accent-light-blue: #4dabf7;
-            --light-gray: #f8f9fa;
-            --medium-gray: #f1f5f9;
-            --dark-gray: #333;
-            --white: #ffffff;
-            --black: #1a1a2e;
+            --cat-yellow: #FFCD11;
+            --cat-black: #000000;
+            --cat-white: #FFFFFF;
+            --cat-gray: #F5F5F5;
+            --cat-dark-gray: #333333;
+            --cat-blue: #005EB8;
+            
+            /* Spacing */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Typography */
+            --font-primary: 'Montserrat', Arial, sans-serif;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 24px;
+            --font-size-xxl: 32px;
+            --font-size-xxxl: 40px;
         }
-
+        
+        /* ===== BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Cairo', 'Montserrat', sans-serif;
-            line-height: 1.8;
-            color: var(--dark-gray);
-            background-color: var(--light-gray);
-            transition: all 0.3s ease;
-            padding-top: 70px;
+        
+        html {
+            scroll-behavior: smooth;
         }
-
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--cat-dark-gray);
+            background: var(--cat-white);
+            overflow-x: hidden;
+        }
+        
         body.english {
             direction: ltr;
-            font-family: 'Montserrat', 'Cairo', sans-serif;
         }
-
-        body.english .logo h1 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        /* تأثير اختفاء عند التمرير */
-.hero {
-    transition: all 0.5s ease;
-}
-
-.hero.hidden {
-    opacity: 0;
-    transform: translateY(-50px);
-}
-                /* ترتيب معكوس */
-.tool-item.reverse {
-    flex-direction: row-reverse;
-}
-
-/* لضبط الترتيب في الجوال */
-@media (max-width: 768px) {
-    .tool-item.reverse {
-        flex-direction: column;
-    }
-}
-/* إصلاح مشكلة الخلفية على الجوال */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 60vh !important; /* تقليل ارتفاع القسم */
-        padding: 40px 15px !important;
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
-                    url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-attachment: scroll !important; /* تغيير من fixed لـ scroll */
-    }
-    
-    .hero::before {
-        display: none !important; /* إزالة التأثير الإضافي إذا موجود */
-    }
-    
-    .hero h2 {
-        font-size: 1.5rem !important;
-        margin-top: 20px !important;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.9) !important;
-        background: rgba(0,0,0,0.5) !important;
-        padding: 10px 15px !important;
-        border-radius: 10px !important;
-        display: inline-block !important;
-    }
-    
-    .hero p {
-        font-size: 1rem !important;
-        background: rgba(0,0,0,0.5) !important;
-        padding: 10px 15px !important;
-        border-radius: 10px !important;
-        margin: 15px 0 !important;
-    }
-    
-    .company-alias {
-        background: rgba(0,0,0,0.6) !important;
-        padding: 8px 12px !important;
-        margin: 10px auto !important;
-        border-radius: 8px !important;
-        font-size: 0.9rem !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero {
-        min-height: 50vh !important;
-        padding: 30px 10px !important;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), 
-                    url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp') !important;
-    }
-    
-    .hero h2 {
-        font-size: 1.3rem !important;
-        padding: 8px 12px !important;
-    }
-    
-    .hero p {
-        font-size: 0.9rem !important;
-        padding: 8px 12px !important;
-    }
-}
-       /* رأس الصفحة - التعديل الجديد */
-/* رأس الصفحة */
-header {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-    color: var(--white);
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
+        
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
-
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--cat-black);
+            color: var(--cat-white);
+            padding: 10px 0;
+            font-size: var(--font-size-sm);
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .top-bar-links {
+            display: flex;
+            gap: var(--space-lg);
+        }
+        
+        .top-bar-links a {
+            color: var(--cat-white);
+            transition: color 0.3s ease;
+        }
+        
+        .top-bar-links a:hover {
+            color: var(--cat-yellow);
+        }
+        
+        .language-switcher {
+            display: flex;
+            gap: var(--space-xs);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--cat-white);
+            cursor: pointer;
+            padding: 4px 8px;
+            font-size: var(--font-size-sm);
+        }
+        
+        .lang-btn.active {
+            color: var(--cat-yellow);
+            font-weight: 600;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: var(--cat-white);
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            padding: 20px 0;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
+            gap: var(--space-md);
         }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            margin: 0 15px;
-            color: var(--white);
-            font-weight: 800;
-        }
-
-        .logo span {
-            color: var(--accent-light-blue);
-        }
-
-        /* تبديل اللغة */
-        .language-switcher {
-            display: flex;
-            margin: 0 20px;
-        }
-
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: var(--white);
-            padding: 8px 15px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:first-child {
-            border-radius: 20px 0 0 20px;
-            border-right: none;
-        }
-
-        .lang-btn:last-child {
-            border-radius: 0 20px 20px 0;
-            border-left: none;
-        }
-
-        .lang-btn.active {
-            background-color: var(--accent-red);
-            color: var(--white);
-        }
-
-        .lang-btn:hover:not(.active) {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        body.english .lang-btn:first-child {
-            border-radius: 0 20px 20px 0;
-            border-left: none;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        body.english .lang-btn:last-child {
-            border-radius: 20px 0 0 20px;
-            border-right: none;
-            border-left: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: var(--accent-light-blue);
-        }
-
-        .contact-header {
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--cat-yellow);
+            border-radius: 8px;
             display: flex;
             align-items: center;
-            background-color: var(--accent-red);
-            padding: 8px 20px;
-            border-radius: 30px;
-            color: var(--white);
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--cat-black);
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: var(--cat-black);
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .logo-text span {
+            font-size: 12px;
+            color: var(--cat-dark-gray);
+            display: block;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: var(--space-lg);
+        }
+        
+        .nav-link {
+            color: var(--cat-black);
             font-weight: 600;
-            text-decoration: none;
+            font-size: var(--font-size-base);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--cat-yellow);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+        }
+        
+        .nav-cta {
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            white-space: nowrap;
         }
-
-        .contact-header:hover {
-            background-color: #d62828;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        
+        .nav-cta:hover {
+            background: #ffd84d;
+            transform: translateY(-2px);
         }
-
-        body.english .contact-header i {
-            margin-right: 8px;
-            margin-left: 0;
-        }
-        /* زر القائمة للجوال */
+        
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            color: white;
-            font-size: 1.5rem;
+            font-size: 24px;
+            color: var(--cat-black);
             cursor: pointer;
-            padding: 10px;
-            order: 2;
         }
-        /* تحسين الترتيب على الجوال */
-@media (max-width: 768px) {
-    /* زر القائمة */
-    .menu-toggle {
-        display: block;
-    }
-    
-    /* إخفاء القائمة الأصلية */
-    nav ul {
-        display: none !important;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background: var(--primary-blue);
-        flex-direction: column;
-        padding: 15px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        z-index: 999;
-        border-top: 2px solid var(--accent-red);
-    }
-    
-    /* عندما تكون القائمة مفتوحة */
-    nav ul.active {
-        display: flex !important;
-    }
-    
-    nav ul li {
-        width: 100%;
-        margin: 5px 0 !important;
-        text-align: center;
-    }
-    
-    nav ul li a {
-        display: block;
-        padding: 12px !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    /* ترتيب العناصر في الهيدر */
-    .header-content {
-        position: relative;
-    }
-    
-    .logo {
-        order: 1;
-    }
-    
-    .menu-toggle {
-        order: 2;
-    }
-    
-    .language-switcher {
-        order: 3;
-        margin: 10px 0;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .contact-header {
-        order: 4;
-        margin-top: 10px;
-    }
-    
-    nav {
-        order: 5;
-        width: 100%;
-    }
-    /* ترتيب عام */
-    .container {
-        padding: 0 15px !important;
-    }
-    
-    /* ترتيب الأقسام */
-    section {
-        padding: 50px 0 !important;
-    }
-    
-    /* العناوين */
-    .section-title h2 {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-    }
-    
-    /* البطاقات */
-    .service-card, .equipment-item {
-        margin-bottom: 20px !important;
-    }
-    
-    /* القوائم */
-    .trade-list li {
-        font-size: 1rem !important;
-        padding: 10px 0 !important;
-    }
-    
-    /* الفوتر */
-    .footer-column {
-        margin-bottom: 30px !important;
-    }
-    
-    /* النماذج */
-    .form-control {
-        font-size: 16px !important; /* منع التكبير في iOS */
-    }
-}
-
-/* هواتف صغيرة */
-@media (max-width: 576px) {
-    .hero h2 {
-        font-size: 1.6rem !important;
-        padding: 0 10px;
-    }
-    
-    .hero p {
-        font-size: 1rem !important;
-        padding: 0 10px;
-    }
-    
-    .btn {
-        padding: 12px 20px !important;
-        font-size: 0.95rem !important;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin: 5px !important;
-    }
-}
-        /* قسم تفاصيل الخدمات */
-.service-detail {
-    background-color: var(--white);
-    padding: 80px 0;
-}
-
-.detail-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.tech-item {
-    background: var(--light-gray);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.tech-item:hover {
-    transform: translateY(-10px);
-}
-
-.tech-item i {
-    font-size: 3rem;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-}
-
-.tech-item h3 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.quality-standards {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 40px 0;
-    border-right: 4px solid #2ecc71;
-}
-
-body.english .quality-standards {
-    border-right: none;
-    border-left: 4px solid #2ecc71;
-}
-
-.quality-standards h3 {
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-}
-
-.quality-standards ul {
-    list-style: none;
-    padding: 0;
-}
-
-.quality-standards li {
-    padding: 10px 0;
-    padding-right: 25px;
-    position: relative;
-    color: #555;
-}
-
-.quality-standards li:before {
-    content: "✓";
-    position: absolute;
-    right: 0;
-    color: #2ecc71;
-    font-weight: bold;
-}
-
-body.english .quality-standards li {
-    padding-right: 0;
-    padding-left: 25px;
-}
-
-body.english .quality-standards li:before {
-    right: auto;
-    left: 0;
-}
-
-.project-showcase {
-    margin: 50px 0;
-    text-align: center;
-}
-
-.project-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.stat {
-    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-    color: white;
-    padding: 25px 35px;
-    border-radius: 10px;
-    min-width: 180px;
-}
-
-.stat .number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    .stat {
-        width: 80%;
-    }
-}
-        /* قسم البطل */
+        
+        /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
             background-size: cover;
             background-position: center;
-            color: var(--white);
+            color: var(--cat-white);
+            padding: var(--space-xxl) 0;
             text-align: center;
-            padding: 120px 0;
         }
-
-        .hero h2 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        
+        .hero h1 {
+            font-size: var(--font-size-xxxl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
         }
-
+        
         .hero p {
-            font-size: 1.4rem;
+            font-size: var(--font-size-lg);
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto var(--space-xl);
             opacity: 0.9;
         }
-
-        .hero-buttons {
+        
+        /* ===== ANNOUNCEMENT BANNER ===== */
+        .announcement-banner {
+            background: var(--cat-yellow);
+            padding: var(--space-lg) 0;
+        }
+        
+        .announcement-content {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-red);
-            color: var(--white);
-            border: 2px solid var(--accent-red);
-        }
-
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--white);
-            border-color: var(--white);
-            transform: translateY(-5px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            transform: translateY(-5px);
-        }
-
-        /* الأقسام العامة */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            font-weight: 800;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            background-color: var(--accent-red);
-            bottom: 0;
-            right: 50%;
-            transform: translateX(50%);
-            border-radius: 2px;
-        }
-
-        body.english .section-title h2:after {
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%);
-        }
-
-        /* قسم تاريخ الشركة */
-        .about {
-            background-color: var(--white);
-        }
-
-        .about-content {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: var(--space-md);
         }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
+        
+        .announcement-text h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-xs);
+            color: var(--cat-black);
         }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: var(--font-size-base);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-yellow {
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+        }
+        
+        .btn-yellow:hover {
+            background: #ffd84d;
+            transform: translateY(-2px);
+        }
+        
+        .btn-black {
+            background: var(--cat-black);
+            color: var(--cat-white);
+        }
+        
+        .btn-black:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+        
+        /* ===== CONTENT SECTIONS ===== */
+        section {
+            padding: var(--space-xxl) 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-title h2 {
+            font-size: var(--font-size-xxl);
+            color: var(--cat-black);
+            margin-bottom: var(--space-sm);
             font-weight: 700;
         }
-
-        .about-text p {
-            font-size: 1.15rem;
-            margin-bottom: 20px;
-            color: #555;
+        
+        .section-title p {
+            color: var(--cat-dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
         }
-
-        .about-image {
-            flex: 1;
-            min-width: 300px;
+        
+        /* ===== ABOUT SECTION ===== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            align-items: center;
         }
-
+        
         .about-image img {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* ===== PARTNERS SECTION ===== */
+        .partners {
+            background: var(--cat-gray);
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .partner-card {
+            background: var(--cat-white);
+            border-radius: 8px;
+            padding: var(--space-xl);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .partner-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cat-white);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 2px solid var(--cat-yellow);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+        
+        /* ===== PRODUCTS SECTION ===== */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .product-card {
+            background: var(--cat-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
-
-        /* قسم الخدمات */
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-content {
+            padding: var(--space-lg);
+        }
+        
+        .product-specs {
+            display: flex;
+            gap: var(--space-lg);
+            margin: var(--space-md) 0;
+            flex-wrap: wrap;
+        }
+        
+        .spec-item {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        
+        .spec-value {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cat-yellow);
+            margin-bottom: 4px;
+        }
+        
+        .spec-label {
+            display: block;
+            font-size: var(--font-size-sm);
+            color: var(--cat-dark-gray);
+        }
+        
+        /* ===== SERVICES SECTION ===== */
         .services {
-            background-color: var(--medium-gray);
+            background: var(--cat-gray);
         }
-
+        
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
         }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 35px 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        
+        .service-item {
+            background: var(--cat-white);
+            border-radius: 8px;
+            padding: var(--space-xl);
+            text-align: center;
             transition: all 0.3s ease;
-            border-top: 5px solid var(--primary-blue);
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        
+        .service-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
+        
         .service-icon {
-            font-size: 3rem;
-            color: var(--accent-red);
-            margin-bottom: 20px;
+            font-size: 48px;
+            color: var(--cat-yellow);
+            margin-bottom: var(--space-md);
         }
-
-        .service-card h3 {
-            font-size: 1.6rem;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        /* قسم الاستيراد والتصدير */
-        .trade {
-            background-color: var(--white);
-        }
-
-        .trade-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .trade-column {
-            flex: 1;
-            min-width: 300px;
-            background-color: var(--light-gray);
-            padding: 30px;
-            border-radius: 10px;
-            border-right: 5px solid var(--primary-blue);
-        }
-
-        body.english .trade-column {
-            border-right: none;
-            border-left: 5px solid var(--primary-blue);
-        }
-
-        .trade-column h3 {
-            font-size: 1.8rem;
-            color: var(--primary-blue);
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--accent-red);
-            font-weight: 700;
-        }
-
-        .trade-list {
-            list-style: none;
-        }
-
-        .trade-list li {
-            padding: 12px 0;
-            border-bottom: 1px dashed #ddd;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-        .trade-list li:before {
-            content: "✓";
-            color: #2ecc71;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-        body.english .trade-list li:before {
-            margin-left: 0;
-            margin-right: 10px;
-        }
-
-        /* قسم المعدات */
-        .equipment {
-            background-color: var(--medium-gray);
-        }
-
-        .equipment-grid {
+        
+        /* ===== TRADE SECTION ===== */
+        .trade-columns {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
         }
-
-        .equipment-item {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        
+        .trade-column {
+            background: var(--cat-gray);
+            border-radius: 8px;
+            padding: var(--space-xl);
+        }
+        
+        .trade-column h3 {
+            color: var(--cat-black);
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--cat-yellow);
+        }
+        
+        .trade-list li {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .trade-list li:before {
+            content: "•";
+            color: var(--cat-yellow);
+            font-size: 24px;
+            line-height: 1;
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--cat-black);
+            color: var(--cat-white);
+        }
+        
+        .contact h2 {
+            color: var(--cat-white);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xxl);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--cat-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cat-black);
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: var(--space-xl);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--cat-white);
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            color: var(--cat-white);
+            font-family: inherit;
+            font-size: var(--font-size-base);
             transition: all 0.3s ease;
         }
-
-        .equipment-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--cat-yellow);
+            background: rgba(255, 255, 255, 0.2);
         }
-
-        .equipment-icon {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
-
-        .equipment-item h4 {
-            font-size: 1.4rem;
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 700;
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111111;
+            color: var(--cat-white);
+            padding: var(--space-xxl) 0 var(--space-lg);
         }
-
-        /* قسم الإحصائيات */
-        .stats {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: var(--white);
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .footer-column h4 {
+            color: var(--cat-white);
+            margin-bottom: var(--space-lg);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .footer-links a {
+            color: #cccccc;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--cat-yellow);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cat-white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
             text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999999;
+            font-size: var(--font-size-sm);
         }
-
+        
+        /* ===== STATS ===== */
+        .stats {
+            background: var(--cat-yellow);
+            padding: var(--space-xl) 0;
+        }
+        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--accent-light-blue);
-        }
-
-        .stat-item p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-        }
-
-        /* قسم الاتصال */
-        .contact {
-            background-color: var(--white);
-        }
-
-        .contact-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            color: var(--primary-blue);
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        .contact-details {
-            list-style: none;
-        }
-
-        .contact-details li {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .contact-details i {
-            font-size: 1.5rem;
-            color: var(--accent-red);
-            margin-left: 15px;
-            width: 30px;
-            flex-shrink: 0;
-        }
-
-        body.english .contact-details i {
-            margin-left: 0;
-            margin-right: 15px;
-        }
-
-        .contact-details div {
-            flex: 1;
-        }
-
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background-color: var(--light-gray);
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #444;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: 'Cairo', 'Montserrat', sans-serif;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(26, 58, 95, 0.1);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border: none;
-            padding: 14px 30px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--accent-red);
-        }
-
-        /* التذييل */
-        footer {
-            background-color: var(--black);
-            color: #ddd;
-            padding: 60px 0 20px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-column h4 {
-            font-size: 1.4rem;
-            color: var(--white);
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-red);
-            font-weight: 700;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-light-blue);
-            padding-right: 5px;
-        }
-
-        body.english .footer-links a:hover {
-            padding-right: 0;
-            padding-left: 5px;
-        }
-
-        .copyright {
+            gap: var(--space-xl);
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #aaa;
-            font-size: 0.95rem;
         }
         
-            /* قسم أدوات الحفر */
-.drilling-tools {
-    background-color: var(--white);
-    padding: 80px 0;
-}
-
-.tools-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tool-item {
-    display: flex;
-    background: var(--light-gray);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-bottom: 40px;
-}
-
-.tool-image {
-    flex: 1;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.tool-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.tool-content {
-    flex: 1;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tool-content h3 {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.tool-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-
-.tool-divider {
-    width: 60px;
-    height: 3px;
-    background: var(--accent-red);
-    margin: 20px 0;
-}
-
-.tool-btn {
-    display: inline-block;
-    background: var(--primary-blue);
-    color: var(--white);
-    padding: 12px 35px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    width: fit-content;
-    border: none;
-    cursor: pointer;
-}
-
-.tool-btn:hover {
-    background: var(--accent-red);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-   
-
-/* للتجاوب مع الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .tool-item {
-        flex-direction: column;
-    }
-    
-    .tool-image, .tool-content {
-        width: 100%;
-        padding: 30px;
-    }
-    
-    .tool-content {
-        padding-top: 20px;
-    }
-    
-    .tool-content h3 {
-        font-size: 1.6rem;
-    }
-}
-        /* التجاوب */
-        @media (max-width: 1200px) {
-            .header-content {
-                justify-content: center;
-                gap: 20px;
-            }
-            
-            nav ul {
-                justify-content: center;
-                order: 3;
-                width: 100%;
-                margin-top: 15px;
-            }
+        .stat-item .number {
+            display: block;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--cat-black);
+            margin-bottom: var(--space-xs);
         }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 80px 0;
-            }
-            
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .services-grid {
+        
+        /* ===== SOLAR SECTION ===== */
+        .solar-section {
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            color: var(--cat-white);
+        }
+        
+        .solar-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            align-items: center;
+        }
+        
+        .solar-image img {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .about-content {
                 grid-template-columns: 1fr;
             }
             
-            .trade-container, .contact-content {
-                flex-direction: column;
+            .solar-content {
+                grid-template-columns: 1fr;
             }
             
-            .btn {
-                padding: 12px 25px;
-                font-size: 1rem;
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--cat-white);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                transition: right 0.3s ease;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            body.english .nav-menu {
+                right: auto;
+                left: -100%;
+            }
+            
+            body.english .nav-menu.active {
+                left: 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .announcement-content {
+                flex-direction: column;
+                text-align: center;
             }
         }
-
-        @media (max-width: 576px) {
-            .container {
-                width: 95%;
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: var(--font-size-xxl);
             }
             
-            .logo h1 {
-                font-size: 1.5rem;
+            section {
+                padding: var(--space-xl) 0;
             }
             
-            .language-switcher {
-                margin: 10px 0;
+            .section-title h2 {
+                font-size: var(--font-size-xl);
             }
             
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .hero-buttons {
+            .product-specs {
                 flex-direction: column;
-                align-items: center;
-                gap: 15px;
+                gap: var(--space-md);
             }
             
-            .btn {
-                width: 100%;
-                max-width: 300px;
+            .spec-item {
+                min-width: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: var(--space-sm);
                 text-align: center;
             }
             
-            .contact-header {
-                padding: 8px 15px;
-                font-size: 0.9rem;
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .hero h1 {
+                font-size: var(--font-size-xl);
+            }
+            
+            .hero p {
+                font-size: var(--font-size-base);
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: var(--font-size-sm);
             }
         }
     </style>
 </head>
 <body>
-    <!-- رأس الصفحة الجديد -->
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-links">
+                <a href="#" data-ar="الوظائف" data-en="Careers">الوظائف</a>
+                <a href="#" data-ar="المستثمرون" data-en="Investors">المستثمرون</a>
+                <a href="#" data-ar="الاتصال الإعلامي" data-en="Media Contacts">الاتصال الإعلامي</a>
+                <a href="#" data-ar="الاستدامة" data-en="Sustainability">الاستدامة</a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ar">العربية</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1><span>SSMA</span> CORPORATION</h1>
+                    <div class="logo-icon">SSMA</div>
+                    <div class="logo-text">
+                        <h1>SSMA CORPORATION</h1>
+                        <span data-ar="الحلول المتكاملة لحفر الآبار والمقاولات" data-en="Integrated Drilling & Contracting Solutions">الحلول المتكاملة لحفر الآبار والمقاولات</span>
+                    </div>
                 </div>
-                
-                <!-- زر القائمة للجوال -->
+
                 <button class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
                 </button>
-                
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="ar">العربية</button>
-                    <button class="lang-btn" data-lang="en">English</button>
-                </div>
-                
-                <nav>
-                    <ul id="mainMenu">
-                        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-                        <li><a href="#about" data-ar="عن الشركة" data-en="About">عن الشركة</a></li>
-                        <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
-                        <li><a href="#trade" data-ar="التجارة" data-en="Trade">التجارة</a></li>
-                        <li><a href="#equipment" data-ar="المعدات" data-en="Equipment">المعدات</a></li>
-                        <li><a href="#drilling-tools" data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</a></li>
-                       <li><a href="#casing-pipes" data-ar="أنابيب التغليف" data-en="Casing Pipes">أنابيب التغليف</a></li>
-                  <li><a href="#water-drilling-detail" data-ar="حفر الآبار المائية" data-en="Water Well Drilling">حفر الآبار المائية</a></li>
-                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
-                    </ul>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="#about" class="nav-link" data-ar="عن الشركة" data-en="About">عن الشركة</a>
+                    <a href="#partners" class="nav-link" data-ar="شركاؤنا" data-en="Partners">شركاؤنا</a>
+                    <a href="#products" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
+                    <a href="#services" class="nav-link" data-ar="الخدمات" data-en="Services">الخدمات</a>
+                    <a href="#solar" class="nav-link" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                    <a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                    <a href="#contact" class="nav-cta" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
                 </nav>
-                
-                <a href="#contact" class="contact-header">
-                    <i class="fas fa-phone-alt"></i> &nbsp; <span data-ar="اتصل بنا الآن" data-en="Call Now">اتصل بنا الآن</span>
-                </a>
             </div>
         </div>
     </header>
 
-    <!-- باقي الموقع كما هو -->
-    <!-- قسم البطل -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h2 data-ar="شركة SSMA للتجاره والمقاولات العامة" data-en="SSMA Trading & General Contracting Corporation">شركة SSMA للحفر والمقاولات العامة</h2>
-            <p data-ar="رائدة في حلول المياه الجوفية وتقديم خدمات متكاملة في مجال الحفر والمقاولات منذ عام 1982" data-en="Leading in groundwater solutions and providing integrated drilling and contracting services since 1982">رائدة في حلول المياه الجوفية وتقديم خدمات متكاملة في مجال الحفر والمقاولات منذ عام 1982</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary" data-ar="استكشف خدماتنا" data-en="Explore Our Services">استكشف خدماتنا</a>
-                <a href="#contact" class="btn btn-secondary" data-ar="طلب استشارة مجانية" data-en="Free Consultation">طلب استشارة مجانية</a>
+            <h1 data-ar="شركة SSMA - الحلول المتكاملة لحفر الآبار والمقاولات منذ 1982" 
+    data-en="SSMA Corporation - Integrated Drilling & Contracting Solutions Since 1982">
+    شركة SSMA - الحلول المتكاملة لحفر الآبار والمقاولات منذ 1982
+</h1>
+
+<p data-ar="قادة في مجال حلول المياه الجوفية والمقاولات مع خبرة تمتد لأكثر من 40 عام. نقدم خدمات متكاملة في حفر الآبار، المقاولات العامة، الطاقة الشمسية، والاستيراد والتصدير." 
+   data-en="Leaders in groundwater solutions and contracting with over 40 years of experience. We provide integrated services in well drilling, general contracting, solar energy, and import-export.">
+   قادة في مجال حلول المياه الجوفية والمقاولات مع خبرة تمتد لأكثر من 40 عام. نقدم خدمات متكاملة في حفر الآبار، المقاولات العامة، الطاقة الشمسية، والاستيراد والتصدير.
+</p>
+            <a href="#about" class="btn btn-yellow" data-ar="تعرف على SSMA" data-en="About SSMA">تعرف على SSMA</a>
+        </div>
+    </section>
+
+    <!-- Announcement Banner -->
+    <section class="announcement-banner">
+        <div class="container announcement-content">
+            <div class="announcement-text">
+                <div class="announcement-text">
+    <h3 data-ar="حلول متكاملة: حفر الآبار، المقاولات، الطاقة الشمسية، الاستيراد والتصدير" 
+        data-en="Integrated Solutions: Well Drilling, Contracting, Solar Energy, Import & Export">
+        حلول متكاملة: حفر الآبار، المقاولات، الطاقة الشمسية، الاستيراد والتصدير
+    </h3>
+    <p data-ar="شركة SSMA توفر حزمة متكاملة من الخدمات: حفر آبار المياه، المقاولات العامة، حلول الطاقة الشمسية، واستيراد وتصدير المعدات المتخصصة بخبرة 40+ عام." 
+       data-en="SSMA Corporation provides a comprehensive package of services: water well drilling, general contracting, solar energy solutions, and import-export of specialized equipment with 40+ years of experience.">
+       شركة SSMA توفر حزمة متكاملة من الخدمات: حفر آبار المياه، المقاولات العامة، حلول الطاقة الشمسية، واستيراد وتصدير المعدات المتخصصة بخبرة 40+ عام.
+    </p>
+        </div>
+            <a href="#" class="btn btn-black" data-ar="عرض البيان" data-en="View Release">عرض البيان</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="number">40+</span>
+                <span data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
+            </div>
+            <div class="stat-item">
+                <span class="number">3,689+</span>
+                <span data-ar="بئر محفور" data-en="Wells Drilled">بئر محفور</span>
+            </div>
+            <div class="stat-item">
+                <span class="number">1,842+</span>
+                <span data-ar="مشروع مكتمل" data-en="Projects Completed">مشروع مكتمل</span>
+            </div>
+            <div class="stat-item">
+                <span class="number">160+</span>
+                <span data-ar="فريق متخصص" data-en="Expert Team">فريق متخصص</span>
             </div>
         </div>
     </section>
 
-    <!-- قسم عن الشركة -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="تاريخ الشركة" data-en="Company History">تاريخ الشركة</h2>
+                <h2 data-ar="شركة SSMA للتجارة والمقاولات" data-en="SSMA Trading & Contracting Corporation">شركة SSMA للتجارة والمقاولات</h2>
+                <p data-ar="تأسست عام 1982، نحن نقدم حلولاً متكاملة في مجال المياه الجوفية والمقاولات" data-en="Established in 1982, we provide integrated solutions in groundwater and contracting">تأسست عام 1982، نحن نقدم حلولاً متكاملة في مجال المياه الجوفية والمقاولات</p>
             </div>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="f5e0638810103836021be46fc53b745b.jpg" alt="SSMA Corporation">
+                </div>
                 <div class="about-text">
                     <h3 data-ar="تأسيس الشركة وتطورها" data-en="Company Establishment & Development">تأسيس الشركة وتطورها</h3>
-                    <p data-ar="تأسست شركة SSMA  عام 1981 على يد السيد صالح صالح محسن الأبرقي. بدأت كشركة عائلية وارتكزت فلسفتها على الالتزام بتقديم منتجات عالية الجودة وآمنة." data-en="SSMA Corporation was founded in France in 1981 by Mr. Saleh Saleh Mohsen Al-Abraqi. Starting as a family-owned business, its philosophy centered on commitment to providing high-quality, safe products.">تأسست شركة SSMA في فرنسا عام 1981 على يد السيد صالح صالح محسن الأبرقي. بدأت كشركة عائلية وارتكزت فلسفتها على الالتزام بتقديم منتجات عالية الجودة وآمنة.</p>
-                    <p data-ar="منذ تأسيسها في اليمن عام 1982، نمت الشركة لتصبح رائدة في مجال حلول المياه الجوفية وتطوير الموارد المائية وتصميم وبناء مرافق إمدادات المياه، حتى في المناطق التي يصعب فيها العثور على موارد مائية كافية أو المهددة بالتلوث أو تداخل المياه المالحة." data-en="Since its establishment in Yemen in 1982, the company has grown to become a leader in groundwater solutions, water resource development, and the design and construction of water supply facilities, even in areas where sufficient water resources are hard to find or threatened by pollution or saltwater intrusion.">منذ تأسيسها في اليمن عام 1982، نمت الشركة لتصبح رائدة في مجال حلول المياه الجوفية وتطوير الموارد المائية وتصميم وبناء مرافق إمدادات المياه، حتى في المناطق التي يصعب فيها العثور على موارد مائية كافية أو المهددة بالتلوث أو تداخل المياه المالحة.</p>
+                    <p data-ar="تأسست شركة SSMA في فرنسا عام 1981 على يد السيد صالح صالح محسن الأبرقي. بدأت كشركة عائلية وارتكزت فلسفتها على الالتزام بتقديم منتجات عالية الجودة وآمنة." data-en="SSMA Corporation was founded in France in 1981 by Mr. Saleh Saleh Mohsen Al-Abraqi. Starting as a family-owned business, its philosophy centered on commitment to providing high-quality, safe products.">تأسست شركة SSMA في فرنسا عام 1981 على يد السيد صالح صالح محسن الأبرقي. بدأت كشركة عائلية وارتكزت فلسفتها على الالتزام بتقديم منتجات عالية الجودة وآمنة.</p>
+                    <p data-ar="منذ تأسيسها في اليمن عام 1982، نمت الشركة لتصبح رائدة في مجال حلول المياه الجوفية وتطوير الموارد المائية وتصميم وبناء مرافق إمدادات المياه." data-en="Since its establishment in Yemen in 1982, the company has grown to become a leader in groundwater solutions, water resource development, and the design and construction of water supply facilities.">منذ تأسيسها في اليمن عام 1982، نمت الشركة لتصبح رائدة في مجال حلول المياه الجوفية وتطوير الموارد المائية وتصميم وبناء مرافق إمدادات المياه.</p>
                     <p data-ar="تمتلك شركة SSMA سجلاً حافلاً يمتد لأكثر من ثلاثة عقود في تطوير الموارد المائية، مع التركيز على تقديم الحلول المبتكرة والموثوقة." data-en="SSMA Corporation has a track record spanning more than three decades in water resource development, with a focus on providing innovative and reliable solutions.">تمتلك شركة SSMA سجلاً حافلاً يمتد لأكثر من ثلاثة عقود في تطوير الموارد المائية، مع التركيز على تقديم الحلول المبتكرة والموثوقة.</p>
                 </div>
-                <div class="about-image">
-<img src="f5e0638810103836021be46fc53b745b.jpg" alt="معدة SSMA بشعار الشركة">                </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-ar="شركاؤنا الاستراتيجيون" data-en="Our Strategic Partners">شركاؤنا الاستراتيجيون</h2>
+                <p data-ar="نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة" data-en="We work with the best companies to ensure delivery of high-quality products and services">نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="SSMA logo.jpg" alt="WSSMA Logo">
+                    </div>
+                    <h3 data-ar="شركة WSSMA للتجارة" data-en="WSSMA Trading Company">شركة WSSMA للتجارة</h3>
+                    <p data-ar="عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين." data-en="Oman - A leading supplier of drilling spare parts and contractors, offering high-quality components for the construction and mining sectors.">عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="wail logo.jpg" alt="Kyan Canon Logo">
+                    </div>
+                    <h3 data-ar="كيان كانون" data-en="Kyan Canon">كيان كانون</h3>
+                    <p data-ar="مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات." data-en="A premier supplier of high-quality spare parts and drilling tools for water, oil, and well drilling projects, as well as for heavy equipment used in these industries.">مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="Atlis mac.jpg" alt="Atlas Mec Logo">
+                    </div>
+                    <h3 data-ar="أطلس ميك للتجارة" data-en="Atlas Mec Trading">أطلس ميك للتجارة</h3>
+                    <p data-ar="تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة." data-en="Atlas Mec Trading Company excels in international trade and logistics efficiently connecting businesses worldwide.">تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="tsmc logo.jpg" alt="TSMC Logo">
+                    </div>
+                    <h3 data-ar="شركة TSMC للموردات" data-en="TSMC Supplier Company">شركة TSMC للموردات</h3>
+                    <p data-ar="شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة." data-en="T S M C Company is a general supplier of spare parts and components for heavy equipment. We specialize in providing high-quality products.">شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-ar="منتجاتنا الرئيسية" data-en="Our Main Products">منتجاتنا الرئيسية</h2>
+                <p data-ar="جودة عالية وأداء موثوق في جميع منتجاتنا" data-en="High quality and reliable performance in all our products">جودة عالية وأداء موثوق في جميع منتجاتنا</p>
+            </div>
+            <div class="products-grid">
+                <!-- RD20 Water Well Drilling Rig -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="rd20-pro-1500m.jpg" alt="RD20 Water Well Drilling Rig">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر" data-en="Water Well Drilling Rig - Model RD20 PRO - Depth 1500m">حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر</h3>
+                        <p data-ar="حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة." data-en="Advanced professional rig for deep water well drilling up to 1500 meters. Equipped with latest hydraulic rotary drilling technology, air-conditioned operator cabin, and integrated digital control system. Ideal for mega projects and deep groundwater exploration.">حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value">1500m</span>
+                                <span class="spec-label" data-ar="العمق" data-en="Depth">العمق</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">PRO</span>
+                                <span class="spec-label" data-ar="الموديل" data-en="Model">الموديل</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">رقمي</span>
+                                <span class="spec-label" data-ar="النظام" data-en="System">النظام</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
+                    </div>
+                </div>
+                
+                <!-- Well Casing Pipes -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="casing-pipes.jpg" alt="Well Casing Pipes">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="أنابيب تغليف الآبار" data-en="Water Well Casing Pipes">أنابيب تغليف الآبار</h3>
+                        <p data-ar="نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية." data-en="We sell well casing pipes from 6 inch to 20 inch sizes. Durable and corrosion-resistant pipes, specifically designed for water well casing and preserving groundwater quality.">نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value">6-20"</span>
+                                <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="تغليف" data-en="Casing">تغليف</span>
+                                <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="مقاوم" data-en="Resistant">مقاوم</span>
+                                <span class="spec-label" data-ar="التآكل" data-en="Corrosion">التآكل</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
+                    </div>
+                </div>
+                
+                <!-- كمبريسور هواء -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="ari compresor.jpg" alt="Air Compressor">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="كمبريسور هواء 1250 CFM/400 PSI" data-en="Air Compressor 1250 CFM/400 PSI">كمبريسور هواء 1250 CFM/400 PSI</h3>
+                        <p data-ar="كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها." data-en="Air compressor with capacity of 1250 CFM and 400 PSI pressure, Ingersoll Rand with air booster starting from 1800m up to 3000m, Garden Denver rock drilling tools and accessories.">كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value">1250 CFM</span>
+                                <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">400 PSI</span>
+                                <span class="spec-label" data-ar="الضغط" data-en="Pressure">الضغط</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">1800-3000m</span>
+                                <span class="spec-label" data-ar="نطاق العمل" data-en="Working Range">نطاق العمل</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
+                    </div>
+                </div>
+
+                <!-- Drill Pipes -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="drill-pipes1.jpg" alt="Drill Pipes">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="أنابيب حفر عالية الجودة" data-en="Professional Drill Pipes">أنابيب حفر عالية الجودة</h3>
+                        <p data-ar="نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة." data-en="We provide high-quality drill pipes for various well drilling projects. Manufactured according to API standards, durable and withstand high pressures. Suitable for deep water well drilling.">نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value">API</span>
+                                <span class="spec-label" data-ar="المعيار" data-en="Standard">المعيار</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="متنوعة" data-en="Various">متنوعة</span>
+                                <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">API</span>
+                                <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="طلب تفاصيل" data-en="Request Details">طلب تفاصيل</a>
+                    </div>
+                </div>
+
+                <!-- Drilling Tools -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="drilling-tools-2.png" alt="Drilling Tools">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="أدوات حفر متعددة" data-en="Professional Drilling Tools">أدوات حفر متعددة</h3>
+                        <p data-ar="استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة DIY، تضمن أداء موثوقاً في التطبيقات المختلفة." data-en="Explore our high-quality drilling tools, engineered for durability and precision. Designed for both professionals and DIY enthusiasts, they ensure reliable performance in various applications.">استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة DIY، تضمن أداء موثوقاً في التطبيقات المختلفة.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="عالي" data-en="High">عالي</span>
+                                <span class="spec-label" data-ar="الجودة" data-en="Quality">الجودة</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="متين" data-en="Durable">متين</span>
+                                <span class="spec-label" data-ar="المتانة" data-en="Durability">المتانة</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="دقيق" data-en="Precise">دقيق</span>
+                                <span class="spec-label" data-ar="الدقة" data-en="Precision">الدقة</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
+                    </div>
+                </div>
+
+                <!-- Advanced Drilling Equipment -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="f5e0638810103836021be46fc53b745b.jpg" alt="Advanced Drilling Equipment">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-ar="معدات حفر متطورة" data-en="Advanced Drilling Equipment">معدات حفر متطورة</h3>
+                        <p data-ar="نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصاميم مبتكرة لأداء متميز في جميع الظروف." data-en="We offer a comprehensive range of modern drilling equipment that meets the highest quality and safety standards. Innovative designs for superior performance in all conditions.">نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصاميم مبتكرة لأداء متميز في جميع الظروف.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="حديث" data-en="Modern">حديث</span>
+                                <span class="spec-label" data-ar="التقنية" data-en="Technology">التقنية</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="آمن" data-en="Safe">آمن</span>
+                                <span class="spec-label" data-ar="السلامة" data-en="Safety">السلامة</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value" data-ar="مبتكر" data-en="Innovative">مبتكر</span>
+                                <span class="spec-label" data-ar="التصميم" data-en="Design">التصميم</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-yellow" data-ar="استفسر الآن" data-en="Inquire Now">استفسر الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="خدماتنا الرئيسية" data-en="Our Main Services">خدماتنا الرئيسية</h2>
+                <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
+                <p data-ar="نقدم مجموعة شاملة من الخدمات المتخصصة" data-en="We offer a comprehensive range of specialized services">نقدم مجموعة شاملة من الخدمات المتخصصة</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-water"></i>
                     </div>
                     <h3 data-ar="حفر الآبار المائية" data-en="Water Well Drilling">حفر الآبار المائية</h3>
-                    <p data-ar="نقدم مجموعة من خيارات حفر الآبار العميقة باستخدام طين البوليمر القابل للتحلل الحيوي، وأنظمة الحفر والتغليف المتزامنة، أو باستخدام إحدى منصات الحفر الثقيلة الخاصة بنا." data-en="We offer a range of deep well drilling options using biodegradable polymer mud, simultaneous drilling and casing systems, or using one of our heavy-duty drilling rigs.">نقدم مجموعة من خيارات حفر الآبار العميقة باستخدام طين البوليمر القابل للتحلل الحيوي، وأنظمة الحفر والتغليف المتزامنة، أو باستخدام إحدى منصات الحفر الثقيلة الخاصة بنا.</p>
+                    <p data-ar="نقدم حفر آبار مائية عميقة باستخدام أحدث التقنيات والمعدات المتطورة مع فريق كامل لكل جهاز حفر وملحقات حفر كاملة." data-en="We provide deep water well drilling using the latest technologies and advanced equipment with complete team for each drilling rig and full drilling complements.">نقدم حفر آبار مائية عميقة باستخدام أحدث التقنيات والمعدات المتطورة مع فريق كامل لكل جهاز حفر وملحقات حفر كاملة.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-hard-hat"></i>
                     </div>
                     <h3 data-ar="المقاولات العامة" data-en="General Contracting">المقاولات العامة</h3>
-                    <p data-ar="قسم المقاولات العامة والمقاولات من الباطن مزود بإدارات مؤهلة وذات خبرة جيدة جداً، وإدارة وموظفين وكذلك قوة بشرية ومهندسين مدنيين." data-en="Our General Contracting & Sub-Contracting section has qualified and experienced management, administration, staff, manpower, and civil engineers.">قسم المقاولات العامة والمقاولات من الباطن مزود بإدارات مؤهلة وذات خبرة جيدة جداً، وإدارة وموظفين وكذلك قوة بشرية ومهندسين مدنيين.</p>
+                    <p data-ar="خدمات المقاولات المتكاملة مع فريق هندسي متخصص وخبرة واسعة أكثر من 30 عاماً في تنفيذ المشاريع في الشرق الأوسط وأفريقيا." data-en="Integrated contracting services with a specialized engineering team and extensive experience over 30 years in project execution across the Middle East and Africa.">خدمات المقاولات المتكاملة مع فريق هندسي متخصص وخبرة واسعة أكثر من 30 عاماً في تنفيذ المشاريع في الشرق الأوسط وأفريقيا.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3 data-ar="قسم التجارة العامة" data-en="General Trading Section">قسم التجارة العامة</h3>
-                    <p data-ar="يتولى قسم التجارة العامة جميع المهام العامة لشركتنا، والتخطيط والبرمجة للاستيراد والتصدير، وله فرعه الخاص وإدارة الموظفين، ومجهز ومنظم بشكل جيد بجميع متطلباته." data-en="Our General Trading Section handles all our company's general duties, planning & programming for import & export, and has its own branch and staff management, well-furnished and organized with all its requirements.">يتولى قسم التجارة العامة جميع المهام العامة لشركتنا، والتخطيط والبرمجة للاستيراد والتصدير، وله فرعه الخاص وإدارة الموظفين، ومجهز ومنظم بشكل جيد بجميع متطلباته.</p>
+                    <h3 data-ar="التجارة العامة" data-en="General Trading">التجارة العامة</h3>
+                    <p data-ar="استيراد وتصدير المعدات والآلات المتخصصة في مجال الحفر والبناء مع شبكة مبيعات وخدمة قوية تتضمن أكثر من 15 مركز مبيعات و50 موزع." data-en="Import and export of specialized equipment and machinery in drilling and construction with robust sales and service network including over 15 sales centers and 50 distributors.">استيراد وتصدير المعدات والآلات المتخصصة في مجال الحفر والبناء مع شبكة مبيعات وخدمة قوية تتضمن أكثر من 15 مركز مبيعات و50 موزع.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-oil-well"></i>
                     </div>
-                    <h3 data-ar="عمليات الحفر المتخصصة" data-en="Specialized Drilling Operations">عمليات الحفر المتخصصة</h3>
-                    <p data-ar="تشمل عملياتنا: عمليات خط السلك، إكمال الخدمات بشكل جيد، اختبار وتنظيف الآبار، إعادة الدخول وإصلاح الخدمة، عمليات الحفارات وتحليل البيانات، برامج الحفر، تقييم الحقل وتطويره." data-en="Our operations include: Wireline operations, well completion services, well testing and cleaning, re-entry and service repair, excavator operations and data analysis, drilling programs, field evaluation and development.">تشمل عملياتنا: عمليات خط السلك، إكمال الخدمات بشكل جيد، اختبار وتنظيف الآبار، إعادة الدخول وإصلاح الخدمة، عمليات الحفارات وتحليل البيانات، برامج الحفر، تقييم الحقل وتطويره.</p>
+                    <h3 data-ar="عمليات الحفر المتخصصة" data-en="Specialized Drilling">عمليات الحفر المتخصصة</h3>
+                    <p data-ar="خدمات حفر متخصصة باستخدام تقنيات DTH ومعدات الحفر الثقيلة وأدوات حفر الصخور، المطارق DTH، بتات DTH، أنابيب الحفر." data-en="Specialized drilling services using DTH technology and heavy drilling equipment, rock drilling tools, DTH hammers, DTH bits, drill pipes.">خدمات حفر متخصصة باستخدام تقنيات DTH ومعدات الحفر الثقيلة وأدوات حفر الصخور، المطارق DTH، بتات DTH، أنابيب الحفر.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- قسم حفر الآبار المائية المتقدم -->
-<section class="service-detail" id="water-drilling-detail">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-ar="تقنيات حفر آبار المياه المتقدمة" data-en="Advanced Water Well Drilling Technologies">تقنيات حفر آبار المياه المتقدمة</h2>
-        </div>
-        
-        <div class="detail-content">
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <i class="fas fa-water"></i>
-                    <h3 data-ar="استكشاف المياه الجوفية" data-en="Groundwater Exploration">استكشاف المياه الجوفية</h3>
-                    <p data-ar="نستخدم أحدث تقنيات المسح الجيوفيزيائي والاستشعار عن بعد لتحديد مواقع المياه الجوفية بدقة." data-en="We use the latest geophysical survey and remote sensing technologies to accurately locate groundwater sources.">نستخدم أحدث تقنيات المسح الجيوفيزيائي والاستشعار عن بعد لتحديد مواقع المياه الجوفية بدقة.</p>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <h3 data-ar="الحفر الدوراني المتطور" data-en="Advanced Rotary Drilling">الحفر الدوراني المتطور</h3>
-                    <p data-ar="منصات حفر متطورة قادرة على الوصول لأعماق تصل إلى 1500 متر مع الحفاظ على جودة المياه." data-en="Advanced drilling rigs capable of reaching depths up to 1500 meters while preserving water quality.">منصات حفر متطورة قادرة على الوصول لأعماق تصل إلى 1500 متر مع الحفاظ على جودة المياه.</p>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3 data-ar="أنظمة التغليف المتكاملة" data-en="Integrated Casing Systems">أنظمة التغليف المتكاملة</h3>
-                    <p data-ar="أنابيب تغليف مقاومة للتآكل تضمن عدم تلوث المياه الجوفية وحماية البئر من الانهيار." data-en="Corrosion-resistant casing pipes ensure groundwater purity and well structural integrity.">أنابيب تغليف مقاومة للتآكل تضمن عدم تلوث المياه الجوفية وحماية البئر من الانهيار.</p>
-                </div>
-            </div>
-            
-            <div class="quality-standards">
-                <h3 data-ar="معايير الجودة العالمية" data-en="International Quality Standards">معايير الجودة العالمية</h3>
-                <ul>
-                    <li data-ar="مطابقة معايير منظمة الصحة العالمية WHO لجودة المياه" data-en="Compliance with WHO water quality standards">مطابقة معايير منظمة الصحة العالمية WHO لجودة المياه</li>
-                    <li data-ar="استخدام مواد مصرح بها للشرب من قبل الهيئات الصحية" data-en="Use of health-approved drinking water materials">استخدام مواد مصرح بها للشرب من قبل الهيئات الصحية</li>
-                    <li data-ar="فحص المياه معملياً قبل التسليم" data-en="Laboratory water testing before delivery">فحص المياه معملياً قبل التسليم</li>
-                    <li data-ar="شهادات ضمان لمكونات البئر" data-en="Well component warranty certificates">شهادات ضمان لمكونات البئر</li>
-                </ul>
-            </div>
-            
-            <div class="project-showcase">
-                <h3 data-ar="مشاريع مميزة" data-en="Featured Projects">مشاريع مميزة</h3>
-                <div class="project-stats">
-                    <div class="stat">
-                        <span class="number">3,689+</span>
-                        <span data-ar="بئر ماء منجز" data-en="Wells Completed">بئر ماء منجز</span>
-                    </div>
-                    <div class="stat">
-                        <span class="number">98%</span>
-                        <span data-ar="معدل نجاح" data-en="Success Rate">معدل نجاح</span>
-                    </div>
-                    <div class="stat">
-                        <span class="number">40+</span>
-                        <span data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- قسم التجارة (الاستيراد والتصدير) -->
-    <section class="trade" id="trade">
+    <!-- Solar Energy Section -->
+    <section class="solar-section" id="solar">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-ar="الطاقة الشمسية والنقل الكهربائي" data-en="Solar Energy & Electric Transportation">الطاقة الشمسية والنقل الكهربائي</h2>
+                <p data-ar="نقود مستقبل الطاقة النظيفة والتنقل المستدام" data-en="Leading the future of clean energy and sustainable mobility">نقود مستقبل الطاقة النظيفة والتنقل المستدام</p>
+            </div>
+            <div class="solar-content">
+                <div class="solar-image">
+                    <img src="solar .jpg" alt="Solar Energy and Electric Vehicles">
+                </div>
+                <div class="solar-text">
+                    <h3 data-ar="رؤيتنا الجديدة للطاقة المستدامة" data-en="Our New Vision for Sustainable Energy">رؤيتنا الجديدة للطاقة المستدامة</h3>
+                    <p data-ar="بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل." data-en="Building on our deep expertise in clean energy integration and large-scale project management, we are formally launching a dedicated new division focused on the future of transportation.">بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل.</p>
+                    <p data-ar="مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية." data-en="Our Mission: To become the leading provider of integrated e-mobility solutions in the region by seamlessly connecting premium electric vehicles with solar-powered charging infrastructure.">مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية.</p>
+                    <p data-ar="نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة." data-en="We seek a strategic partnership where we act as your project-based, integrated mobility partner, selling EVs as the core component of a custom 'Green Solar' package.">نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة.</p>
+                    <a href="#contact" class="btn btn-yellow" data-ar="تعرف على المزيد" data-en="Learn More">تعرف على المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade Section -->
+    <section>
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="الاستيراد والتصدير" data-en="Import & Export">الاستيراد والتصدير</h2>
+                <p data-ar="نستورد و نصدر مجموعة واسعة من المنتجات" data-en="We import and export a wide range of products">نستورد ونصدر مجموعة واسعة من المنتجات</p>
             </div>
-            <div class="trade-container">
+            <div class="trade-columns">
                 <div class="trade-column">
                     <h3 data-ar="نستورد" data-en="We Import">نستورد</h3>
                     <ul class="trade-list">
-                        <li data-ar="الآليات والمعدات الزراعية وقطع الغيار" data-en="Agricultural Machineries, Equipment & Spare parts">الآليات والمعدات الزراعية وقطع الغيار</li>
-                        <li data-ar="معدات النقل وقطع الغيار" data-en="Transportation Equipment & Spare parts">معدات النقل وقطع الغيار</li>
-                        <li data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</li>
-                        <li data-ar="أنابيب الحفر، أنابيب التغليف" data-en="Drilling Pipes, Casing Pipe">أنابيب الحفر، أنابيب التغليف</li>
-                        <li data-ar="الألواح الشمسية" data-en="Solar Panels">الألواح الشمسية</li>
-                        <li data-ar="محركات الديزل" data-en="Diesel Engines">محركات الديزل</li>
-                        <li data-ar="مضخات المياه الزراعية" data-en="Agricultural Pump Water">مضخات المياه الزراعية</li>
-                        <li data-ar="منصات حفر الآبار الارتوازية" data-en="Drilling Rig of Artesian Wells">منصات حفر الآبار الارتوازية</li>
-                        <li data-ar="بيع معدات الحفر" data-en="Sale of Drilling Equipment">بيع معدات الحفر</li>
-                        <li data-ar="مطارق وريش الحفر المباشر (DTH)" data-en="DTH Hammer & Bit">مطارق ورؤس الحفر المباشر (DTH)</li>
-                        <li data-ar="رغوة الحفر" data-en="Drilling Foam">رغوة الحفر</li>
-                        <li data-ar="منتجات بونتنايت" data-en="Bontnait">منتجات بونتنايت</li>
+                        <li data-ar="الآليات والمعدات الزراعية وقطع الغيار" data-en="Agricultural Machinery & Parts">الآليات والمعدات الزراعية وقطع الغيار</li>
+                        <li data-ar="معدات النقل وقطع الغيار" data-en="Transportation Equipment & Parts">معدات النقل وقطع الغيار</li>
+                        <li data-ar="أدوات الحفر ومطارق DTH وبتات DTH" data-en="Drilling Tools, DTH Hammers & Bits">أدوات الحفر ومطارق DTH وبتات DTH</li>
+                        <li data-ar="أنابيب الحفر والتغليف" data-en="Drilling & Casing Pipes">أنابيب الحفر والتغليف</li>
+                        <li data-ar="الألواح الشمسية ومعدات الطاقة الشمسية" data-en="Solar Panels & Solar Equipment">الألواح الشمسية ومعدات الطاقة الشمسية</li>
+                        <li data-ar="محركات الديزل والكمبريسورات" data-en="Diesel Engines & Compressors">محركات الديزل والكمبريسورات</li>
                     </ul>
                 </div>
                 <div class="trade-column">
                     <h3 data-ar="نصدر" data-en="We Export">نصدر</h3>
                     <ul class="trade-list">
-                        <li data-ar="إلى أسواق الدول المجاورة" data-en="To our neighbour countries' markets">إلى أسواق الدول المجاورة</li>
-                        <li data-ar="عدة مواد خام حسب الطلب" data-en="Several Raw Materials Items as required">عدة مواد خام حسب الطلب</li>
-                        
+                        <li data-ar="إلى أسواق الدول المجاورة" data-en="To neighboring countries markets">إلى أسواق الدول المجاورة</li>
+                        <li data-ar="مواد خام حسب الطلب" data-en="Raw materials as required">مواد خام حسب الطلب</li>
+                        <li data-ar="معدات وأدوات الحفر المتخصصة" data-en="Specialized drilling equipment and tools">معدات وأدوات الحفر المتخصصة</li>
                     </ul>
-                    <br>
-                    <h3 data-ar="تأجير المعدات" data-en="Equipment Rental">تأجير المعدات</h3>
-                    <p data-ar="نقدم الكثير من المعدات الثقيلة للإيجار مثل كمبريسور هواء،  الحفارات ، ومنصات الحفر ." data-en="We offer a lot of heavy-duty equipment for rent like cars, buses, loading equipment, trucks, excavators, lorries, and drilling rigs at any time requested by our customers with drivers or without, at reasonable prices.">نقدم الكثير من المعدات الثقيلة للإيجار مثل السيارات، الحافلات، معدات التحميل، الشاحنات، الحفارات، الشاحنات الثقيلة، ومنصات الحفر في أي وقت يطلبه عملاؤنا مع سائقين أو بدون، بأسعار معقولة.</p>
+                    <h3 style="margin-top: 30px;" data-ar="تأجير المعدات" data-en="Equipment Rental">تأجير المعدات</h3>
+                    <p data-ar="نقدم معدات ثقيلة للإيجار مثل كمبريسور هواء، الحفارات، ومنصات الحفر مع فريق كامل وملحقات حفر كاملة لكل جهاز." data-en="We offer heavy equipment for rent like air compressors, excavators, and drilling rigs with complete team and full drilling complements for each rig.">نقدم معدات ثقيلة للإيجار مثل كمبريسور هواء، الحفارات، ومنصات الحفر مع فريق كامل وملحقات حفر كاملة لكل جهاز.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم المعدات -->
-    <section class="equipment" id="equipment">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-ar="معداتنا وخدمات الحفر" data-en="Our Equipment & Drilling Services">معداتنا وخدمات الحفر</h2>
-            </div>
-            <div class="equipment-grid">
-                <div class="equipment-item">
-                    <div class="equipment-icon">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <h4 data-ar="مطارق الحفر المباشر (DTH)" data-en="DTH Hammers">مطارق الحفر المباشر (DTH)</h4>
-                    <p data-ar="أدوات حفر عالية الجودة لمختلف التطبيقات" data-en="High-quality drilling tools for various applications">أدوات حفر عالية الجودة لمختلف التطبيقات</p>
-                </div>
-                <div class="equipment-item">
-                    <div class="equipment-icon">
-                        <i class="fas fa-toolbox"></i>
-                    </div>
-                    <h4 data-ar="أنظمة إنزال منسوب المياه" data-en="Dewatering Systems">أنظمة إنزال منسوب المياه</h4>
-                    <p data-ar="حلول بسيطة وموثوقة وفعالة لمشاكل المياه الجوفية" data-en="Simple, reliable and effective solutions to groundwater problems">حلول بسيطة وموثوقة وفعالة لمشاكل المياه الجوفية</p>
-                </div>
-                <div class="equipment-item">
-                    <div class="equipment-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h4 data-ar="معدات الحفر الثقيلة" data-en="Heavy Drilling Equipment">معدات الحفر الثقيلة</h4>
-                    <p data-ar="منصات حفر متطورة للآبار العميقة" data-en="Advanced drilling rigs for deep wells">منصات حفر متطورة للآبار العميقة</p>
-                </div>
-                <div class="equipment-item">
-                    <div class="equipment-icon">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h4 data-ar="أنظمة الطاقة الشمسية" data-en="Solar Systems">أنظمة الطاقة الشمسية</h4>
-                    <p data-ar="حلول طاقة مستدامة للمشاريع البعيدة" data-en="Sustainable energy solutions for remote projects">حلول طاقة مستدامة للمشاريع البعيدة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-   <!-- قسم حفارة RD20 -->
-<section class="drilling-tools" id="excavators-rd20">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-ar="حفارة آبار المياه RD20" data-en="RD20 Water Well Drilling Rig">حفارة آبار المياه RD20</h2>
-        </div>
-        
-        <div class="tools-container">
-            <!-- حفارة RD20 -->
-            <div class="tool-item">
-                <div class="tool-image">
-                     <img src="rd20-pro-1500m.jpg" alt="حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر">
-                </div>
-                <div class="tool-content">
-                    <h3 data-ar="حفارة آبار المياه - موديل RD20 PRO" data-en="Water Well Drilling Rig - Model RD20 PRO">حفارة آبار المياه - موديل RD20 PRO</h3>
-                    <p data-ar="حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع العملاقة والتنقيب عن المياه الجوفية العميقة." 
-                       data-en="Advanced professional rig for deep water well drilling up to 1500 meters. Equipped with latest hydraulic rotary drilling technology, air-conditioned operator cabin, and integrated digital control system. Ideal for mega projects and deep groundwater exploration.">
-                        حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع العملاقة والتنقيب عن المياه الجوفية العميقة.
-                    </p>
-                    <div class="tool-divider"></div>
-                    <a href="#contact" class="tool-btn" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- قسم أدوات الحفر -->
-<section class="drilling-tools" id="drilling-tools">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</h2>
-        </div>
-        
-        <div class="tools-container">
-            <!-- أداة 1 -->
-            <div class="tool-item">
-                <div class="tool-image">
-                    <img src="f5e0638810103836021be46fc53b745b.jpg" alt="أدوات حفر متعددة">
-                </div>
-                <div class="tool-content">
-                    <h3 data-ar="أدوات الحفر الاحترافية" data-en="Professional Drilling Tools">أدوات الحفر الاحترافية</h3>
-                    <p data-ar="استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة 'اصنعها بنفسك'، تضمن أداءً موثوقاً في تطبيقات متنوعة. ارتقِ بمشاريعك مع الأفضل في المجال." 
-                       data-en="Explore our high-quality drilling tools, engineered for durability and precision. Designed for both professionals and DIY enthusiasts, they ensure reliable performance in various applications. Elevate your projects with the best in the industry.">
-                        استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة 'اصنعها بنفسك'، تضمن أداءً موثوقاً في تطبيقات متنوعة. ارتقِ بمشاريعك مع الأفضل في المجال.
-                    </p>
-                    <div class="tool-divider"></div>
-                    <a href="#contact" class="tool-btn" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- أداة 2 - الصورة الجديدة -->
-<div class="tool-item reverse">
-    <div class="tool-content">
-        <h3 data-ar="معدات حفر متطورة" data-en="Advanced Drilling Equipment">معدات حفر متطورة</h3>
-        <p data-ar="نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصميمات مبتكرة لأداء فائق في جميع الظروف." 
-           data-en="We offer a comprehensive range of modern drilling equipment that meets the highest quality and safety standards. Innovative designs for superior performance in all conditions.">
-            نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصميمات مبتكرة لأداء فائق في جميع الظروف.
-        </p>
-        <div class="tool-divider"></div>
-        <a href="#contact" class="tool-btn" data-ar="استفسر الآن" data-en="Inquire Now">استفسر الآن</a>
-    </div>
-    <div class="tool-image">
-        <!-- استخدم اسم صورتك الجديدة -->
-       <img src="drilling-tools-2.png" alt="معدات حفر متطورة">
-    </div>
-</div>
-    <!-- قسم أنابيب تغليف الآبار -->
-<section class="drilling-tools" id="casing-pipes">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-ar="أنابيب تغليف الآبار" data-en="Well Casing Pipes">أنابيب تغليف الآبار</h2>
-        </div>
-        
-        <div class="tools-container">
-            <div class="tool-item reverse">
-                <div class="tool-content">
-                    <h3 data-ar="أنابيب تغليف الآبار المائية" data-en="Water Well Casing Pipes">أنابيب تغليف الآبار المائية</h3>
-                    
-                    <!-- المعلومات الأساسية -->
-                    <div class="simple-specs">
-                        <p><strong data-ar="المقاسات:" data-en="Sizes:">المقاسات:</strong> من 6 بوصة إلى 20 بوصة</p>
-                        <p><strong data-ar="النوع:" data-en="Type:">النوع:</strong> أنابيب تغليف للآبار</p>
-                        <p><strong data-ar="الاستخدام:" data-en="Usage:">الاستخدام:</strong> تغليف آبار المياه</p>
-                    </div>
-                    
-                    <p data-ar="نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية." 
-                       data-en="We sell well casing pipes from 6 inch to 20 inch sizes. Durable and corrosion-resistant pipes, specifically designed for water well casing and preserving groundwater quality.">
-                        نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية.
-                    </p>
-                    
-                    <!-- مميزات الأنابيب -->
-                    <div class="pipe-features">
-                        <h4 data-ar="مميزات أنابيب التغليف" data-en="Casing Pipe Features">مميزات أنابيب التغليف</h4>
-                        <ul>
-                            <li data-ar="مقاومة للتآكل والصدأ" data-en="Corrosion and rust resistant">مقاومة للتآكل والصدأ</li>
-                            <li data-ar="متانة عالية وعمر طويل" data-en="High durability and long lifespan">متانة عالية وعمر طويل</li>
-                            <li data-ar="مناسبة للأعماق المختلفة" data-en="Suitable for various depths">مناسبة للأعماق المختلفة</li>
-                            <li data-ar="مطابقة للمواصفات القياسية" data-en="Compliant with standard specifications">مطابقة للمواصفات القياسية</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tool-divider"></div>
-                    <a href="#contact" class="tool-btn" data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
-                </div>
-                <div class="tool-image">
-                    <!-- غير اسم الصورة هنا -->
-                    <img src="casing-pipes.jpg" alt="أنابيب تغليف الآبار">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- قسم أنابيب الحفر -->
-<section class="drilling-tools" id="drill-pipes">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-ar="أنابيب الحفر" data-en="Drill Pipes">أنابيب الحفر</h2>
-        </div>
-        
-        <div class="tools-container">
-            <div class="tool-item">
-                <div class="tool-image">
-                    <!-- غير اسم الصورة هنا -->
-                    <img src="drill-pipes1.jpg" alt="أنابيب حفر عالية الجودة">
-                </div>
-                <div class="tool-content">
-                    <h3 data-ar="أنابيب الحفر الاحترافية" data-en="Professional Drill Pipes">أنابيب الحفر الاحترافية</h3>
-                    
-                    <!-- المعلومات الأساسية -->
-                    <div class="simple-specs">
-                        <p><strong data-ar="المقاسات:" data-en="Sizes:">المقاسات:</strong> متنوعة حسب الطلب</p>
-                        <p><strong data-ar="النوع:" data-en="Type:">النوع:</strong> أنابيب حفر API</p>
-                        <p><strong data-ar="الاستخدام:" data-en="Usage:">الاستخدام:</strong> حفر الآبار</p>
-                    </div>
-                    
-                    <p data-ar="نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة." 
-                       data-en="We provide high-quality drill pipes for various well drilling projects. Manufactured according to API standards, durable and withstand high pressures. Suitable for deep water well drilling.">
-                        نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة.
-                    </p>
-                    
-                    <!-- مميزات أنابيب الحفر -->
-                    <div class="pipe-features">
-                        <h4 data-ar="مميزات أنابيب الحفر" data-en="Drill Pipe Features">مميزات أنابيب الحفر</h4>
-                        <ul>
-                            <li data-ar="مصنوعة وفق معايير API العالمية" data-en="Manufactured according to API standards">مصنوعة وفق معايير API العالمية</li>
-                            <li data-ar="متانة عالية ضد الالتواء والضغط" data-en="High durability against torsion and pressure">متانة عالية ضد الالتواء والضغط</li>
-                            <li data-ar="مناسبة للأعماق المختلفة" data-en="Suitable for various depths">مناسبة للأعماق المختلفة</li>
-                            <li data-ar="مقاومة للتآكل في البيئات الصعبة" data-en="Corrosion resistant in harsh environments">مقاومة للتآكل في البيئات الصعبة</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tool-divider"></div>
-                    <a href="#contact" class="tool-btn" data-ar="طلب تفاصيل فنية" data-en="Request Technical Details">طلب تفاصيل فنية</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- قسم الإحصائيات -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>47+</h3>
-                    <p data-ar="سنة من الخبرة" data-en="Years of Experience">سنة من الخبرة</p>
-                    
-                </div>
-                <div class="stat-item">
-                    <h3>3689+</h3>
-                    <p data-ar="بئر ماء تم حفرها" data-en="Water Wells Drilled">بئر ماء تم حفرها</p>
-                </div>
-                <div class="stat-item">
-                    <h3>1842+</h3>
-                    <p data-ar="مشروع مكتمل" data-en="Projects Completed">مشروع مكتمل</p>
-                </div>
-                <div class="stat-item">
-                    <h3>38+</h3>
-                    <p data-ar="سنة في حفر الآبار" data-en="Years in Well Drilling">سنة في حفر الآبار</p>
-                    <div class="stat-item">
-    <h3>50+</h3>
-    <p data-ar="فريق متخصص" data-en="Expert Team">فريق متخصص</p>
-</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الاتصال -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+                <p data-ar="تواصل مع فريق SSMA اليوم" data-en="Contact the SSMA team today">تواصل مع فريق SSMA اليوم</p>
             </div>
-            <div class="contact-content">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <h3 data-ar="معلومات الاتصال" data-en="Contact Information">معلومات الاتصال</h3>
-                    <ul class="contact-details">
-                        <li>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong data-ar="العنوان:" data-en="Address:">العنوان:</strong><br>
-                                <span data-ar="الشارع الستين الشمالي، بالقرب من مستشفى السعودي الألماني، صنعاء، الجمهورية اليمنية" data-en="Northern 60th Street, Near Saudi Germany Hospital, Sana'a City, Republic of Yemen">الشارع الستين الشمالي، بالقرب من مستشفى السعودي الألماني، صنعاء، الجمهورية اليمنية</span>
-                            </div>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
+                            <h3 data-ar="العنوان" data-en="Address">العنوان</h3>
+                            <p data-ar="الشارع الستين الشمالي، بالقرب من مستشفى السعودي الألماني، صنعاء، اليمن" data-en="Northern 60th Street, Near Saudi Germany Hospital, Sana'a, Yemen">الشارع الستين الشمالي، بالقرب من مستشفى السعودي الألماني، صنعاء، اليمن</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
-                            <div>
-                                <strong data-ar="الهاتف المحمول:" data-en="Mobile:">الهاتف المحمول:</strong><br>
-                                +967-7777 666 95
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-fax"></i>
-                            <div>
-                                <strong data-ar="الفاكس:" data-en="Fax:">الفاكس:</strong><br>
-                                +967-01 334579
-                            </div>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
+                            <h3 data-ar="الهاتف" data-en="Phone">الهاتف</h3>
+                            <p>+967 7777 666 95</p>
+                            <p>+967 1 334 579</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong data-ar="البريد الإلكتروني:" data-en="Email:">البريد الإلكتروني:</strong><br>
-                                ssma.wells@gmail.com
-                            </div>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
+                            <h3 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h3>
+                            <p>ssma.wells@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-globe"></i>
-                            <div>
-                                <strong data-ar="الموقع الإلكتروني:" data-en="Website:">الموقع الإلكتروني:</strong><br>
-                                www.ssmawellscorporation.com
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div>
+                            <h3 data-ar="الموقع الإلكتروني" data-en="Website">الموقع الإلكتروني</h3>
+                            <p>www.ssmawellscorporation.com</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
-                    <h3 data-ar="أرسل رسالة" data-en="Send Message">أرسل رسالة</h3>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
@@ -1722,306 +1293,174 @@ body.english .quality-standards li:before {
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone" data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
                             <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn-submit" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
+                        <button type="submit" class="btn btn-yellow" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- التذييل -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-column">
-                    <h4 data-ar="شركة SSMA" data-en="SSMA Corporation">شركة SSMA</h4>
-                    <p data-ar="شركة رائدة في حلول المياه الجوفية وتقديم خدمات متكاملة في مجال الحفر والمقاولات منذ عام 1982. نحن نلتزم بتقديم منتجات عالية الجودة وآمنة مع خدمة عملاء متميزة." data-en="A leading company in groundwater solutions and providing integrated drilling and contracting services since 1982. We are committed to providing high-quality, safe products with excellent customer service.">شركة رائدة في حلول المياه الجوفية وتقديم خدمات متكاملة في مجال الحفر والمقاولات منذ عام 1982. نحن نلتزم بتقديم منتجات عالية الجودة وآمنة مع خدمة عملاء متميزة.</p>
+                    <h4 data-ar="موارد الموظفين" data-en="Employee Resources">موارد الموظفين</h4>
+                    <div class="footer-links">
+                        <a href="#" data-ar="تابع SSMA على وسائل التواصل" data-en="Follow SSMA on Social Media">تابع SSMA على وسائل التواصل</a>
+                        <a href="#" data-ar="الاستراتيجية والغرض" data-en="Strategy & Purpose">الاستراتيجية والغرض</a>
+                        <a href="#" data-ar="التاريخ" data-en="History">التاريخ</a>
+                        <a href="#" data-ar="مدونة السلوك" data-en="Code of Conduct">مدونة السلوك</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 <div class="footer-column">
-                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-                        <li><a href="#about" data-ar="عن الشركة" data-en="About">عن الشركة</a></li>
-                        <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
-                        <li><a href="#trade" data-ar="التجارة" data-en="Trade">التجارة</a></li>
-                        <li><a href="#equipment" data-ar="المعدات" data-en="Equipment">المعدات</a></li>
-                    </ul>
+                    <h4 data-ar="الشركة" data-en="Company">الشركة</h4>
+                    <div class="footer-links">
+                        <a href="#about" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
+                        <a href="#partners" data-ar="شركاؤنا" data-en="Our Partners">شركاؤنا</a>
+                        <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+                        <a href="#solar" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                    </div>
                 </div>
                 <div class="footer-column">
-                    <h4 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services" data-ar="حفر الآبار المائية" data-en="Water Well Drilling">حفر الآبار المائية</a></li>
-                        <li><a href="#services" data-ar="المقاولات العامة" data-en="General Contracting">المقاولات العامة</a></li>
-                        <li><a href="#trade" data-ar="الاستيراد والتصدير" data-en="Import & Export">الاستيراد والتصدير</a></li>
-                        <li><a href="#equipment" data-ar="تأجير المعدات" data-en="Equipment Rental">تأجير المعدات</a></li>
-                        <li><a href="#services" data-ar="عمليات الحفر المتخصصة" data-en="Specialized Drilling">عمليات الحفر المتخصصة</a></li>
-                    </ul>
+                    <h4 data-ar="المستثمرون" data-en="Investors">المستثمرون</h4>
+                    <div class="footer-links">
+                        <a href="#" data-ar="معلومات الأسهم" data-en="Stock Information">معلومات الأسهم</a>
+                        <a href="#" data-ar="المعلومات المالية" data-en="Financial Information">المعلومات المالية</a>
+                        <a href="#" data-ar="خدمات المساهمين" data-en="Shareholder Services">خدمات المساهمين</a>
+                        <a href="#" data-ar="التقارير السنوية" data-en="Annual Reports">التقارير السنوية</a>
+                    </div>
                 </div>
                 <div class="footer-column">
-                    <h4 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-ar="الشارع الستين الشمالي، صنعاء" data-en="Northern 60th Street, Sana'a">الشارع الستين الشمالي، صنعاء</span></p>
-                    <p><i class="fas fa-phone"></i> +967-7777 666 95</p>
-                    <p><i class="fas fa-envelope"></i> ssma.wells@gmail.com</p>
+                    <h4 data-ar="الأخبار" data-en="News">الأخبار</h4>
+                    <div class="footer-links">
+                        <a href="#" data-ar="الأخبار والمميزات" data-en="News & Features">الأخبار والمميزات</a>
+                        <a href="#" data-ar="بيانات صحفية" data-en="Press Releases">بيانات صحفية</a>
+                        <a href="#" data-ar="وسائل التواصل الاجتماعي" data-en="Social Media">وسائل التواصل الاجتماعي</a>
+                        <a href="#" data-ar="الأسئلة الشائعة" data-en="FAQs">الأسئلة الشائعة</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-tradenames">
-    <p data-ar="© 2024 SSMATradingCorp - شركة SSMA للتجارة والمقاولات" data-en="© 2024 SSMATradingCorp - SSMA Trading Corporation">© 2024 SSMATradingCorp - شركة SSMA للتجارة والمقاولات</p>
-</div>
-            <div class="copyright">
-                <p data-ar="جميع الحقوق محفوظة &copy; 2023 شركة SSMA" data-en="All Rights Reserved &copy; 2023 SSMA Corporation">جميع الحقوق محفوظة &copy; 2023 شركة SSMA</p>
+            <div class="footer-bottom">
+                <p data-ar="جميع الحقوق محفوظة © 2024 شركة SSMA للتجارة والمقاولات" data-en="All Rights Reserved © 2024 SSMA Trading & Contracting Corporation">جميع الحقوق محفوظة © 2024 شركة SSMA للتجارة والمقاولات</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // ⬇⬇⬇ الكود الجديد للقائمة في الجوال ⬇⬇⬇
-        // تحكم في قائمة الجوال
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const mainMenu = document.getElementById('mainMenu');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    mainMenu.classList.toggle('active');
-                    
-                    // تغيير الأيقونة
-                    const icon = this.querySelector('i');
-                    if (mainMenu.classList.contains('active')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-                
-                // إغلاق القائمة عند النقر على رابط
-                mainMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mainMenu.classList.remove('active');
-                        const icon = menuToggle.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    });
-                });
+        // Language Switching
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const body = document.body;
+        
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                body.classList.add('english');
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            } else {
+                body.classList.remove('english');
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
             }
             
-            // ⬇⬇⬇ باقي JavaScript القديم ⬇⬇⬇
-            // كائن يحتوي على جميع النصوص ثنائية اللغة
-            const translations = {
-                ar: {
-                    // العناوين الرئيسية
-                    "home": "الرئيسية",
-                    "about": "عن الشركة",
-                    "services": "خدماتنا",
-                    "trade": "التجارة",
-                    "equipment": "المعدات",
-                    "contact": "اتصل بنا",
-                    "callNow": "اتصل بنا الآن",
-                    "exploreServices": "استكشف خدماتنا",
-                    "freeConsultation": "طلب استشارة مجانية",
-                    
-                    // النصوص الأخرى
-                    "companyHistory": "تاريخ الشركة",
-                    "companyEstablishment": "تأسيس الشركة وتطورها",
-                    "mainServices": "خدماتنا الرئيسية",
-                    "importExport": "الاستيراد والتصدير",
-                    "ourEquipment": "معداتنا وخدمات الحفر",
-                    "contactInfo": "معلومات الاتصال",
-                    "sendMessage": "أرسل رسالة",
-                    "fullName": "الاسم الكامل",
-                    "emailAddress": "البريد الإلكتروني",
-                    "phoneNumber": "رقم الهاتف",
-                    "subject": "الموضوع",
-                    "message": "الرسالة",
-                    "address": "العنوان:",
-                    "mobile": "الهاتف المحمول:",
-                    "fax": "الفاكس:",
-                    "email": "البريد الإلكتروني:",
-                    "website": "الموقع الإلكتروني:",
-                    "quickLinks": "روابط سريعة",
-                    "ourServices": "خدماتنا",
-                    "allRights": "جميع الحقوق محفوظة",
-                    "yearsExperience": "سنة من الخبرة",
-                    "waterWellsDrilled": "بئر ماء تم حفرها",
-                    "projectsCompleted": "مشروع مكتمل",
-                    "yearsInDrilling": "سنة في حفر الآبار"
-                },
-                en: {
-                    // Main headings
-                    "home": "Home",
-                    "about": "About",
-                    "services": "Services",
-                    "trade": "Trade",
-                    "equipment": "Equipment",
-                    "contact": "Contact",
-                    "callNow": "Call Now",
-                    "exploreServices": "Explore Our Services",
-                    "freeConsultation": "Free Consultation",
-                    
-                    // Other texts
-                    "companyHistory": "Company History",
-                    "companyEstablishment": "Company Establishment & Development",
-                    "mainServices": "Our Main Services",
-                    "importExport": "Import & Export",
-                    "ourEquipment": "Our Equipment & Drilling Services",
-                    "contactInfo": "Contact Information",
-                    "sendMessage": "Send Message",
-                    "fullName": "Full Name",
-                    "emailAddress": "Email Address",
-                    "phoneNumber": "Phone Number",
-                    "subject": "Subject",
-                    "message": "Message",
-                    "address": "Address:",
-                    "mobile": "Mobile:",
-                    "fax": "Fax:",
-                    "email": "Email:",
-                    "website": "Website:",
-                    "quickLinks": "Quick Links",
-                    "ourServices": "Our Services",
-                    "allRights": "All Rights Reserved",
-                    "yearsExperience": "Years of Experience",
-                    "waterWellsDrilled": "Water Wells Drilled",
-                    "projectsCompleted": "Projects Completed",
-                    "yearsInDrilling": "Years in Well Drilling"
-                }
-            };
-
-            // وظيفة تبديل اللغة
-            function switchLanguage(lang) {
-                // تغيير اتجاه الصفحة
-                if (lang === 'en') {
-                    document.body.classList.add('english');
-                    document.documentElement.setAttribute('dir', 'ltr');
-                    document.documentElement.setAttribute('lang', 'en');
-                } else {
-                    document.body.classList.remove('english');
-                    document.documentElement.setAttribute('dir', 'rtl');
-                    document.documentElement.setAttribute('lang', 'ar');
-                }
-                
-                // تحديث أزرار اللغة
-                document.querySelectorAll('.lang-btn').forEach(btn => {
-                    if (btn.dataset.lang === lang) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                });
-                
-                // تحديث جميع النصوص ذات السمة data-ar و data-en
-                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+            // Update active button
+            langButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                const text = element.dataset[lang];
+                if (text) {
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        // لحقول الإدخال، نغير placeholder إذا كان موجودًا
-                        if (element.hasAttribute('data-ar') && element.hasAttribute('data-en')) {
-                            element.setAttribute('placeholder', lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en'));
-                        }
-                    } else if (element.tagName === 'OPTION') {
-                        // خيارات القائمة
-                        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                        element.placeholder = text;
+                    } else if (element.tagName === 'LABEL') {
+                        element.textContent = text;
                     } else {
-                        // جميع العناصر الأخرى
-                        element.textContent = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                        element.textContent = text;
                     }
-                });
-                
-                // تحديث عنوان الصفحة
-                document.title = lang === 'ar' 
-                    ? "شركة SSMA | حلول متكاملة لحفر الآبار والمقاولات" 
-                    : "SSMA Corporation | Integrated Drilling & Contracting Solutions";
-                
-                // حفظ اللغة في التخزين المحلي
-                localStorage.setItem('preferredLanguage', lang);
-            }
-
-            // استرجاع اللغة المحفوظة عند تحميل الصفحة
-            const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
-            switchLanguage(savedLang);
-            
-            // إضافة أحداث النقر على أزرار اللغة
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const lang = this.dataset.lang;
-                    switchLanguage(lang);
-                });
+                }
             });
             
-            // التمرير السلس للروابط الداخلية
-            document.querySelectorAll('nav a, .footer-links a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if(targetId.startsWith('#')) {
-                        const targetElement = document.querySelector(targetId);
-                        if(targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-
-            // معالجة نموذج الاتصال
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // جمع بيانات النموذج
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    subject: document.getElementById('subject').value,
-                    message: document.getElementById('message').value
-                };
-                
-                // هنا يمكن إضافة كود إرسال البيانات إلى الخادم
-                const currentLang = localStorage.getItem('preferredLanguage') || 'ar';
-                const thankYouMsg = currentLang === 'ar' 
-                    ? `شكراً ${formData.name} على رسالتك! سنتواصل معك قريباً.`
-                    : `Thank you ${formData.name} for your message! We will contact you soon.`;
-                
-                alert(thankYouMsg);
-                
-                // إعادة تعيين النموذج
-                this.reset();
-            });
-
-            // تأثير الظهور عند التمرير
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // تطبيق تأثير الظهور على العناصر
-            document.querySelectorAll('section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(section);
+            // Update page title
+            document.title = lang === 'ar' 
+                ? "شركة SSMA | الحلول المتكاملة لحفر الآبار والمقاولات" 
+                : "SSMA Corporation | Integrated Drilling & Contracting Solutions";
+            
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Initialize language
+        const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+        switchLanguage(savedLang);
+        
+        // Add click events to language buttons
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
             });
         });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                const currentLang = localStorage.getItem('preferredLanguage') || 'ar';
+                const message = currentLang === 'ar'
+                    ? `شكراً ${data.name}! تم استلام رسالتك.`
+                    : `Thank you ${data.name}! Your message has been received.`;
+                
+                alert(message);
+                contactForm.reset();
+            });
+        }
     </script>
 </body>
 </html>
