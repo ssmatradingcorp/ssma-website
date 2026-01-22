@@ -812,6 +812,327 @@
         .page-section {
             display: block;
         }
+        /* ===== Companies & Partners Section ===== */
+.history-timeline {
+    background: var(--cat-white);
+    padding: var(--space-xl);
+    border-radius: 8px;
+    margin-bottom: var(--space-xxl);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    position: relative;
+    padding: var(--space-lg) 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--cat-yellow);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-lg);
+    padding-right: 60px;
+}
+
+.timeline-year {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--cat-yellow);
+    color: var(--cat-black);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    min-width: 80px;
+    text-align: center;
+}
+
+.timeline-content {
+    background: var(--cat-gray);
+    padding: var(--space-lg);
+    border-radius: 8px;
+    border-right: 4px solid var(--cat-yellow);
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xxl);
+}
+
+.company-card {
+    background: var(--cat-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.company-header {
+    background: var(--cat-gray);
+    padding: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--cat-white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cat-yellow);
+    flex-shrink: 0;
+}
+
+.company-logo img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.company-title h3 {
+    color: var(--cat-black);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.company-location, .company-year, .company-role, .company-experience {
+    display: block;
+    font-size: 12px;
+    color: var(--cat-dark-gray);
+    margin-bottom: 2px;
+}
+
+.company-experience {
+    color: var(--cat-yellow);
+    font-weight: 600;
+}
+
+.company-details {
+    padding: var(--space-lg);
+}
+
+.company-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: var(--space-md);
+}
+
+.company-specialties span {
+    background: var(--cat-gray);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--cat-dark-gray);
+}
+
+/* ===== Projects Showcase ===== */
+.projects-showcase {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid #e5e5e5;
+}
+
+.projects-showcase h4 {
+    color: var(--cat-black);
+    margin-bottom: var(--space-md);
+    font-size: 18px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.project-item {
+    background: var(--cat-gray);
+    padding: var(--space-md);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: var(--cat-yellow);
+    transform: translateY(-2px);
+}
+
+.project-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--cat-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cat-yellow);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.project-info h5 {
+    color: var(--cat-black);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: var(--cat-dark-gray);
+    margin: 0;
+}
+
+.project-item:hover .project-info p {
+    color: var(--cat-black);
+}
+
+/* ===== Company Stats ===== */
+.company-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid #e5e5e5;
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--space-sm);
+    background: var(--cat-gray);
+    border-radius: 8px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cat-yellow);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 12px;
+    color: var(--cat-dark-gray);
+}
+
+/* ===== Expertise Grid ===== */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+}
+
+.expertise-item {
+    text-align: center;
+    padding: 12px 8px;
+    background: var(--cat-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.expertise-item:hover {
+    background: var(--cat-yellow);
+    transform: translateY(-2px);
+}
+
+.expertise-item i {
+    font-size: 24px;
+    color: var(--cat-yellow);
+    margin-bottom: 8px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.expertise-item:hover i {
+    color: var(--cat-black);
+}
+
+.expertise-item span {
+    font-size: 12px;
+    color: var(--cat-dark-gray);
+    display: block;
+    font-weight: 600;
+}
+
+.expertise-item:hover span {
+    color: var(--cat-black);
+}
+
+.network-map {
+    background: var(--cat-white);
+    padding: var(--space-xl);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-countries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+}
+
+.country {
+    text-align: center;
+    padding: var(--space-md);
+    border-radius: 8px;
+    background: var(--cat-gray);
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.country:hover {
+    background: var(--cat-yellow);
+    transform: translateY(-3px);
+}
+
+.country i {
+    font-size: 32px;
+    color: var(--cat-black);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.country span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.country small {
+    color: var(--cat-dark-gray);
+    font-size: 12px;
+}
     </style>
 </head>
 <body>
@@ -938,45 +1259,288 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="partners page-section" id="partners" style="display:none;">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-ar="شركاؤنا الاستراتيجيون" data-en="Our Strategic Partners">شركاؤنا الاستراتيجيون</h2>
-                <p data-ar="نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة" data-en="We work with the best companies to ensure delivery of high-quality products and services">نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="wail logo.jpg" alt="WSSMA Logo">
+ <!-- Partners/Brands Section -->
+<section class="partners page-section" id="partners" style="display:none;">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-ar="مجموعة SSMA العالمية" data-en="SSMA Global Group">مجموعة SSMA العالمية</h2>
+            <p data-ar="شبكة من الشركات المتخصصة تغطي اليمن ودول الخليج وآسيا" data-en="A network of specialized companies covering Yemen, Gulf countries, and Asia">شبكة من الشركات المتخصصة تغطي اليمن ودول الخليج وآسيا</p>
+        </div>
+        
+        <!-- Development History -->
+        <div class="history-timeline">
+            <h3 data-ar="تاريخ التطور والتوسع" data-en="Development & Expansion History">تاريخ التطور والتوسع</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2014</div>
+                    <div class="timeline-content">
+                        <h4 data-ar="إنشاء فرع في السعودية" data-en="Establish Branch in Saudi Arabia">إنشاء فرع في السعودية</h4>
+                        <p data-ar="توسيع النشاط التجاري إلى المملكة العربية السعودية" data-en="Expanding business activities to Saudi Arabia">توسيع النشاط التجاري إلى المملكة العربية السعودية</p>
                     </div>
-                    <h3 data-ar="شركة WSSMA للتجارة" data-en="WSSMA Trading Company">شركة WSSMA للتجارة</h3>
-                    <p data-ar="عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين." data-en="Oman - A leading supplier of drilling spare parts and contractors, offering high-quality components for the construction and mining sectors.">عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين.</p>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="KCC logo .jpg" alt="Kyan Canon Logo">
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-content">
+                        <h4 data-ar="إنشاء فرع في الهند" data-en="Establish Branch in India">إنشاء فرع في الهند</h4>
+                        <p data-ar="فتح مكتب تمثيلي في الهند لاستيراد المعدات" data-en="Opening representative office in India for equipment import">فتح مكتب تمثيلي في الهند لاستيراد المعدات</p>
                     </div>
-                    <h3 data-ar="كيان كانون" data-en="Kyan Canon">كيان كانون</h3>
-                    <p data-ar="مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات." data-en="A premier supplier of high-quality spare parts and drilling tools for water, oil, and well drilling projects, as well as for heavy equipment used in these industries.">مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات.</p>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="Atlis mac.jpg" alt="Atlas Mec Logo">
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h4 data-ar="إنشاء فرع في عُمان" data-en="Establish Branch in Oman">إنشاء فرع في عُمان</h4>
+                        <p data-ar="تأسيس Wail Trading Company في مسقط" data-en="Establishing Wail Trading Company in Muscat">تأسيس Wail Trading Company في مسقط</p>
                     </div>
-                    <h3 data-ar="أطلس ميك للتجارة" data-en="Atlas Mec Trading">أطلس ميك للتجارة</h3>
-                    <p data-ar="تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة." data-en="Atlas Mec Trading Company excels in international trade and logistics efficiently connecting businesses worldwide.">تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة.</p>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="tsmc logo.jpg" alt="TSMC Logo">
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h4 data-ar="إنشاء فرع في غوانزو" data-en="Establish Branch in Guangzhou">إنشاء فرع في غوانزو</h4>
+                        <p data-ar="التوسع إلى الصين لاستيراد المعدات مباشرة" data-en="Expanding to China for direct equipment import">التوسع إلى الصين لاستيراد المعدات مباشرة</p>
                     </div>
-                    <h3 data-ar="شركة TSMC للموردات" data-en="TSMC Supplier Company">شركة TSMC للموردات</h3>
-                    <p data-ar="شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة." data-en="T S M C Company is a general supplier of spare parts and components for heavy equipment. We specialize in providing high-quality products.">شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة.</p>
                 </div>
             </div>
         </div>
-    </section>
 
+        <!-- Our Companies Grid -->
+        <div class="companies-grid">
+            <!-- SSMA Yemen - UPDATED -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="ssma-logo.jpg" alt="SSMA Yemen">
+                    </div>
+                    <div class="company-title">
+                        <h3 data-ar="مؤسسة صالح الأبرقي" data-en="Saleh Al-Abray Foundation">مؤسسة صالح الأبرقي</h3>
+                        <span class="company-location" data-ar="اليمن - المقر الرئيسي" data-en="Yemen - Headquarters">اليمن - المقر الرئيسي</span>
+                        <span class="company-year" data-ar="تأسست: ١٩٨٢" data-en="Est: 1982">تأسست: ١٩٨٢</span>
+                    </div>
+                </div>
+                <div class="company-details">
+                    <p data-ar="الشركة الرائدة في حلول المياه الجوفية والمقاولات والطاقة المتجددة في اليمن. نقدم خدمات متكاملة تشمل حفر الآبار، المشاريع الإنشائية، وحلول الطاقة المستدامة." data-en="The leading company in groundwater solutions, contracting, and renewable energy in Yemen. We provide integrated services including well drilling, construction projects, and sustainable energy solutions.">الشركة الرائدة في حلول المياه الجوفية والمقاولات والطاقة المتجددة في اليمن.</p>
+                    
+                    <!-- Specialties with icons -->
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-water"></i>
+                            <span data-ar="حفر الآبار" data-en="Well Drilling">حفر الآبار</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-hard-hat"></i>
+                            <span data-ar="المقاولات" data-en="Contracting">المقاولات</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-sun"></i>
+                            <span data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-industry"></i>
+                            <span data-ar="محطات الغاز" data-en="Gas Stations">محطات الغاز</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Renewable Energy Projects -->
+                    <div class="projects-showcase">
+                        <h4 data-ar="مشاريع الطاقة المتجددة" data-en="Renewable Energy Projects">مشاريع الطاقة المتجددة</h4>
+                        <div class="projects-grid">
+                            <div class="project-item">
+                                <div class="project-icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h5 data-ar="منظومات الطاقة الشمسية" data-en="Solar Energy Systems">منظومات الطاقة الشمسية</h5>
+                                    <p data-ar="تصميم وتركيب أنظمة الطاقة الشمسية للمنازل، الشركات، والمشاريع الصناعية" data-en="Design and installation of solar energy systems for homes, businesses, and industrial projects">تصميم وتركيب أنظمة الطاقة الشمسية للمنازل، الشركات، والمشاريع الصناعية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <div class="project-icon">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h5 data-ar="محطات الغاز الطبيعي المركزية" data-en="Central Natural Gas Stations">محطات الغاز الطبيعي المركزية</h5>
+                                    <p data-ar="إنشاء وتشغيل محطات توزيع الغاز الطبيعي للمدن والمناطق الصناعية" data-en="Establishment and operation of natural gas distribution stations for cities and industrial areas">إنشاء وتشغيل محطات توزيع الغاز الطبيعي للمدن والمناطق الصناعية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <div class="project-icon">
+                                    <i class="fas fa-charging-station"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h5 data-ar="محطات الشحن الكهربائي" data-en="Electric Charging Stations">محطات الشحن الكهربائي</h5>
+                                    <p data-ar="تركيب محطات شحن المركبات الكهربائية التي تعمل بالطاقة الشمسية" data-en="Installation of electric vehicle charging stations powered by solar energy">تركيب محطات شحن المركبات الكهربائية التي تعمل بالطاقة الشمسية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <div class="project-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h5 data-ar="مشاريع Solar Piller" data-en="Solar Piller Projects">مشاريع Solar Piller</h5>
+                                    <p data-ar="أنارة الشوارع بالطاقة الشمسية باستخدام أعمدة الإنارة الشمسية" data-en="Street lighting using solar-powered lighting pillars">أنارة الشوارع بالطاقة الشمسية باستخدام أعمدة الإنارة الشمسية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Statistics -->
+                    <div class="company-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label" data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3,689+</span>
+                            <span class="stat-label" data-ar="بئر محفور" data-en="Wells Drilled">بئر محفور</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label" data-ar="مشروع طاقة شمسية" data-en="Solar Projects">مشروع طاقة شمسية</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label" data-ar="محطة غاز" data-en="Gas Stations">محطة غاز</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wail Trading Oman -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="wail-logo.jpg" alt="Wail Trading">
+                    </div>
+                    <div class="company-title">
+                        <h3 data-ar="شركة وايل للتجارة" data-en="Wail Trading Company">شركة وايل للتجارة</h3>
+                        <span class="company-location" data-ar="عُمان - مسقط" data-en="Oman - Muscat">عُمان - مسقط</span>
+                        <span class="company-year" data-ar="تأسست: ٢٠٢٠" data-en="Est: 2020">تأسست: ٢٠٢٠</span>
+                    </div>
+                </div>
+                <div class="company-details">
+                    <p data-ar="مورد رائد لقطع غيار الحفر والمقاولين في عُمان، تقدم مكونات عالية الجودة لقطاعات البناء والتعدين. تختص الشركة أيضاً في تصدير منتجات متنوعة من عُمان إلى اليمن، مما يدعم التجارة بين البلدين." data-en="A leading supplier of drilling spare parts and contractors in Oman, offering high-quality components for construction and mining sectors. Specializes in exporting various products from Oman to Yemen, supporting trade between the two countries.">مورد رائد لقطع غيار الحفر والمقاولين في عُمان، تقدم مكونات عالية الجودة لقطاعات البناء والتعدين.</p>
+                    <div class="company-specialties">
+                        <span data-ar="التصدير" data-en="Export">التصدير</span>
+                        <span data-ar="قطع الغيار" data-en="Spare Parts">قطع الغيار</span>
+                        <span data-ar="التجارة الدولية" data-en="Intl Trade">التجارة الدولية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atlas Mec -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="atlas-logo.jpg" alt="Atlas Mec">
+                    </div>
+                    <div class="company-title">
+                        <h3>أطلس ميك للتجارة</h3>
+                        <span class="company-role" data-ar="المورد الرئيسي" data-en="Main Supplier">المورد الرئيسي</span>
+                    </div>
+                </div>
+                <div class="company-details">
+                    <p data-ar="تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة من خلال توريد ونقل البضائع. نحن نضمن عمليات استيراد وتصدير سلسة، ونقدم منتجات عالية الجودة مع تعزيز شراكات دائمة في صناعة التجارة." data-en="Excels in international trade and logistics, efficiently connecting businesses worldwide by sourcing and transporting goods. We ensure seamless import and export operations, delivering top-quality products while fostering lasting partnerships.">تتفوق في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة.</p>
+                    <div class="company-specialties">
+                        <span data-ar="اللوجستيات" data-en="Logistics">اللوجستيات</span>
+                        <span data-ar="الشحن" data-en="Shipping">الشحن</span>
+                        <span data-ar="التوريد" data-en="Sourcing">التوريد</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TSMC -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="tsmc-logo.jpg" alt="TSMC">
+                    </div>
+                    <div class="company-title">
+                        <h3>شركة TSMC للموردات</h3>
+                        <span class="company-role" data-ar="مورد عام" data-en="General Supplier">مورد عام</span>
+                    </div>
+                </div>
+                <div class="company-details">
+                    <p data-ar="شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة لتلبية احتياجات معداتك، مما يضمن الموثوقية والأداء لعملياتك." data-en="A general supplier of spare parts and components for heavy equipment. We specialize in providing high-quality products to meet your equipment needs, ensuring reliability and performance for your operations.">مورد عام لقطع الغيار والمكونات للمعدات الثقيلة، نختص في تقديم منتجات عالية الجودة.</p>
+                    <div class="company-specialties">
+                        <span data-ar="المعدات الثقيلة" data-en="Heavy Equipment">المعدات الثقيلة</span>
+                        <span data-ar="المكونات" data-en="Components">المكونات</span>
+                        <span data-ar="قطع الغيار" data-en="Spare Parts">قطع الغيار</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kyan Canon -->
+            <div class="company-card full-width">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="kyan-logo.jpg" alt="Kyan Canon">
+                    </div>
+                    <div class="company-title">
+                        <h3>كيان كانون للتجارة</h3>
+                        <span class="company-role" data-ar="مورد متخصص" data-en="Specialized Supplier">مورد متخصص</span>
+                        <span class="company-experience" data-ar="٢٦+ سنة خبرة" data-en="26+ Years Experience">٢٦+ سنة خبرة</span>
+                    </div>
+                </div>
+                <div class="company-details">
+                    <p data-ar="مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات. نقدم مجموعة شاملة من المكونات بما في ذلك المحركات، الأنظمة الهيدروليكية، أجزاء الهيكل السفلي، المرشحات، والمزيد للمعدات الثقيلة مثل الحفارات، معدات كاتربيلر، اللوادر ذات العجلات، المدادات، وغيرها من المعدات الأساسية." data-en="A premier supplier of high-quality spare parts and drilling tools for water, oil, and well drilling projects, as well as for heavy equipment. We provide a comprehensive range of components including engines, hydraulics, undercarriage parts, filters, and more for heavy machinery.">مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، والمعدات الثقيلة.</p>
+                    
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-oil-well"></i>
+                            <span data-ar="مشاريع الحفر" data-en="Drilling Projects">مشاريع الحفر</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-cogs"></i>
+                            <span data-ar="قطع الغيار" data-en="Spare Parts">قطع الغيار</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-tools"></i>
+                            <span data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-hard-hat"></i>
+                            <span data-ar="معدات البناء" data-en="Construction Equipment">معدات البناء</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Network Map -->
+        <div class="network-map">
+            <h3 data-ar="شبكتنا العالمية" data-en="Our Global Network">شبكتنا العالمية</h3>
+            <div class="map-countries">
+                <div class="country" data-country="yemen">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-ar="اليمن" data-en="Yemen">اليمن</span>
+                    <small data-ar="المقر الرئيسي" data-en="Headquarters">المقر الرئيسي</small>
+                </div>
+                <div class="country" data-country="oman">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-ar="عُمان" data-en="Oman">عُمان</span>
+                    <small data-ar>فرع ٢٠٢٠</small>
+                </div>
+                <div class="country" data-country="saudi">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-ar="السعودية" data-en="Saudi Arabia">السعودية</span>
+                    <small data-ar>فرع ٢٠١٤</small>
+                </div>
+                <div class="country" data-country="india">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-ar="الهند" data-en="India">الهند</span>
+                    <small data-ar>فرع ٢٠١٧</small>
+                </div>
+                <div class="country" data-country="china">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-ar="الصين" data-en="China">الصين</span>
+                    <small data-ar>فرع ٢٠٢٢</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Products Section -->
     <section id="products" class="page-section" style="display:none;">
         <div class="container">
