@@ -431,93 +431,57 @@
         }
         
         /* Timeline Styling */
-    /* Timeline Styling - ثابت للغتين */
+   /* Timeline Styling - NEW SIMPLE VERSION */
 .timeline-container {
-    position: relative;
-    max-width: 900px;
+    max-width: 700px;
     margin: var(--space-xxl) auto;
-    min-height: 600px; /* أضف هذا */
+    padding: 0 20px;
 }
 
 .timeline {
-    position: relative;
-    padding: var(--space-xl) 0;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--cat-yellow);
-    transform: translateX(-50%);
-    z-index: 1; /* أضف هذا */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 60px; /* غير من var(--space-xl) إلى 60px */
-    width: 45%;
-    padding: 25px; /* غير من var(--space-lg) إلى 25px */
     background: var(--cat-white);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 2; /* أضف هذا */
-    clear: both; /* أضف هذا لمنع التداخل */
-    display: block !important; /* أضف هذا */
-    opacity: 1 !important; /* أضف هذا */
-    visibility: visible !important; /* أضف هذا */
-}
-
-/* العناصر الفردية على اليمين دائماً */
-.timeline-item:nth-child(odd) {
-    left: 0;
-    float: left;
-    margin-left: 0;
-    margin-right: 5%;
-}
-
-/* العناصر الزوجية على اليسار دائماً */
-.timeline-item:nth-child(even) {
-    left: 55%;
-    float: right;
-    margin-right: 0;
-    margin-left: 5%;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 25px; /* زد من 20px إلى 25px */
-    width: 24px; /* زد من 20px إلى 24px */
-    height: 24px; /* زد من 20px إلى 24px */
-    background: var(--cat-yellow);
-    border: 3px solid var(--cat-black);
-    border-radius: 50%;
-    z-index: 3; /* أضف هذا */
-}
-
-/* نقاط العناصر على اليمين */
-.timeline-item:nth-child(odd)::before {
-    right: -38px; /* عدل من -42px إلى -38px */
-}
-
-/* نقاط العناصر على اليسار */
-.timeline-item:nth-child(even)::before {
-    left: -38px; /* عدل من -42px إلى -38px */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--cat-yellow);
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .timeline-year {
     display: inline-block;
     background: var(--cat-black);
     color: var(--cat-white);
-    padding: 8px 16px; /* زد من 4px 12px إلى 8px 16px */
-    border-radius: 20px;
+    padding: 8px 20px;
+    border-radius: 5px;
     font-weight: 600;
-    margin-bottom: 15px; /* زد من var(--space-sm) إلى 15px */
+    margin-bottom: 15px;
     font-size: 14px;
+}
+
+.timeline-item h4 {
+    color: var(--cat-black);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.timeline-item p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: var(--cat-dark-gray);
+}
+
+/* إزالة الخط والنقاط القديمة */
+.timeline::before,
+.timeline-item::before {
+    display: none;
 }
         /* Branches Grid */
         .branches-grid {
