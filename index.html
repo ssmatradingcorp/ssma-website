@@ -240,7 +240,7 @@
         
         /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bae42f02-ed44-4344-8523-1dc5c35acfa0.jpg.webp');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
             color: var(--cat-white);
@@ -431,58 +431,52 @@
         }
         
         /* Timeline Styling */
-   /* Timeline Styling - NEW SIMPLE VERSION */
-.timeline-container {
-    max-width: 700px;
-    margin: var(--space-xxl) auto;
-    padding: 0 20px;
-}
-
-.timeline {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-.timeline-item {
-    background: var(--cat-white);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--cat-yellow);
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.timeline-year {
-    display: inline-block;
-    background: var(--cat-black);
-    color: var(--cat-white);
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-.timeline-item h4 {
-    color: var(--cat-black);
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.timeline-item p {
-    margin-bottom: 8px;
-    line-height: 1.5;
-    color: var(--cat-dark-gray);
-}
-
-/* إزالة الخط والنقاط القديمة */
-.timeline::before,
-.timeline-item::before {
-    display: none;
-}
+        .timeline-container {
+            max-width: 700px;
+            margin: var(--space-xxl) auto;
+            padding: 0 20px;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .timeline-item {
+            background: var(--cat-white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--cat-yellow);
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            background: var(--cat-black);
+            color: var(--cat-white);
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .timeline-item h4 {
+            color: var(--cat-black);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .timeline-item p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: var(--cat-dark-gray);
+        }
+        
         /* Branches Grid */
         .branches-grid {
             display: grid;
@@ -909,31 +903,341 @@
             margin-bottom: var(--space-xs);
         }
         
-        /* ===== SOLAR SECTION ===== */
-        .solar-section {
-            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+        /* ===== ENERGY SECTION - الجديد بالكامل ===== */
+        .energy-section {
+            background: var(--cat-white);
+        }
+        
+        .energy-hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--cat-white);
+            padding: var(--space-xxl) 0;
+            text-align: center;
+        }
+        
+        .energy-hero h1 {
+            font-size: var(--font-size-xxxl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
+        }
+        
+        .energy-hero .highlight {
+            color: var(--cat-yellow);
+        }
+        
+        .energy-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xxl);
+            flex-wrap: wrap;
+        }
+        
+        .energy-tab {
+            background: var(--cat-gray);
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--cat-dark-gray);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .energy-tab.active {
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+        }
+        
+        .energy-tab:hover:not(.active) {
+            background: #e5e5e5;
+        }
+        
+        .energy-content {
+            display: none;
+        }
+        
+        .energy-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Gas Section */
+        .gas-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+        
+        .gas-stat {
+            background: var(--cat-white);
+            border-radius: 10px;
+            padding: var(--space-lg);
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--cat-yellow);
+        }
+        
+        .gas-stat .number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--cat-black);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .infrastructure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-xxl) 0;
+        }
+        
+        .infrastructure-card {
+            background: var(--cat-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .infrastructure-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .infrastructure-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .infrastructure-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .infrastructure-card:hover .infrastructure-image img {
+            transform: scale(1.1);
+        }
+        
+        .infrastructure-content {
+            padding: var(--space-lg);
+        }
+        
+        .infrastructure-content h3 {
+            color: var(--cat-black);
+            margin-bottom: var(--space-sm);
+            font-size: var(--font-size-xl);
+        }
+        
+        .infrastructure-badge {
+            display: inline-block;
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Solar Section */
+        .solar-systems {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-xxl) 0;
+        }
+        
+        .system-card {
+            background: var(--cat-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .system-header {
+            padding: var(--space-lg);
+            background: linear-gradient(135deg, var(--cat-black) 0%, #333 100%);
             color: var(--cat-white);
         }
         
-        .solar-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xxl);
-            align-items: center;
+        .system-header h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-xs);
         }
         
-        .solar-image img {
+        .system-capacity {
+            font-size: var(--font-size-lg);
+            color: var(--cat-yellow);
+            font-weight: 600;
+        }
+        
+        .system-body {
+            padding: var(--space-lg);
+        }
+        
+        .system-features {
+            margin: var(--space-md) 0;
+        }
+        
+        .system-features li {
+            padding: var(--space-xs) 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .system-features li i {
+            color: var(--cat-yellow);
+        }
+        
+        .saving-calculator {
+            background: var(--cat-gray);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            margin: var(--space-xxl) 0;
+        }
+        
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .input-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--cat-dark-gray);
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: var(--font-size-base);
+            font-family: inherit;
+        }
+        
+        .calculator-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .result-card {
+            background: var(--cat-white);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: var(--space-lg);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .result-card.highlight {
+            background: var(--cat-yellow);
+            color: var(--cat-black);
+        }
+        
+        .result-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin: var(--space-sm) 0;
+        }
+        
+        /* Energy Management */
+        .management-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-xxl) 0;
+        }
+        
+        .management-card {
+            background: var(--cat-white);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .management-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .management-icon {
+            font-size: 48px;
+            color: var(--cat-yellow);
+            margin-bottom: var(--space-lg);
+        }
+        
+        /* Why SSMA */
+        .why-ssma-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-xxl) 0;
+        }
+        
+        .advantage-card {
+            background: var(--cat-white);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .advantage-icon {
+            font-size: 48px;
+            color: var(--cat-yellow);
+            margin-bottom: var(--space-lg);
+        }
+        
+        /* Energy CTA */
+        .energy-cta {
+            background: linear-gradient(135deg, var(--cat-black) 0%, #333 100%);
+            color: var(--cat-white);
+            padding: var(--space-xxl) 0;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: var(--space-xxl);
         }
         
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 992px) {
             .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .solar-content {
                 grid-template-columns: 1fr;
             }
             
@@ -991,6 +1295,10 @@
                 font-size: var(--font-size-xxl);
             }
             
+            .energy-hero h1 {
+                font-size: var(--font-size-xxl);
+            }
+            
             section {
                 padding: var(--space-xl) 0;
             }
@@ -1015,6 +1323,16 @@
             .branches-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .energy-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .energy-tab {
+                width: 100%;
+                max-width: 300px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1036,6 +1354,18 @@
                 font-size: var(--font-size-base);
             }
             
+            .energy-hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .energy-hero h1 {
+                font-size: var(--font-size-xl);
+            }
+            
+            .energy-hero p {
+                font-size: var(--font-size-base);
+            }
+            
             .btn {
                 padding: 12px 24px;
                 font-size: var(--font-size-sm);
@@ -1047,6 +1377,18 @@
             
             .timeline::before {
                 display: none;
+            }
+            
+            .gas-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .infrastructure-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .solar-systems {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -1113,7 +1455,7 @@
                     <a href="#" class="nav-link" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
                     <a href="#" class="nav-link" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
                     <a href="#" class="nav-link" onclick="showSection('services'); return false;" data-ar="الخدمات" data-en="Services">الخدمات</a>
-                    <a href="#" class="nav-link" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                    <a href="#" class="nav-link" onclick="showSection('energy'); return false;" data-ar="الطاقة" data-en="Energy">الطاقة</a>
                     <a href="#" class="nav-cta" onclick="showSection('contact'); return false;" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
                 </nav>
             </div>
@@ -1311,7 +1653,7 @@
                             <div class="stat-item">
                                 <span class="stat-value">200K+</span>
                                 <span class="stat-label" data-ar="قطعة غيار" data-en="Spare Parts">قطعة غيار</span>
-                              </div>
+                            </div>
                         </div>
                        <p data-ar="أول توسع دولي لـ SSMA، أصبح أكبر مورد لقطع غيار كاتربيلر وجميع المعدات الثقيلة في المنطقة مع أكثر من ربع قرن من الثقة والجودة." data-en="SSMA's first international expansion, became the largest supplier of Caterpillar spare parts and all heavy equipment brands in the region with over a quarter century of trust and quality.">أول توسع دولي لـ SSMA، أصبح أكبر مورد لقطع غيار كاتربيلر وجميع برادات المعدات الثقيلة في المنطقة مع أكثر من ربع قرن من الثقة والجودة.</p>
                     </div>
@@ -1619,27 +1961,400 @@
         </div>
     </section>
 
-    <!-- Solar Energy Section -->
-    <section class="solar-section page-section" id="solar" style="display:none;">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-ar="الطاقة الشمسية والنقل الكهربائي" data-en="Solar Energy & Electric Transportation">الطاقة الشمسية والنقل الكهربائي</h2>
-                <p data-ar="نقود مستقبل الطاقة النظيفة والتنقل المستدام" data-en="Leading the future of clean energy and sustainable mobility">نقود مستقبل الطاقة النظيفة والتنقل المستدام</p>
+    <!-- ⚡⚡⚡ قسم الطاقة الجديد - بداية ⚡⚡⚡ -->
+    <section class="energy-section page-section" id="energy" style="display:none;">
+        <!-- الهيرو -->
+        <div class="energy-hero">
+            <div class="container">
+                <h1 data-ar="حلول الطاقة المتكاملة من SSMA" data-en="Integrated Energy Solutions by SSMA">
+                    <span class="highlight" data-ar="غاز طبيعي" data-en="Natural Gas">غاز طبيعي</span> + 
+                    <span class="highlight" data-ar="طاقة شمسية" data-en="Solar Energy">طاقة شمسية</span> = 
+                    <span class="highlight" data-ar="أمن طاقوي كامل" data-en="Complete Energy Security">أمن طاقوي كامل</span>
+                </h1>
+                <p data-ar="نشغل محطات غاز مركزية ونبيع أنظمة شمسية متكاملة - خبرة 40+ سنة في إدارة مشاريع الطاقة المعقدة" data-en="We operate central gas stations and sell integrated solar systems - 40+ years experience in managing complex energy projects">
+                    نشغل محطات غاز مركزية ونبيع أنظمة شمسية متكاملة - خبرة 40+ سنة في إدارة مشاريع الطاقة المعقدة
+                </p>
             </div>
-            <div class="solar-content">
-                <div class="solar-image">
-                    <img src="solar .jpg" alt="Solar Energy and Electric Vehicles">
+        </div>
+
+        <!-- التبويبات -->
+        <div class="container">
+            <div class="energy-tabs">
+                <button class="energy-tab active" data-tab="gas" onclick="switchEnergyTab('gas')">
+                    <i class="fas fa-fire"></i>
+                    <span data-ar="الغاز الطبيعي" data-en="Natural Gas">الغاز الطبيعي</span>
+                </button>
+                <button class="energy-tab" data-tab="solar" onclick="switchEnergyTab('solar')">
+                    <i class="fas fa-sun"></i>
+                    <span data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</span>
+                </button>
+                <button class="energy-tab" data-tab="management" onclick="switchEnergyTab('management')">
+                    <i class="fas fa-chart-line"></i>
+                    <span data-ar="إدارة الطاقة" data-en="Energy Management">إدارة الطاقة</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- محتوى الغاز الطبيعي -->
+        <div class="energy-content active" id="gas-content">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-ar="الغاز الطبيعي: شبكتنا التشغيلية" data-en="Natural Gas: Our Operational Network">الغاز الطبيعي: شبكتنا التشغيلية</h2>
+                    <p data-ar="نشغل أكبر شبكة غاز طبيعي في المنطقة - من الإنتاج إلى التوزيع المباشر" data-en="We operate the largest natural gas network in the region - from production to direct distribution">
+                        نشغل أكبر شبكة غاز طبيعي في المنطقة - من الإنتاج إلى التوزيع المباشر
+                    </p>
                 </div>
-                <div class="solar-text">
-                    <h3 data-ar="رؤيتنا الجديدة للطاقة المستدامة" data-en="Our New Vision for Sustainable Energy">رؤيتنا الجديدة للطاقة المستدامة</h3>
-                    <p data-ar="بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل." data-en="Building on our deep expertise in clean energy integration and large-scale project management, we are formally launching a dedicated new division focused on the future of transportation.">بناءً على خبرتنا العميقة في مجال الطاقة النظيفة وإدارة المشاريع واسعة النطاق، نطلق رسمياً قسم جديد مخصص لمستقبل النقل.</p>
-                    <p data-ar="مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية." data-en="Our Mission: To become the leading provider of integrated e-mobility solutions in the region by seamlessly connecting premium electric vehicles with solar-powered charging infrastructure.">مهمتنا: أن نكون المزود الرائد لحلول التنقل الكهربائي المتكاملة في المنطقة من خلال ربط المركبات الكهربائية المتميزة مع البنية التحتية للشحن التي تعمل بالطاقة الشمسية.</p>
-                    <p data-ar="نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة." data-en="We seek a strategic partnership where we act as your project-based, integrated mobility partner, selling EVs as the core component of a custom 'Green Solar' package.">نسعى لشراكة استراتيجية نعمل فيها كشريك متكامل للتنقل القائم على المشاريع، حيث نبيع المركبات الكهربائية كجزء أساسي من حزمة 'الطاقة الشمسية الخضراء' المخصصة.</p>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="تعرف على المزيد" data-en="Learn More">تعرف على المزيد</a>
+
+                <!-- إحصائيات الغاز -->
+                <div class="gas-stats">
+                    <div class="gas-stat">
+                        <span class="number">6</span>
+                        <span data-ar="محطة مركزية" data-en="Central Stations">محطة مركزية</span>
+                    </div>
+                    <div class="gas-stat">
+                        <span class="number">160</span>
+                        <span data-ar="مقطورة توزيع" data-en="Distribution Trailers">مقطورة توزيع</span>
+                    </div>
+                    <div class="gas-stat">
+                        <span class="number">24/7</span>
+                        <span data-ar="تشغيل مستمر" data-en="Continuous Operation">تشغيل مستمر</span>
+                    </div>
+                    <div class="gas-stat">
+                        <span class="number">500+</span>
+                        <span data-ar="عميل نشط" data-en="Active Clients">عميل نشط</span>
+                    </div>
+                </div>
+
+                <!-- البنية التحتية -->
+                <h3 class="text-center" style="margin: var(--space-xxl) 0 var(--space-xl);" data-ar="بنيتنا التحتية التشغيلية" data-en="Our Operational Infrastructure">بنيتنا التحتية التشغيلية</h3>
+                <div class="infrastructure-grid">
+                    <div class="infrastructure-card">
+                        <div class="infrastructure-image">
+                            <img src="gas staution.jpg" alt="محطات الغاز المركزية">
+                        </div>
+                        <div class="infrastructure-content">
+                            <span class="infrastructure-badge" data-ar="تشغيلية" data-en="Operational">تشغيلية</span>
+                            <h3 data-ar="محطات LNG المركزية" data-en="Central LNG Stations">محطات LNG المركزية</h3>
+                            <p data-ar="6 محطات مركزية نشتغل ونشغلها بأنفسنا، بسعات تخزين تصل إلى 5,000 م³ لكل محطة." data-en="6 central stations we own and operate ourselves, with storage capacities up to 5,000 m³ per station.">
+                                6 محطات مركزية نشتغل ونشغلها بأنفسنا، بسعات تخزين تصل إلى 5,000 م³ لكل محطة.
+                            </p>
+                            <ul>
+                                <li data-ar="مراقبة مستمرة 24/7" data-en="24/7 Continuous Monitoring">مراقبة مستمرة 24/7</li>
+                                <li data-ar="صيانة وقائية أسبوعية" data-en="Weekly Preventive Maintenance">صيانة وقائية أسبوعية</li>
+                                <li data-ar="فريق تشغيل متخصص لكل محطة" data-en="Specialized Team per Station">فريق تشغيل متخصص لكل محطة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="infrastructure-card">
+                        <div class="infrastructure-image">
+                            <img src="Transport Tank (LPG).jpg" alt="أسطول التوزيع">
+                        </div>
+                        <div class="infrastructure-content">
+                            <span class="infrastructure-badge" data-ar="توزيع" data-en="Distribution">توزيع</span>
+                            <h3 data-ar="أسطول المقطورات" data-en="Trailer Fleet">أسطول المقطورات</h3>
+                            <p data-ar="160 مقطورة غاز حديثة، مجهزة بأنظمة تتبع GPS ومراقبة السلامة الأوتوماتيكية." data-en="160 modern gas trailers, equipped with GPS tracking systems and automatic safety monitoring.">
+                                160 مقطورة غاز حديثة، مجهزة بأنظمة تتبع GPS ومراقبة السلامة الأوتوماتيكية.
+                            </p>
+                            <ul>
+                                <li data-ar="تتبع مباشر للشحنات" data-en="Live Shipment Tracking">تتبع مباشر للشحنات</li>
+                                <li data-ar="أنظمة أمان متطورة" data-en="Advanced Safety Systems">أنظمة أمان متطورة</li>
+                                <li data-ar="صيانة دورية إجبارية" data-en="Mandatory Periodic Maintenance">صيانة دورية إجبارية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عملاء الغاز -->
+                <div class="section-title" style="margin-top: var(--space-xxl);">
+                    <h2 data-ar="نخدم جميع القطاعات" data-en="We Serve All Sectors">نخدم جميع القطاعات</h2>
+                    <p data-ar="توزيع مباشر من محطاتنا إلى موقع عملك" data-en="Direct distribution from our stations to your location">
+                        توزيع مباشر من محطاتنا إلى موقع عملك
+                    </p>
+                </div>
+
+                <div class="management-services">
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3 data-ar="القطاع الصناعي" data-en="Industrial Sector">القطاع الصناعي</h3>
+                        <p data-ar="تزويد المصانع والمعامل باحتياجاتها من الغاز الطبيعي المسال لتشغيل الغلايات والمعدات الصناعية." data-en="Supplying factories and plants with their LNG needs for boilers and industrial equipment operation.">
+                            تزويد المصانع والمعامل باحتياجاتها من الغاز الطبيعي المسال لتشغيل الغلايات والمعدات الصناعية.
+                        </p>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3 data-ar="الفنادق والمجمعات" data-en="Hotels & Complexes">الفنادق والمجمعات</h3>
+                        <p data-ar="حلول طاقة موثوقة لتشغيل أنظمة التدفئة والتبريد والمطابخ في المنشآت السياحية." data-en="Reliable energy solutions for heating, cooling, and kitchen systems in tourism facilities.">
+                            حلول طاقة موثوقة لتشغيل أنظمة التدفئة والتبريد والمطابخ في المنشآت السياحية.
+                        </p>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 data-ar="المجمعات السكنية" data-en="Residential Complexes">المجمعات السكنية</h3>
+                        <p data-ar="إمداد مستمر للغاز الطبيعي للمجمعات السكنية الكبيرة مع عقود صيانة وتزويد طويلة الأجل." data-en="Continuous natural gas supply for large residential complexes with long-term maintenance and supply contracts.">
+                            إمداد مستمر للغاز الطبيعي للمجمعات السكنية الكبيرة مع عقود صيانة وتزويد طويلة الأجل.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- محتوى الطاقة الشمسية -->
+        <div class="energy-content" id="solar-content">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-ar="الطاقة الشمسية: حلول متكاملة" data-en="Solar Energy: Integrated Solutions">الطاقة الشمسية: حلول متكاملة</h2>
+                    <p data-ar="نبيع أنظمة طاقة شمسية كاملة: تصميم، تركيب، تشغيل، وصيانة" data-en="We sell complete solar energy systems: design, installation, operation, and maintenance">
+                        نبيع أنظمة طاقة شمسية كاملة: تصميم، تركيب، تشغيل، وصيانة
+                    </p>
+                </div>
+
+                <!-- أنظمة الطاقة الشمسية -->
+                <div class="solar-systems">
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h3 data-ar="أنظمة المنازل والمباني التجارية" data-en="Home & Commercial Building Systems">أنظمة المنازل والمباني التجارية</h3>
+                            <div class="system-capacity">5 - 100 كيلووات</div>
+                        </div>
+                        <div class="system-body">
+                            <p data-ar="حلول شمسية مصممة خصيصاً للمنازل والمباني التجارية لتخفيض فواتير الكهرباء." data-en="Custom solar solutions for homes and commercial buildings to reduce electricity bills.">
+                                حلول شمسية مصممة خصيصاً للمنازل والمباني التجارية لتخفيض فواتير الكهرباء.
+                            </p>
+                            <ul class="system-features">
+                                <li><i class="fas fa-check"></i> <span data-ar="دراسة جدوى مجانية" data-en="Free Feasibility Study">دراسة جدوى مجانية</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="تمويل متاح" data-en="Financing Available">تمويل متاح</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="عقود صيانة سنوية" data-en="Annual Maintenance Contracts">عقود صيانة سنوية</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="ضمان الأداء 25 سنة" data-en="25-Year Performance Warranty">ضمان الأداء 25 سنة</span></li>
+                            </ul>
+                            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب دراسة جدوى" data-en="Request Feasibility Study">طلب دراسة جدوى</a>
+                        </div>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h3 data-ar="أنظمة المصانع والمنشآت الصناعية" data-en="Factory & Industrial Systems">أنظمة المصانع والمنشآت الصناعية</h3>
+                            <div class="system-capacity">100 - 2,000 كيلووات</div>
+                        </div>
+                        <div class="system-body">
+                            <p data-ar="حلول طاقة شمسية صناعية تخفض تكاليف الإنتاج وتعزز استدامة العمليات." data-en="Industrial solar solutions that reduce production costs and enhance process sustainability.">
+                                حلول طاقة شمسية صناعية تخفض تكاليف الإنتاج وتعزز استدامة العمليات.
+                            </p>
+                            <ul class="system-features">
+                                <li><i class="fas fa-check"></i> <span data-ar="تصميم هيكل صناعي متين" data-en="Durable Industrial Structure Design">تصميم هيكل صناعي متين</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="مراقبة أدآنية عن بعد" data-en="Live Remote Monitoring">مراقبة أدآنية عن بعد</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="صيانة وقائية مخططة" data-en="Planned Preventive Maintenance">صيانة وقائية مخططة</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="تقارير أداء شهرية" data-en="Monthly Performance Reports">تقارير أداء شهرية</span></li>
+                            </ul>
+                            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="اطلب عرض سعر" data-en="Request Quote">اطلب عرض سعر</a>
+                        </div>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h3 data-ar="أنظمة المزارع والمشاريع الزراعية" data-en="Farm & Agricultural Systems">أنظمة المزارع والمشاريع الزراعية</h3>
+                            <div class="system-capacity">20 - 500 كيلووات</div>
+                        </div>
+                        <div class="system-body">
+                            <p data-ar="حلول طاقة للمضخات والري والإضاءة في المزارع والمناطق الزراعية النائية." data-en="Energy solutions for pumps, irrigation, and lighting in farms and remote agricultural areas.">
+                                حلول طاقة للمضخات والري والإضاءة في المزارع والمناطق الزراعية النائية.
+                            </p>
+                            <ul class="system-features">
+                                <li><i class="fas fa-check"></i> <span data-ar="أنظمة تعمل بالكامل على الطاقة الشمسية" data-en="Fully Solar-Powered Systems">أنظمة تعمل بالكامل على الطاقة الشمسية</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="محطات ضخ تعمل بالطاقة الشمسية" data-en="Solar-Powered Pumping Stations">محطات ضخ تعمل بالطاقة الشمسية</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="تحكم عن بعد في الري" data-en="Remote Irrigation Control">تحكم عن بعد في الري</span></li>
+                                <li><i class="fas fa-check"></i> <span data-ar="صيانة دورية مجانية للسنة الأولى" data-en="Free First-Year Maintenance">صيانة دورية مجانية للسنة الأولى</span></li>
+                            </ul>
+                            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="استشارة مجانية" data-en="Free Consultation">استشارة مجانية</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- حاسبة التوفير -->
+                <div class="saving-calculator">
+                    <h2 class="text-center" data-ar="احسب توفيرك مع الطاقة الشمسية" data-en="Calculate Your Solar Savings">احسب توفيرك مع الطاقة الشمسية</h2>
+                    
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label data-ar="فاتورة الكهرباء الشهرية (ريال)" data-en="Monthly Electricity Bill (SAR)">فاتورة الكهرباء الشهرية (ريال)</label>
+                            <input type="range" id="electricity-bill" min="500" max="50000" value="5000" step="500">
+                            <span id="bill-value">5,000 ريال</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label data-ar="نوع العقار" data-en="Property Type">نوع العقار</label>
+                            <select id="property-type">
+                                <option value="residential" data-ar="سكني" data-en="Residential">سكني</option>
+                                <option value="commercial" data-ar="تجاري" data-en="Commercial">تجاري</option>
+                                <option value="industrial" data-ar="صناعي" data-en="Industrial">صناعي</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label data-ar="مساحة السقف المتاحة (م²)" data-en="Available Roof Area (m²)">مساحة السقف المتاحة (م²)</label>
+                            <input type="number" id="roof-area" min="20" max="10000" value="200">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-yellow" onclick="calculateSolarSavings()" data-ar="احسب التوفير" data-en="Calculate Savings">احسب التوفير</button>
+                    </div>
+                    
+                    <div class="calculator-results" id="savings-results" style="display:none;">
+                        <div class="result-card">
+                            <h4 data-ar="الاستثمار المطلوب" data-en="Required Investment">الاستثمار المطلوب</h4>
+                            <div class="result-value" id="investment-amount">-</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h4 data-ar="التوفير الشهري" data-en="Monthly Savings">التوفير الشهري</h4>
+                            <div class="result-value" id="monthly-saving">-</div>
+                        </div>
+                        
+                        <div class="result-card highlight">
+                            <h4 data-ar="فترة استرداد الاستثمار" data-en="Investment Payback Period">فترة استرداد الاستثمار</h4>
+                            <div class="result-value" id="payback-period">-</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h4 data-ar="التوفير خلال 25 سنة" data-en="25-Year Savings">التوفير خلال 25 سنة</h4>
+                            <div class="result-value" id="total-saving">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- محتوى إدارة الطاقة -->
+        <div class="energy-content" id="management-content">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-ar="إدارة مشاريع الطاقة المتكاملة" data-en="Integrated Energy Project Management">إدارة مشاريع الطاقة المتكاملة</h2>
+                    <p data-ar="ندير مشاريع الطاقة نيابة عنك من التصميم إلى التشغيل" data-en="We manage energy projects on your behalf from design to operation">
+                        ندير مشاريع الطاقة نيابة عنك من التصميم إلى التشغيل
+                    </p>
+                </div>
+
+                <div class="management-services">
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 data-ar="تشغيل وصيانة المحطات" data-en="Plant Operation & Maintenance">تشغيل وصيانة المحطات</h3>
+                        <p data-ar="ندير محطات الطاقة الشمسية والغاز نيابة عنك بفريق تشغيل مخصص وبرامج صيانة مخططة." data-en="We manage solar and gas plants on your behalf with dedicated operation teams and planned maintenance programs.">
+                            ندير محطات الطاقة الشمسية والغاز نيابة عنك بفريق تشغيل مخصص وبرامج صيانة مخططة.
+                        </p>
+                        <ul>
+                            <li data-ar="فريق تشغيل 24/7" data-en="24/7 Operation Team">فريق تشغيل 24/7</li>
+                            <li data-ar="صيانة وقائية مخططة" data-en="Planned Preventive Maintenance">صيانة وقائية مخططة</li>
+                            <li data-ar="مستودع قطع غيار مركزي" data-en="Central Spare Parts Warehouse">مستودع قطع غيار مركزي</li>
+                            <li data-ar="تقارير أداء أسبوعية" data-en="Weekly Performance Reports">تقارير أداء أسبوعية</li>
+                        </ul>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 data-ar="تحسين كفاءة الطاقة" data-en="Energy Efficiency Optimization">تحسين كفاءة الطاقة</h3>
+                        <p data-ar="نحلل أنظمتك الطاقوية ونطبق حلول تحسين الكفاءة لتحقيق أقصى توفير ممكن." data-en="We analyze your energy systems and implement efficiency optimization solutions for maximum savings.">
+                            نحلل أنظمتك الطاقوية ونطبق حلول تحسين الكفاءة لتحقيق أقصى توفير ممكن.
+                        </p>
+                        <ul>
+                            <li data-ar="تدقيق طاقوي شامل" data-en="Comprehensive Energy Audit">تدقيق طاقوي شامل</li>
+                            <li data-ar="اكتشاف فرص التوفير" data-en="Savings Opportunity Detection">اكتشاف فرص التوفير</li>
+                            <li data-ar="تطبيق حلول التحسين" data-en="Implementation of Optimization Solutions">تطبيق حلول التحسين</li>
+                            <li data-ar="ضمان نتائج ملموسة" data-en="Guaranteed Tangible Results">ضمان نتائج ملموسة</li>
+                        </ul>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="management-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3 data-ar="إدارة عقود الطاقة" data-en="Energy Contract Management">إدارة عقود الطاقة</h3>
+                        <p data-ar="ندير علاقاتك مع مزودي الطاقة والوقود لتحقيق أفضل شروط وأسعار." data-en="We manage your relationships with energy and fuel suppliers to achieve the best terms and prices.">
+                            ندير علاقاتك مع مزودي الطاقة والوقود لتحقيق أفضل شروط وأسعار.
+                        </p>
+                        <ul>
+                            <li data-ar="مفاوضات أسعار الوقود" data-en="Fuel Price Negotiations">مفاوضات أسعار الوقود</li>
+                            <li data-ar="إدارة العقود طويلة الأجل" data-en="Long-Term Contract Management">إدارة العقود طويلة الأجل</li>
+                            <li data-ar="مراقبة الالتزامات" data-en="Obligation Monitoring">مراقبة الالتزامات</li>
+                            <li data-ar="تحقيق وفورات في التكلفة" data-en="Cost Savings Achievement">تحقيق وفورات في التكلفة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم "لماذا SSMA؟" -->
+        <div class="container">
+            <div class="section-title" style="margin-top: var(--space-xxl);">
+                <h2 data-ar="لماذا تختار SSMA لحلول الطاقة؟" data-en="Why Choose SSMA for Energy Solutions?">لماذا تختار SSMA لحلول الطاقة؟</h2>
+            </div>
+
+            <div class="why-ssma-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 data-ar="40+ سنة خبرة" data-en="40+ Years Experience">40+ سنة خبرة</h3>
+                    <p data-ar="خبرة طويلة في إدارة المشاريع المعقدة تنعكس على جودة حلولنا الطاقوية." data-en="Long experience in managing complex projects reflects on the quality of our energy solutions.">
+                        خبرة طويلة في إدارة المشاريع المعقدة تنعكس على جودة حلولنا الطاقوية.
+                    </p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 data-ar="بنية تحتية حقيقية" data-en="Real Infrastructure">بنية تحتية حقيقية</h3>
+                    <p data-ar="6 محطات غاز و160 مقطورة - لسنا وسطاء، نحن مشغلون حقيقيون." data-en="6 gas stations and 160 trailers - we're not middlemen, we're real operators.">
+                        6 محطات غاز و160 مقطورة - لسنا وسطاء، نحن مشغلون حقيقيون.
+                    </p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 data-ar="فريق فني متكامل" data-en="Complete Technical Team">فريق فني متكامل</h3>
+                    <p data-ar="80+ مهندس وفني معتمد يضمنون تشغيل أنظمتكم بأعلى معايير الجودة." data-en="80+ certified engineers and technicians ensure your systems operate to the highest quality standards.">
+                        80+ مهندس وفني معتمد يضمنون تشغيل أنظمتكم بأعلى معايير الجودة.
+                    </p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-ar="التزام كامل" data-en="Full Commitment">التزام كامل</h3>
+                    <p data-ar="نلتزم بنتائج ملموسة وضمانات حقيقية، ليس مجرد وعود تسويقية." data-en="We commit to tangible results and real guarantees, not just marketing promises.">
+                        نلتزم بنتائج ملموسة وضمانات حقيقية، ليس مجرد وعود تسويقية.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- دعوة للعمل -->
+        <div class="energy-cta">
+            <div class="container">
+                <h2 data-ar="جاهزون لبدء مشروعك الطاقوي؟" data-en="Ready to Start Your Energy Project?">جاهزون لبدء مشروعك الطاقوي؟</h2>
+                <p data-ar="تواصل مع فريق الطاقة المتخصص لدينا للحصول على استشارة مجانية وتصميم مبدئي." data-en="Contact our specialized energy team for a free consultation and preliminary design.">
+                    تواصل مع فريق الطاقة المتخصص لدينا للحصول على استشارة مجانية وتصميم مبدئي.
+                </p>
+                <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" style="margin-top: var(--space-lg);" data-ar="اتصل بنا الآن" data-en="Contact Us Now">اتصل بنا الآن</a>
+            </div>
+        </div>
     </section>
+    <!-- ⚡⚡⚡ قسم الطاقة الجديد - نهاية ⚡⚡⚡ -->
 
     <!-- Trade Section -->
     <section class="page-section" id="trade" style="display:none;">
@@ -1767,7 +2482,7 @@
                         <a href="#" onclick="showSection('about'); return false;" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
                         <a href="#" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
                         <a href="#" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
-                        <a href="#" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
+                        <a href="#" onclick="showSection('energy'); return false;" data-ar="الطاقة" data-en="Energy">الطاقة</a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1833,6 +2548,77 @@
             
             return false;
         }
+
+        // ===== ⚡⚡⚡ دوال قسم الطاقة الجديد ⚡⚡⚡ =====
+
+        // تبديل تبويبات الطاقة
+        function switchEnergyTab(tabId) {
+            // تحديث التبويبات النشطة
+            document.querySelectorAll('.energy-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.energy-tab[data-tab="${tabId}"]`).classList.add('active');
+            
+            // تحديث المحتوى الظاهر
+            document.querySelectorAll('.energy-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`${tabId}-content`).classList.add('active');
+        }
+
+        // حاسبة التوفير الشمسي
+        function calculateSolarSavings() {
+            const bill = parseInt(document.getElementById('electricity-bill').value);
+            const propertyType = document.getElementById('property-type').value;
+            const roofArea = parseInt(document.getElementById('roof-area').value);
+            
+            // عوامل التقدير
+            let systemSize = 0;
+            let investment = 0;
+            let monthlySaving = 0;
+            
+            // حساب حسب نوع العقار
+            switch(propertyType) {
+                case 'residential':
+                    systemSize = Math.min(roofArea * 0.15, 100); // كيلووات
+                    investment = systemSize * 5500; // ريال لكل كيلووات
+                    monthlySaving = bill * 0.65; // توفير 65%
+                    break;
+                case 'commercial':
+                    systemSize = Math.min(roofArea * 0.12, 1000);
+                    investment = systemSize * 4800;
+                    monthlySaving = bill * 0.70;
+                    break;
+                case 'industrial':
+                    systemSize = Math.min(roofArea * 0.10, 5000);
+                    investment = systemSize * 4200;
+                    monthlySaving = bill * 0.75;
+                    break;
+            }
+            
+            // نتائج الحساب
+            const paybackMonths = Math.round(investment / monthlySaving);
+            const years = Math.floor(paybackMonths / 12);
+            const months = paybackMonths % 12;
+            const totalSaving = monthlySaving * 12 * 25; // 25 سنة
+            
+            // عرض النتائج
+            document.getElementById('investment-amount').textContent = investment.toLocaleString() + ' ريال';
+            document.getElementById('monthly-saving').textContent = monthlySaving.toLocaleString() + ' ريال';
+            document.getElementById('payback-period').textContent = years + ' سنة ' + (months > 0 ? months + ' شهر' : '');
+            document.getElementById('total-saving').textContent = totalSaving.toLocaleString() + ' ريال';
+            
+            // إظهار النتائج
+            document.getElementById('savings-results').style.display = 'grid';
+        }
+
+        // تحديث قيمة فاتورة الكهرباء
+        document.getElementById('electricity-bill').addEventListener('input', function() {
+            document.getElementById('bill-value').textContent = 
+                parseInt(this.value).toLocaleString() + ' ريال';
+        });
+
+        // ===== ⚡⚡⚡ نهاية دوال قسم الطاقة ⚡⚡⚡ =====
 
         // Language Switching
         const langButtons = document.querySelectorAll('.lang-btn');
@@ -2043,6 +2829,11 @@
         // Initialize the page with home section visible
         document.addEventListener('DOMContentLoaded', function() {
             showSection('home');
+            
+            // إضافة استعلامات الطاقة إذا تم تحميل الصفحة مباشرة على قسم الطاقة
+            if (window.location.hash === '#energy') {
+                showSection('energy');
+            }
         });
     </script>
 </body>
