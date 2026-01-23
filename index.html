@@ -352,48 +352,278 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        /* ===== PARTNERS SECTION ===== */
-        .partners {
+        /* ===== GLOBAL BRANCHES SECTION ===== */
+        .global-branches {
             background: var(--cat-gray);
         }
         
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-xl);
+        /* World Map Styling */
+        .world-map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: var(--space-xl) 0;
+            background: #e8f4f8;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid var(--cat-white);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
         
-        .partner-card {
+        .world-map {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/World_map_blank_without_borders.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        
+        .map-point {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: var(--cat-yellow);
+            border: 3px solid var(--cat-black);
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .map-point:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+            box-shadow: 0 0 20px rgba(255, 205, 17, 0.8);
+        }
+        
+        .map-point.active {
+            background: #ff0000;
+            border-color: var(--cat-white);
+            animation: pulse 2s infinite;
+        }
+        
+        .map-tooltip {
+            position: absolute;
+            background: var(--cat-black);
+            color: var(--cat-white);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            transform: translateY(10px);
+        }
+        
+        .map-point:hover .map-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 205, 17, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 205, 17, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 205, 17, 0); }
+        }
+        
+        /* Timeline Styling */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: var(--space-xxl) auto;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: var(--space-xl) 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--cat-yellow);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-xl);
+            width: 45%;
+            padding: var(--space-lg);
             background: var(--cat-white);
             border-radius: 8px;
-            padding: var(--space-xl);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        .partner-card:hover {
-            transform: translateY(-4px);
+        .timeline-item:nth-child(odd) {
+            left: 0;
         }
         
-        .partner-logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto var(--space-lg);
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--cat-yellow);
+            border: 3px solid var(--cat-black);
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -42px;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -42px;
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            background: var(--cat-black);
+            color: var(--cat-white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Branches Grid */
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .branch-card {
+            background: var(--cat-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .branch-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: var(--cat-yellow);
+        }
+        
+        .branch-header {
+            padding: var(--space-lg);
+            background: linear-gradient(135deg, var(--cat-black) 0%, #333 100%);
+            color: var(--cat-white);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .branch-flag {
+            font-size: 32px;
+        }
+        
+        .branch-title {
+            flex: 1;
+        }
+        
+        .branch-title h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        
+        .branch-year {
+            font-size: 14px;
+            color: var(--cat-yellow);
+            font-weight: 600;
+        }
+        
+        .branch-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--cat-white);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--cat-white);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border: 2px solid var(--cat-yellow);
+            padding: 8px;
         }
         
-        .partner-logo img {
+        .branch-logo img {
             max-width: 100%;
-            max-height: 80px;
+            max-height: 100%;
             object-fit: contain;
+        }
+        
+        .branch-body {
+            padding: var(--space-lg);
+        }
+        
+        .branch-info {
+            margin-bottom: var(--space-md);
+        }
+        
+        .branch-info p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .branch-info i {
+            color: var(--cat-yellow);
+            width: 20px;
+        }
+        
+        .branch-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin: var(--space-md) 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: var(--space-sm);
+            background: var(--cat-gray);
+            border-radius: 6px;
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cat-black);
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--cat-dark-gray);
+        }
+        
+        .branch-tagline {
+            font-style: italic;
+            color: var(--cat-yellow);
+            font-weight: 500;
+            margin: var(--space-md) 0;
+            padding: 8px 12px;
+            background: rgba(255, 205, 17, 0.1);
+            border-right: 3px solid var(--cat-yellow);
+            border-radius: 4px;
         }
         
         /* ===== PRODUCTS SECTION ===== */
@@ -758,6 +988,19 @@
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .timeline-item {
+                width: 90%;
+                left: 5% !important;
+            }
+            
+            .timeline-item::before {
+                display: none;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -780,6 +1023,14 @@
             
             .spec-item {
                 min-width: auto;
+            }
+            
+            .world-map-container {
+                height: 300px;
+            }
+            
+            .branches-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -806,11 +1057,37 @@
                 padding: 12px 24px;
                 font-size: var(--font-size-sm);
             }
+            
+            .timeline-container {
+                padding: 0;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
         }
         
         /* ===== إضافة واحدة فقط للصفحة الواحدة ===== */
         .page-section {
             display: block;
+        }
+        
+        /* Global Stats Counter */
+        .counter {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--cat-black);
+            display: inline-block;
+        }
+        
+        /* Animation for numbers */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .counting {
+            animation: countUp 1s ease-out;
         }
     </style>
 </head>
@@ -850,7 +1127,7 @@
                 <nav class="nav-menu" id="navMenu">
                     <a href="#" class="nav-link active" onclick="showSection('home'); return false;" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                     <a href="#" class="nav-link" onclick="showSection('about'); return false;" data-ar="عن الشركة" data-en="About">عن الشركة</a>
-                    <a href="#" class="nav-link" onclick="showSection('partners'); return false;" data-ar="شركاؤنا" data-en="Partners">شركاؤنا</a>
+                    <a href="#" class="nav-link" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
                     <a href="#" class="nav-link" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
                     <a href="#" class="nav-link" onclick="showSection('services'); return false;" data-ar="الخدمات" data-en="Services">الخدمات</a>
                     <a href="#" class="nav-link" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
@@ -898,19 +1175,19 @@
     <section class="stats page-section" id="stats">
         <div class="container stats-grid">
             <div class="stat-item">
-                <span class="number">40+</span>
+                <span class="number counter" data-target="40">0</span>
                 <span data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
             </div>
             <div class="stat-item">
-                <span class="number">3,689+</span>
+                <span class="number counter" data-target="3689">0</span>
                 <span data-ar="بئر محفور" data-en="Wells Drilled">بئر محفور</span>
             </div>
             <div class="stat-item">
-                <span class="number">1,842+</span>
+                <span class="number counter" data-target="1842">0</span>
                 <span data-ar="مشروع مكتمل" data-en="Projects Completed">مشروع مكتمل</span>
             </div>
             <div class="stat-item">
-                <span class="number">160+</span>
+                <span class="number counter" data-target="160">0</span>
                 <span data-ar="فريق متخصص" data-en="Expert Team">فريق متخصص</span>
             </div>
         </div>
@@ -937,41 +1214,225 @@
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section class="partners page-section" id="partners" style="display:none;">
+    <!-- Global Branches Section -->
+    <section class="global-branches page-section" id="branches">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="شركاؤنا الاستراتيجيون" data-en="Our Strategic Partners">شركاؤنا الاستراتيجيون</h2>
-                <p data-ar="نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة" data-en="We work with the best companies to ensure delivery of high-quality products and services">نعمل مع أفضل الشركات لضمان تقديم منتجات وخدمات عالية الجودة</p>
+                <h2 data-ar="فروعنا العالمية" data-en="Our Global Branches">فروعنا العالمية</h2>
+                <p data-ar="رحلة توسع SSMA حول العالم منذ 1982" data-en="SSMA's global expansion journey since 1982">رحلة توسع SSMA حول العالم منذ 1982</p>
             </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="wail logo.jpg" alt="WSSMA Logo">
+            
+            <!-- World Map -->
+            <div class="world-map-container">
+                <div class="world-map" id="worldMap">
+                    <!-- Yemen -->
+                    <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
+                        <div class="map-tooltip">اليمن - 1982</div>
                     </div>
-                    <h3 data-ar="شركة WSSMA للتجارة" data-en="WSSMA Trading Company">شركة WSSMA للتجارة</h3>
-                    <p data-ar="عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين." data-en="Oman - A leading supplier of drilling spare parts and contractors, offering high-quality components for the construction and mining sectors.">عُمان - مورد رائد لقطع غيار الحفر والمقاولين، يقدم مكونات عالية الجودة لقطاعات البناء والتعدين.</p>
+                    <!-- Saudi Arabia -->
+                    <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
+                        <div class="map-tooltip">السعودية - 1992</div>
+                    </div>
+                    <!-- Oman -->
+                    <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
+                        <div class="map-tooltip">عُمان - 2017</div>
+                    </div>
+                    <!-- China - Guangzhou -->
+                    <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
+                        <div class="map-tooltip">جوانزو، الصين - 2020</div>
+                    </div>
+                    <!-- China - Yiwu -->
+                    <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
+                        <div class="map-tooltip">ييوو، الصين - 2022</div>
+                    </div>
+                    <!-- India -->
+                    <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
+                        <div class="map-tooltip">الهند - قريباً</div>
+                    </div>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="KCC logo .jpg" alt="Kyan Canon Logo">
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timeline-container">
+                <h3 style="text-align: center; margin-bottom: var(--space-xl);" data-ar="رحلة توسعنا" data-en="Our Expansion Journey">رحلة توسعنا</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">١٩٨٢</span>
+                        <h4 data-ar="المقر الرئيسي" data-en="Headquarters">المقر الرئيسي</h4>
+                        <p data-ar="تأسيس SSMA في اليمن" data-en="SSMA established in Yemen">تأسيس SSMA في اليمن</p>
+                        <p data-ar="بداية رحلة الـ 40 عاماً" data-en="Beginning of the 40-year journey">بداية رحلة الـ 40 عاماً</p>
                     </div>
-                    <h3 data-ar="كيان كانون" data-en="Kyan Canon">كيان كانون</h3>
-                    <p data-ar="مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات." data-en="A premier supplier of high-quality spare parts and drilling tools for water, oil, and well drilling projects, as well as for heavy equipment used in these industries.">مورد رائد لقطع الغيار عالية الجودة وأدوات الحفر لمشاريع المياه والنفط والآبار، بالإضافة إلى المعدات الثقيلة المستخدمة في هذه الصناعات.</p>
+                    <div class="timeline-item">
+                        <span class="timeline-year">١٩٩٢</span>
+                        <h4 data-ar="التوسع الأول" data-en="First Expansion">التوسع الأول</h4>
+                        <p data-ar="افتتاح Kyan Canon في السعودية" data-en="Opening Kyan Canon in Saudi Arabia">افتتاح Kyan Canon في السعودية</p>
+                        <p data-ar="بوابة SSMA إلى الخليج العربي" data-en="SSMA's gateway to the Arabian Gulf">بوابة SSMA إلى الخليج العربي</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">٢٠١٧</span>
+                        <h4 data-ar="الجسر التجاري" data-en="Trade Bridge">الجسر التجاري</h4>
+                        <p data-ar="افتتاح WSSMA Trading في عُمان" data-en="Opening WSSMA Trading in Oman">افتتاح WSSMA Trading في عُمان</p>
+                        <p data-ar="ربط الأسواق العُمانية باليمنية" data-en="Connecting Omani and Yemeni markets">ربط الأسواق العُمانية باليمنية</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">٢٠٢٠</span>
+                        <h4 data-ar="بوابة الصين" data-en="China Gateway">بوابة الصين</h4>
+                        <p data-ar="افتتاح KCC Trading في جوانزو" data-en="Opening KCC Trading in Guangzhou">افتتاح KCC Trading في جوانزو</p>
+                        <p data-ar="الاستيراد المباشر من مصانع الصين" data-en="Direct import from Chinese factories">الاستيراد المباشر من مصانع الصين</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">٢٠٢٢</span>
+                        <h4 data-ar="عاصمة الجملة" data-en="Wholesale Capital">عاصمة الجملة</h4>
+                        <p data-ar="افتتاح TSMC في ييوو" data-en="Opening TSMC in Yiwu">افتتاح TSMC في ييوو</p>
+                        <p data-ar="أكبر سوق جملة في العالم" data-en="World's largest wholesale market">أكبر سوق جملة في العالم</p>
+                    </div>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="Atlis mac.jpg" alt="Atlas Mec Logo">
+            </div>
+            
+            <!-- Branches Grid -->
+            <div class="branches-grid">
+                <!-- Yemen Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇾🇪</span>
+                        <div class="branch-title">
+                            <h3 data-ar="المقر الرئيسي" data-en="Headquarters">المقر الرئيسي</h3>
+                            <span class="branch-year">١٩٨٢</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="SSMA logo.jpg" alt="SSMA Yemen">
+                        </div>
                     </div>
-                    <h3 data-ar="أطلس ميك للتجارة" data-en="Atlas Mec Trading">أطلس ميك للتجارة</h3>
-                    <p data-ar="تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة." data-en="Atlas Mec Trading Company excels in international trade and logistics efficiently connecting businesses worldwide.">تتفوق شركة أطلس ميك للتجارة في التجارة الدولية واللوجستيات، تربط الشركات في جميع أنحاء العالم بكفاءة.</p>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="قلب الشركة النابض منذ ٤٠+ عام" data-en="The beating heart of the company for 40+ years">قلب الشركة النابض منذ ٤٠+ عام</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="صنعاء، اليمن" data-en="Sana'a, Yemen">صنعاء، اليمن</span></p>
+                            <p><i class="fas fa-phone"></i> +967 7777 666 95</p>
+                            <p><i class="fas fa-envelope"></i> ssma.wells@gmail.com</p>
+                        </div>
+                        <p data-ar="البداية التي انطلقت منها رحلة SSMA العالمية، حيث وضعت الأسس والخبرة التي مكنتنا من التوسع إلى ٦ دول حول العالم." data-en="The starting point of SSMA's global journey, where the foundations and expertise were laid that enabled us to expand to 6 countries worldwide.">البداية التي انطلقت منها رحلة SSMA العالمية، حيث وضعت الأسس والخبرة التي مكنتنا من التوسع إلى ٦ دول حول العالم.</p>
+                    </div>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="tsmc logo.jpg" alt="TSMC Logo">
+                
+                <!-- Saudi Arabia Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇸🇦</span>
+                        <div class="branch-title">
+                            <h3>Kyan Canon Trading</h3>
+                            <span class="branch-year">١٩٩٢</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="KCC logo .jpg" alt="Kyan Canon">
+                        </div>
                     </div>
-                    <h3 data-ar="شركة TSMC للموردات" data-en="TSMC Supplier Company">شركة TSMC للموردات</h3>
-                    <p data-ar="شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة." data-en="T S M C Company is a general supplier of spare parts and components for heavy equipment. We specialize in providing high-quality products.">شركة TSMC هي مورد عام لقطع الغيار والمكونات للمعدات الثقيلة. نحن نختص في تقديم منتجات عالية الجودة.</p>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="بوابة SSMA إلى الخليج العربي" data-en="SSMA's gateway to the Arabian Gulf">بوابة SSMA إلى الخليج العربي</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="الرياض & خميس مشيط، السعودية" data-en="Riyadh & Khamis Mushait, Saudi Arabia">الرياض & خميس مشيط، السعودية</span></p>
+                            <p><i class="fas fa-phone"></i> +966 55490 2495</p>
+                            <p><i class="fas fa-globe"></i> kyancanon.com</p>
+                        </div>
+                        <div class="branch-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">٢٦+</span>
+                                <span class="stat-label" data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">٢٠٠K+</span>
+                                <span class="stat-label" data-ar="قطعة غيار" data-en="Spare Parts">قطعة غيار</span>
+                            </div>
+                        </div>
+                        <p data-ar="أول توسع دولي لـ SSMA، أصبح أكبر مورد لقطع غيار كاتربيلر في المنطقة مع أكثر من ربع قرن من الثقة والجودة." data-en="SSMA's first international expansion, became the largest supplier of Caterpillar spare parts in the region with over a quarter century of trust and quality.">أول توسع دولي لـ SSMA، أصبح أكبر مورد لقطع غيار كاتربيلر في المنطقة مع أكثر من ربع قرن من الثقة والجودة.</p>
+                    </div>
+                </div>
+                
+                <!-- Oman Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇴🇲</span>
+                        <div class="branch-title">
+                            <h3>WSSMA Trading Co.</h3>
+                            <span class="branch-year">٢٠١٧</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="wail logo.jpg" alt="WSSMA Oman">
+                        </div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="جسر التجارة بين عُمان واليمن" data-en="Trade bridge between Oman and Yemen">جسر التجارة بين عُمان واليمن</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="سلطنة عُمان" data-en="Sultanate of Oman">سلطنة عُمان</span></p>
+                            <p><i class="fas fa-phone"></i> <span data-ar="رقم الهاتف قريباً" data-en="Phone number coming soon">رقم الهاتف قريباً</span></p>
+                        </div>
+                        <p data-ar="المورد الرائد لقطع غيار الحفر والمقاولين في عُمان، يربط الأسواق العُمانية المزدهرة بالخبرة اليمنية في مجال الحفر والمقاولات." data-en="The leading supplier of drilling spare parts and contractors in Oman, connecting thriving Omani markets with Yemeni expertise in drilling and contracting.">المورد الرائد لقطع غيار الحفر والمقاولين في عُمان، يربط الأسواق العُمانية المزدهرة بالخبرة اليمنية في مجال الحفر والمقاولات.</p>
+                    </div>
+                </div>
+                
+                <!-- China - Guangzhou Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇨🇳</span>
+                        <div class="branch-title">
+                            <h3>KCC Trading Co.</h3>
+                            <span class="branch-year">٢٠٢٠</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="KCC logo .jpg" alt="KCC China">
+                        </div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="بوابة SSMA إلى مصانع الصين" data-en="SSMA's gateway to Chinese factories">بوابة SSMA إلى مصانع الصين</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="جوانزو، الصين" data-en="Guangzhou, China">جوانزو، الصين</span></p>
+                            <p><i class="fas fa-phone"></i> +86 13024666941</p>
+                            <p><i class="fas fa-envelope"></i> muaadhs.ssma@gmail.com</p>
+                        </div>
+                        <p data-ar="الاستيراد المباشر من مصانع جوانزو يقلل التكاليف بنسبة ٤٠٪ ويضمن الجودة العالية للمعدات وقطع الغيار التي تحتاجها مشاريع SSMA حول العالم." data-en="Direct import from Guangzhou factories reduces costs by 40% and ensures high quality for equipment and spare parts needed for SSMA projects worldwide.">الاستيراد المباشر من مصانع جوانزو يقلل التكاليف بنسبة ٤٠٪ ويضمن الجودة العالية للمعدات وقطع الغيار التي تحتاجها مشاريع SSMA حول العالم.</p>
+                    </div>
+                </div>
+                
+                <!-- China - Yiwu Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇨🇳</span>
+                        <div class="branch-title">
+                            <h3>TSMC Supplier</h3>
+                            <span class="branch-year">٢٠٢٢</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="tsmc logo.jpg" alt="TSMC Yiwu">
+                        </div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="عاصمة العالم للبضائع الصغيرة" data-en="World capital of small goods">عاصمة العالم للبضائع الصغيرة</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="ييوو، الصين" data-en="Yiwu, China">ييوو، الصين</span></p>
+                            <p><i class="fas fa-phone"></i> <span data-ar="رقم الهاتف قريباً" data-en="Phone number coming soon">رقم الهاتف قريباً</span></p>
+                        </div>
+                        <p data-ar="في أكبر سوق جملة في العالم، نضمن لـ SSMA أسعار لا تنافس وتشكيلة لا نهائية من البضائع والتجهيزات اللازمة للمشاريع الإنشائية." data-en="In the world's largest wholesale market, we guarantee SSMA unbeatable prices and an endless variety of goods and equipment needed for construction projects.">في أكبر سوق جملة في العالم، نضمن لـ SSMA أسعار لا تنافس وتشكيلة لا نهائية من البضائع والتجهيزات اللازمة للمشاريع الإنشائية.</p>
+                    </div>
+                </div>
+                
+                <!-- India - Atlas Mec Branch -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <span class="branch-flag">🇮🇳</span>
+                        <div class="branch-title">
+                            <h3>Atlas Mec Trading</h3>
+                            <span class="branch-year" data-ar="قريباً" data-en="Soon">قريباً</span>
+                        </div>
+                        <div class="branch-logo">
+                            <img src="Atlis mac.jpg" alt="Atlas Mec India">
+                        </div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-tagline" data-ar="الجسر التجاري إلى شبه القارة الهندية" data-en="Trade bridge to the Indian subcontinent">الجسر التجاري إلى شبه القارة الهندية</div>
+                        <div class="branch-info">
+                            <p><i class="fas fa-map-marker-alt"></i> <span data-ar="الهند" data-en="India">الهند</span></p>
+                        </div>
+                        <p data-ar="التوسع القادم لـ SSMA إلى سوق المعدات الهندي الضخم، حيث تجتمع التقنية الهندية المتقدمة مع الأسعار التنافسية لخدمة مشاريعنا في الشرق الأوسط وأفريقيا." data-en="SSMA's upcoming expansion into the huge Indian equipment market, where advanced Indian technology meets competitive prices to serve our projects in the Middle East and Africa.">التوسع القادم لـ SSMA إلى سوق المعدات الهندي الضخم، حيث تجتمع التقنية الهندية المتقدمة مع الأسعار التنافسية لخدمة مشاريعنا في الشرق الأوسط وأفريقيا.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1330,7 +1791,7 @@
                     <h4 data-ar="الشركة" data-en="Company">الشركة</h4>
                     <div class="footer-links">
                         <a href="#" onclick="showSection('about'); return false;" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
-                        <a href="#" onclick="showSection('partners'); return false;" data-ar="شركاؤنا" data-en="Our Partners">شركاؤنا</a>
+                        <a href="#" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
                         <a href="#" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
                         <a href="#" onclick="showSection('solar'); return false;" data-ar="الطاقة الشمسية" data-en="Solar Energy">الطاقة الشمسية</a>
                     </div>
@@ -1381,6 +1842,12 @@
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
             });
+            
+            // العثور على الرابط المناسب وإضافته
+            const activeLink = document.querySelector(`.nav-link[onclick*="'${sectionId}'"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
             
             // إغلاق القائمة المتنقلة
             const navMenu = document.getElementById('navMenu');
@@ -1475,6 +1942,134 @@
                 contactForm.reset();
             });
         }
+
+        // Animated Counter for Stats
+        function animateCounter() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // The lower the slower
+            
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+                    
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = Math.ceil(count + inc);
+                        // Call function every ms
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target + '+';
+                        counter.classList.add('counting');
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+
+        // Intersection Observer for counter animation
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(statsSection);
+        }
+
+        // World Map Interaction
+        const mapPoints = document.querySelectorAll('.map-point');
+        mapPoints.forEach(point => {
+            point.addEventListener('click', () => {
+                // Remove active class from all points
+                mapPoints.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked point
+                point.classList.add('active');
+                
+                // Get the branch name from data attribute
+                const branch = point.getAttribute('data-branch');
+                
+                // Find corresponding branch card and scroll to it
+                const branchCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
+                if (branchCard) {
+                    branchCard.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // Add highlight effect
+                    branchCard.style.boxShadow = '0 0 30px rgba(255, 205, 17, 0.5)';
+                    setTimeout(() => {
+                        branchCard.style.boxShadow = '';
+                    }, 2000);
+                }
+            });
+            
+            // Add hover effect
+            point.addEventListener('mouseenter', () => {
+                point.style.transform = 'translate(-50%, -50%) scale(1.3)';
+            });
+            
+            point.addEventListener('mouseleave', () => {
+                if (!point.classList.contains('active')) {
+                    point.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+            });
+        });
+
+        // Timeline Animation on Scroll
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.3 });
+
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            timelineObserver.observe(item);
+        });
+
+        // Branch Cards Animation
+        const branchCards = document.querySelectorAll('.branch-card');
+        const branchObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        branchCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            branchObserver.observe(card);
+        });
+
+        // Initialize the page with home section visible
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
     </script>
 </body>
 </html>
