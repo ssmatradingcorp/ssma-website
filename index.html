@@ -431,7 +431,7 @@
         }
         
         /* Timeline Styling */
-    /* Timeline Styling - FINAL FIX */
+    /* Timeline Styling - COMPLETE FIX */
 .timeline-container {
     position: relative;
     max-width: 900px;
@@ -441,10 +441,13 @@
 .timeline {
     position: relative;
     padding: var(--space-xl) 0;
-    min-height: 600px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px; /* مسافة كبيرة بين العناصر */
 }
 
-/* الخط الأصفر في المنتصف */
+/* الخط في المنتصف */
 .timeline::before {
     content: '';
     position: absolute;
@@ -457,7 +460,7 @@
     z-index: 1;
 }
 
-/* العنصر الأساسي */
+/* كل العناصر */
 .timeline-item {
     position: relative;
     width: 45%;
@@ -465,47 +468,49 @@
     background: var(--cat-white);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 60px;
     z-index: 2;
-    display: block !important;
-    opacity: 1 !important;
+    min-height: 140px;
 }
 
-/* للغة العربية - إصلاح RTL */
-body:not(.english) .timeline-item:nth-child(odd) {
-    right: 0;
-    left: auto;
-    float: right;
-    margin-right: 0;
-    margin-left: 5%;
-}
+/* الترتيب الصحيح حسب السنة */
 
-body:not(.english) .timeline-item:nth-child(even) {
-    right: 55%;
-    left: auto;
-    float: left;
-    margin-left: 0;
-    margin-right: 5%;
-}
-
-/* للغة الإنجليزية - LTR */
-body.english .timeline-item:nth-child(odd) {
+/* 1982 - أول عنصر على اليمين */
+.timeline-item:nth-child(1) {
+    margin-top: 0;
     left: 0;
     right: auto;
-    float: left;
-    margin-left: 0;
-    margin-right: 5%;
+    order: 1;
 }
 
-body.english .timeline-item:nth-child(even) {
+/* 1992 - ثاني عنصر على اليسار */
+.timeline-item:nth-child(2) {
     left: 55%;
     right: auto;
-    float: right;
-    margin-right: 0;
-    margin-left: 5%;
+    order: 2;
 }
 
-/* النقاط على الخط */
+/* 2017 - ثالث عنصر على اليمين */
+.timeline-item:nth-child(3) {
+    left: 0;
+    right: auto;
+    order: 3;
+}
+
+/* 2020 - رابع عنصر على اليسار */
+.timeline-item:nth-child(4) {
+    left: 55%;
+    right: auto;
+    order: 4;
+}
+
+/* 2022 - خامس عنصر على اليمين */
+.timeline-item:nth-child(5) {
+    left: 0;
+    right: auto;
+    order: 5;
+}
+
+/* النقاط */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -518,24 +523,17 @@ body.english .timeline-item:nth-child(even) {
     z-index: 3;
 }
 
-/* تعديل النقاط للغة العربية */
-body:not(.english) .timeline-item:nth-child(odd)::before {
-    left: -38px;
-    right: auto;
-}
-
-body:not(.english) .timeline-item:nth-child(even)::before {
+/* نقاط العناصر على اليمين */
+.timeline-item:nth-child(1)::before,
+.timeline-item:nth-child(3)::before,
+.timeline-item:nth-child(5)::before {
     right: -38px;
     left: auto;
 }
 
-/* تعديل النقاط للغة الإنجليزية */
-body.english .timeline-item:nth-child(odd)::before {
-    right: -38px;
-    left: auto;
-}
-
-body.english .timeline-item:nth-child(even)::before {
+/* نقاط العناصر على اليسار */
+.timeline-item:nth-child(2)::before,
+.timeline-item:nth-child(4)::before {
     left: -38px;
     right: auto;
 }
@@ -549,6 +547,33 @@ body.english .timeline-item:nth-child(even)::before {
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 14px;
+}
+
+/* للغة الإنجليزية - عكس المواقع */
+body.english .timeline-item:nth-child(1),
+body.english .timeline-item:nth-child(3),
+body.english .timeline-item:nth-child(5) {
+    left: 55%;
+    right: auto;
+}
+
+body.english .timeline-item:nth-child(2),
+body.english .timeline-item:nth-child(4) {
+    left: 0;
+    right: auto;
+}
+
+body.english .timeline-item:nth-child(1)::before,
+body.english .timeline-item:nth-child(3)::before,
+body.english .timeline-item:nth-child(5)::before {
+    left: -38px;
+    right: auto;
+}
+
+body.english .timeline-item:nth-child(2)::before,
+body.english .timeline-item:nth-child(4)::before {
+    right: -38px;
+    left: auto;
 }
         /* Branches Grid */
         .branches-grid {
