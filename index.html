@@ -431,7 +431,7 @@
         }
         
         /* Timeline Styling */
-    /* Timeline Styling */
+    /* Timeline Styling - FINAL FIX */
 .timeline-container {
     position: relative;
     max-width: 900px;
@@ -441,8 +441,10 @@
 .timeline {
     position: relative;
     padding: var(--space-xl) 0;
+    min-height: 600px;
 }
 
+/* الخط الأصفر في المنتصف */
 .timeline::before {
     content: '';
     position: absolute;
@@ -452,53 +454,101 @@
     width: 4px;
     background: var(--cat-yellow);
     transform: translateX(-50%);
+    z-index: 1;
 }
 
+/* العنصر الأساسي */
 .timeline-item {
     position: relative;
-    margin-bottom: var(--space-xl);
     width: 45%;
-    padding: var(--space-lg);
+    padding: 25px;
     background: var(--cat-white);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 60px;
+    z-index: 2;
+    display: block !important;
+    opacity: 1 !important;
 }
 
-.timeline-item:nth-child(odd) {
+/* للغة العربية - إصلاح RTL */
+body:not(.english) .timeline-item:nth-child(odd) {
+    right: 0;
+    left: auto;
+    float: right;
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+body:not(.english) .timeline-item:nth-child(even) {
+    right: 55%;
+    left: auto;
+    float: left;
+    margin-left: 0;
+    margin-right: 5%;
+}
+
+/* للغة الإنجليزية - LTR */
+body.english .timeline-item:nth-child(odd) {
     left: 0;
+    right: auto;
+    float: left;
+    margin-left: 0;
+    margin-right: 5%;
 }
 
-.timeline-item:nth-child(even) {
+body.english .timeline-item:nth-child(even) {
     left: 55%;
+    right: auto;
+    float: right;
+    margin-right: 0;
+    margin-left: 5%;
 }
 
+/* النقاط على الخط */
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 20px;
-    width: 20px;
-    height: 20px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
     background: var(--cat-yellow);
     border: 3px solid var(--cat-black);
     border-radius: 50%;
+    z-index: 3;
 }
 
-.timeline-item:nth-child(odd)::before {
-    right: -42px;
+/* تعديل النقاط للغة العربية */
+body:not(.english) .timeline-item:nth-child(odd)::before {
+    left: -38px;
+    right: auto;
 }
 
-.timeline-item:nth-child(even)::before {
-    left: -42px;
+body:not(.english) .timeline-item:nth-child(even)::before {
+    right: -38px;
+    left: auto;
+}
+
+/* تعديل النقاط للغة الإنجليزية */
+body.english .timeline-item:nth-child(odd)::before {
+    right: -38px;
+    left: auto;
+}
+
+body.english .timeline-item:nth-child(even)::before {
+    left: -38px;
+    right: auto;
 }
 
 .timeline-year {
     display: inline-block;
     background: var(--cat-black);
     color: var(--cat-white);
-    padding: 4px 12px;
+    padding: 8px 16px;
     border-radius: 20px;
     font-weight: 600;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 15px;
+    font-size: 14px;
 }
         /* Branches Grid */
         .branches-grid {
