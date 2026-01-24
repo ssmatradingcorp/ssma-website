@@ -1419,6 +1419,28 @@
         .vehicles-card-section { margin-top: var(--space-xxl); }
         .vehicles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin: var(--space-xl) 0; }
         .text-center { text-align: center; }
+        .expansion-arrow {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            z-index: 9;
+            pointer-events: none;
+        }
+        .arrow-head {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 15px 10px;
+        }
+        .arrow-line {
+            height: 2px;
+            background: inherit;
+        }
+        .arrow-1 { color: #FFCD11; } /* أصفر */
+        .arrow-2 { color: #4CAF50; } /* أخضر */
+        .arrow-3 { color: #2196F3; } /* أزرق */
+        .arrow-4 { color: #9C27B0; } /* بنفسجي */
+        .arrow-5 { color: #FF9800; }
     </style>
     </style>
 </head>
@@ -1542,34 +1564,35 @@
             </div>
             
             <!-- World Map -->
-            <div class="world-map-container">
-                <div class="world-map" id="worldMap">
-                    <!-- Yemen -->
-                    <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
-                        <div class="map-tooltip">Yemen - 1982</div>
-                    </div>
-                    <!-- Saudi Arabia -->
-                    <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
-                        <div class="map-tooltip">Saudi Arabia - 1992</div>
-                    </div>
-                    <!-- Oman -->
-                    <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
-                        <div class="map-tooltip">Oman - 2017</div>
-                    </div>
-                    <!-- China - Guangzhou -->
-                    <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
-                        <div class="map-tooltip">Guangzhou, China - 2020</div>
-                    </div>
-                    <!-- China - Yiwu -->
-                    <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
-                        <div class="map-tooltip">Yiwu, China - 2022</div>
-                    </div>
-                    <!-- India -->
-                    <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
-                        <div class="map-tooltip">India - 2017</div>
-                    </div>
-                </div>
-            </div>
+            <!-- World Map -->
+<div class="world-map-container">
+    <div class="world-map" id="worldMap">
+        <!-- Yemen -->
+        <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
+            <div class="map-tooltip">Yemen - 1982</div>
+        </div>
+        <!-- Saudi Arabia -->
+        <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
+            <div class="map-tooltip">Saudi Arabia - 1992</div>
+        </div>
+        <!-- Oman -->
+        <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
+            <div class="map-tooltip">Oman - 2017</div>
+        </div>
+        <!-- China - Guangzhou -->
+        <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
+            <div class="map-tooltip">Guangzhou, China - 2020</div>
+        </div>
+        <!-- China - Yiwu -->
+        <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
+            <div class="map-tooltip">Yiwu, China - 2022</div>
+        </div>
+        <!-- India -->
+        <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
+            <div class="map-tooltip">India - 2017</div>
+        </div>
+    </div>
+</div>
             
             <!-- Timeline -->
             <div class="timeline-container">
@@ -3155,6 +3178,20 @@
             if (window.location.hash === '#energy') {
                 showSection('energy');
             }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("الأسهم جاهزة!");
+            
+            // عند التمرير على الدولة
+            const countries = document.querySelectorAll('.map-location');
+            countries.forEach(country => {
+                country.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translate(-50%, -50%) scale(1.2)';
+                });
+                country.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+            });
         });
     </script>
 </body>
