@@ -1436,102 +1436,163 @@
             height: 2px;
             background: inherit;
         }
-       
-        <!-- ===== خريطة العالم التفاعلية الاحترافية ===== -->
-<div class="world-map-container">
-    <div class="world-map" id="worldMap">
-        <!-- خريطة SVG تفاعلية -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" class="world-svg">
-            <!-- الخلفية -->
-            <rect width="800" height="400" fill="#e8f4f8"/>
+       .world-map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: #e8f4f8;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--cat-white);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+
+        .map-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-point {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .point-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #000;
+            transition: all 0.3s ease;
+        }
+
+        .map-point:hover .point-dot {
+            transform: scale(1.5);
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .point-label {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .map-point:hover .point-label {
+            opacity: 1;
+        }
+
+        /* لوحة المعلومات */
+        .map-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 250px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .sidebar-header {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--cat-yellow);
+        }
+
+        .branches-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .branch-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+        }
+
+        .branch-item:hover {
+            background: rgba(255, 205, 17, 0.1);
+            transform: translateX(5px);
+        }
+
+        .branch-item.active {
+            background: rgba(255, 205, 17, 0.2);
+            border-left: 3px solid var(--cat-yellow);
+        }
+
+        .branch-color {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .branch-info {
+            flex: 1;
+        }
+
+        .branch-info h4 {
+            font-size: 13px;
+            margin: 0;
+            color: var(--cat-black);
+        }
+
+        .branch-info p {
+            font-size: 11px;
+            margin: 0;
+            color: #666;
+        }
+
+        .branch-status {
+            font-size: 10px;
+            color: #4CAF50;
+        }
+
+        /* للجوال */
+        @media (max-width: 768px) {
+            .world-map-container {
+                height: 300px;
+            }
             
-            <!-- القارات (بألوان فاتحة) -->
-            <path class="continent" d="M..." fill="#f0f8ff" stroke="#d1e7f0" stroke-width="1"/>
+            .map-sidebar {
+                position: relative;
+                width: 100%;
+                top: auto;
+                right: auto;
+                margin-top: 15px;
+            }
             
-            <!-- النقاط التفاعلية -->
-            
-            <!-- اليمن -->
-            <g class="map-point yemen" data-branch="yemen">
-                <circle cx="460" cy="220" r="8" fill="#FFCD11" stroke="#000000" stroke-width="2"/>
-                <circle cx="460" cy="220" r="12" fill="transparent" stroke="#FFCD11" stroke-width="2" class="pulse-ring"/>
-                <text x="480" y="225" class="map-label" fill="#000">Yemen 1982</text>
-            </g>
-            
-            <!-- السعودية -->
-            <g class="map-point saudi" data-branch="saudi">
-                <circle cx="480" cy="200" r="8" fill="#005EB8" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="480" cy="200" r="12" fill="transparent" stroke="#005EB8" stroke-width="2" class="pulse-ring"/>
-                <text x="500" y="205" class="map-label" fill="#000">Saudi Arabia 1992</text>
-            </g>
-            
-            <!-- عمان -->
-            <g class="map-point oman" data-branch="oman">
-                <circle cx="520" cy="230" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="520" cy="230" r="12" fill="transparent" stroke="#4CAF50" stroke-width="2" class="pulse-ring"/>
-                <text x="540" y="235" class="map-label" fill="#000">Oman 2017</text>
-            </g>
-            
-            <!-- الهند -->
-            <g class="map-point india" data-branch="india">
-                <circle cx="550" cy="190" r="8" fill="#9C27B0" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="550" cy="190" r="12" fill="transparent" stroke="#9C27B0" stroke-width="2" class="pulse-ring"/>
-                <text x="570" y="195" class="map-label" fill="#000">India 2017</text>
-            </g>
-            
-            <!-- الصين (غوانزو) -->
-            <g class="map-point guangzhou" data-branch="guangzhou">
-                <circle cx="620" cy="180" r="8" fill="#FF9800" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="620" cy="180" r="12" fill="transparent" stroke="#FF9800" stroke-width="2" class="pulse-ring"/>
-                <text x="640" y="185" class="map-label" fill="#000">Guangzhou 2020</text>
-            </g>
-            
-            <!-- الصين (ييوو) -->
-            <g class="map-point yiwu" data-branch="yiwu">
-                <circle cx="640" cy="170" r="8" fill="#E91E63" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="640" cy="170" r="12" fill="transparent" stroke="#E91E63" stroke-width="2" class="pulse-ring"/>
-                <text x="660" y="175" class="map-label" fill="#000">Yiwu 2022</text>
-            </g>
-            
-            <!-- خطوط التوسع -->
-            <line x1="460" y1="220" x2="480" y2="200" stroke="#FFCD11" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="480" y1="200" x2="520" y2="230" stroke="#005EB8" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="520" y1="230" x2="550" y2="190" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="550" y1="190" x2="620" y2="180" stroke="#9C27B0" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="620" y1="180" x2="640" y2="170" stroke="#FF9800" stroke-width="2" stroke-dasharray="5,5"/>
-        </svg>
-    </div>
-    
-    <!-- لوحة المعلومات الجانبية -->
-    <div class="map-sidebar">
-        <div class="sidebar-header">
-            <h3 data-ar="شبكة SSMA العالمية" data-en="SSMA Global Network">شبكة SSMA العالمية</h3>
-            <p data-ar="6 دول، 40+ سنة خبرة" data-en="6 countries, 40+ years experience">6 دول، 40+ سنة خبرة</p>
-        </div>
+            .point-label {
+                display: none;
+            }
+        }
         
-        <div class="branches-list">
-            <div class="branch-item active" data-branch="yemen">
-                <div class="branch-color" style="background: #FFCD11;"></div>
-                <div class="branch-info">
-                    <h4>اليمن</h4>
-                    <p>المقر الرئيسي 1982</p>
-                </div>
-                <div class="branch-status">🟢 نشط</div>
-            </div>
-            
-            <div class="branch-item" data-branch="saudi">
-                <div class="branch-color" style="background: #005EB8;"></div>
-                <div class="branch-info">
-                    <h4>السعودية</h4>
-                    <p>Kyan Canon 1992</p>
-                </div>
-                <div class="branch-status">🟢 نشط</div>
-            </div>
-            
-            <!-- ... باقي الفروع بنفس النمط -->
-        </div>
-    </div>
-</div>
-<!-- ===== نهاية الخريطة التفاعلية ===== -->
+        .arrow-1 { color: #FFCD11; } /* أصفر */
+        .arrow-2 { color: #4CAF50; } /* أخضر */
+        .arrow-3 { color: #2196F3; } /* أزرق */
+        .arrow-4 { color: #9C27B0; } /* بنفسجي */
+        .arrow-5 { color: #FF9800; 
+
     </style>
     </style>
 </head>
@@ -1657,68 +1718,46 @@
             <!-- World Map -->
             <!-- World Map -->
 <!-- World Map -->
-<!-- ===== خريطة العالم التفاعلية الاحترافية ===== -->
+<!-- ===== خريطة مبسطة وواضحة ===== -->
 <div class="world-map-container">
-    <div class="world-map" id="worldMap">
-        <!-- خريطة SVG تفاعلية -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" class="world-svg">
-            <!-- الخلفية -->
-            <rect width="800" height="400" fill="#e8f4f8"/>
+    <div class="world-map">
+        <!-- خريطة صورة مع نقاط تفاعلية -->
+        <div class="map-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/World_map_blank_without_borders.svg" 
+                 alt="خريطة العالم"
+                 style="width: 100%; height: 100%; object-fit: contain;">
             
-            <!-- القارات (بألوان فاتحة) -->
-            <path class="continent" d="M..." fill="#f0f8ff" stroke="#d1e7f0" stroke-width="1"/>
+            <!-- نقاط الفروع -->
+            <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
+                <div class="point-dot" style="background: #FFCD11;"></div>
+                <div class="point-label">اليمن 1982</div>
+            </div>
             
-            <!-- النقاط التفاعلية -->
+            <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
+                <div class="point-dot" style="background: #005EB8;"></div>
+                <div class="point-label">السعودية 1992</div>
+            </div>
             
-            <!-- اليمن -->
-            <g class="map-point yemen" data-branch="yemen">
-                <circle cx="460" cy="220" r="8" fill="#FFCD11" stroke="#000000" stroke-width="2"/>
-                <circle cx="460" cy="220" r="12" fill="transparent" stroke="#FFCD11" stroke-width="2" class="pulse-ring"/>
-                <text x="480" y="225" class="map-label" fill="#000">Yemen 1982</text>
-            </g>
+            <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
+                <div class="point-dot" style="background: #4CAF50;"></div>
+                <div class="point-label">عُمان 2017</div>
+            </div>
             
-            <!-- السعودية -->
-            <g class="map-point saudi" data-branch="saudi">
-                <circle cx="480" cy="200" r="8" fill="#005EB8" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="480" cy="200" r="12" fill="transparent" stroke="#005EB8" stroke-width="2" class="pulse-ring"/>
-                <text x="500" y="205" class="map-label" fill="#000">Saudi Arabia 1992</text>
-            </g>
+            <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
+                <div class="point-dot" style="background: #9C27B0;"></div>
+                <div class="point-label">الهند 2018</div>
+            </div>
             
-            <!-- عمان -->
-            <g class="map-point oman" data-branch="oman">
-                <circle cx="520" cy="230" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="520" cy="230" r="12" fill="transparent" stroke="#4CAF50" stroke-width="2" class="pulse-ring"/>
-                <text x="540" y="235" class="map-label" fill="#000">Oman 2017</text>
-            </g>
+            <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
+                <div class="point-dot" style="background: #FF9800;"></div>
+                <div class="point-label">جوانزو 2020</div>
+            </div>
             
-            <!-- الهند -->
-            <g class="map-point india" data-branch="india">
-                <circle cx="550" cy="190" r="8" fill="#9C27B0" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="550" cy="190" r="12" fill="transparent" stroke="#9C27B0" stroke-width="2" class="pulse-ring"/>
-                <text x="570" y="195" class="map-label" fill="#000">India 2017</text>
-            </g>
-            
-            <!-- الصين (غوانزو) -->
-            <g class="map-point guangzhou" data-branch="guangzhou">
-                <circle cx="620" cy="180" r="8" fill="#FF9800" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="620" cy="180" r="12" fill="transparent" stroke="#FF9800" stroke-width="2" class="pulse-ring"/>
-                <text x="640" y="185" class="map-label" fill="#000">Guangzhou 2020</text>
-            </g>
-            
-            <!-- الصين (ييوو) -->
-            <g class="map-point yiwu" data-branch="yiwu">
-                <circle cx="640" cy="170" r="8" fill="#E91E63" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="640" cy="170" r="12" fill="transparent" stroke="#E91E63" stroke-width="2" class="pulse-ring"/>
-                <text x="660" y="175" class="map-label" fill="#000">Yiwu 2022</text>
-            </g>
-            
-            <!-- خطوط التوسع -->
-            <line x1="460" y1="220" x2="480" y2="200" stroke="#FFCD11" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="480" y1="200" x2="520" y2="230" stroke="#005EB8" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="520" y1="230" x2="550" y2="190" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="550" y1="190" x2="620" y2="180" stroke="#9C27B0" stroke-width="2" stroke-dasharray="5,5"/>
-            <line x1="620" y1="180" x2="640" y2="170" stroke="#FF9800" stroke-width="2" stroke-dasharray="5,5"/>
-        </svg>
+            <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
+                <div class="point-dot" style="background: #E91E63;"></div>
+                <div class="point-label">ييوو 2022</div>
+            </div>
+        </div>
     </div>
     
     <!-- لوحة المعلومات الجانبية -->
@@ -1729,6 +1768,7 @@
         </div>
         
         <div class="branches-list">
+            <!-- اليمن -->
             <div class="branch-item active" data-branch="yemen">
                 <div class="branch-color" style="background: #FFCD11;"></div>
                 <div class="branch-info">
@@ -1738,6 +1778,7 @@
                 <div class="branch-status">🟢 نشط</div>
             </div>
             
+            <!-- السعودية -->
             <div class="branch-item" data-branch="saudi">
                 <div class="branch-color" style="background: #005EB8;"></div>
                 <div class="branch-info">
@@ -1747,12 +1788,49 @@
                 <div class="branch-status">🟢 نشط</div>
             </div>
             
-            <!-- ... باقي الفروع بنفس النمط -->
+            <!-- عُمان -->
+            <div class="branch-item" data-branch="oman">
+                <div class="branch-color" style="background: #4CAF50;"></div>
+                <div class="branch-info">
+                    <h4>عُمان</h4>
+                    <p>WSSMA Trading 2017</p>
+                </div>
+                <div class="branch-status">🟢 نشط</div>
+            </div>
+            
+            <!-- الهند -->
+            <div class="branch-item" data-branch="india">
+                <div class="branch-color" style="background: #9C27B0;"></div>
+                <div class="branch-info">
+                    <h4>الهند</h4>
+                    <p>Atlas Mec Trading 2018</p>
+                </div>
+                <div class="branch-status">🟢 نشط</div>
+            </div>
+            
+            <!-- الصين - جوانزو -->
+            <div class="branch-item" data-branch="guangzhou">
+                <div class="branch-color" style="background: #FF9800;"></div>
+                <div class="branch-info">
+                    <h4>الصين - جوانزو</h4>
+                    <p>KCC Trading 2020</p>
+                </div>
+                <div class="branch-status">🟢 نشط</div>
+            </div>
+            
+            <!-- الصين - ييوو -->
+            <div class="branch-item" data-branch="yiwu">
+                <div class="branch-color" style="background: #E91E63;"></div>
+                <div class="branch-info">
+                    <h4>الصين - ييوو</h4>
+                    <p>TSMC Supplier 2022</p>
+                </div>
+                <div class="branch-status">🟢 نشط</div>
+            </div>
         </div>
     </div>
 </div>
 <!-- ===== نهاية الخريطة التفاعلية ===== -->
-            
             <!-- Timeline -->
             <div class="timeline-container">
                 <h3 style="text-align: center; margin-bottom: var(--space-xl);" data-ar="رحلة توسعنا" data-en="Our Expansion Journey">رحلة توسعنا</h3>
@@ -3447,75 +3525,57 @@
             
             console.log("موقع SSMA جاهز للتشغيل!");
             
-            // ===== ⚡ تفاعل الخريطة الجديدة ⚡ =====
-            const mapPoints = document.querySelectorAll('.map-point');
-            const branchItems = document.querySelectorAll('.branch-item');
-            const branchCards = document.querySelectorAll('.branch-card');
-            
-            // عند النقر على نقطة في الخريطة
-            mapPoints.forEach(point => {
-                point.addEventListener('click', function() {
-                    const branch = this.dataset.branch;
-                    
-                    // إزالة التفعيل من الكل
-                    mapPoints.forEach(p => p.classList.remove('active'));
-                    branchItems.forEach(i => i.classList.remove('active'));
-                    
-                    // تفعيل العنصر المحدد
-                    this.classList.add('active');
-                    const branchElement = document.querySelector(`.branch-item[data-branch="${branch}"]`);
-                    if (branchElement) branchElement.classList.add('active');
-                    
-                    // البحث عن بطاقة الفرع والتمرير إليها
-                    const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
-                    if (targetCard) {
-                        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        targetCard.classList.add('branch-highlight');
-                        setTimeout(() => {
-                            targetCard.classList.remove('branch-highlight');
-                        }, 1000);
-                    }
-                });
+            /        // ===== ⚡ تفاعل الخريطة الجديدة ⚡ =====
+        const mapPoints = document.querySelectorAll('.map-point');
+        const branchItems = document.querySelectorAll('.branch-item');
+        
+        // عند النقر على نقطة في الخريطة
+        mapPoints.forEach(point => {
+            point.addEventListener('click', function() {
+                const branch = this.dataset.branch;
                 
-                // تأثير التمرير
-                point.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.5)';
-                    this.style.filter = 'drop-shadow(0 0 10px currentColor)';
-                });
+                // إزالة التفعيل من الكل
+                mapPoints.forEach(p => p.classList.remove('active'));
+                branchItems.forEach(i => i.classList.remove('active'));
                 
-                point.addEventListener('mouseleave', function() {
-                    if (!this.classList.contains('active')) {
-                        this.style.transform = 'scale(1)';
-                        this.style.filter = 'none';
-                    }
-                });
+                // تفعيل العناصر المحددة
+                this.classList.add('active');
+                document.querySelector(`.branch-item[data-branch="${branch}"]`).classList.add('active');
+                
+                // البحث عن بطاقة الفرع
+                const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
+                if (targetCard) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetCard.style.boxShadow = '0 0 20px rgba(255, 205, 17, 0.5)';
+                    setTimeout(() => {
+                        targetCard.style.boxShadow = '';
+                    }, 1500);
+                }
             });
-            
-            // عند النقر على عنصر في القائمة الجانبية
-            if (branchItems.length > 0) {
-                branchItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        const branch = this.dataset.branch;
-                        
-                        // إزالة التفعيل
-                        branchItems.forEach(i => i.classList.remove('active'));
-                        mapPoints.forEach(p => p.classList.remove('active'));
-                        
-                        // تفعيل العنصر المحدد
-                        this.classList.add('active');
-                        const mapElement = document.querySelector(`.map-point.${branch}`);
-                        if (mapElement) mapElement.classList.add('active');
-                        
-                        // التمرير للبطاقة
-                        const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
-                        if (targetCard) {
-                            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    });
-                });
-            }
-            // ===== نهاية تفاعل الخريطة =====
         });
+        
+        // عند النقر على عنصر في القائمة الجانبية
+        branchItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const branch = this.dataset.branch;
+                
+                // إزالة التفعيل
+                branchItems.forEach(i => i.classList.remove('active'));
+                mapPoints.forEach(p => p.classList.remove('active'));
+                
+                // تفعيل العناصر المحددة
+                this.classList.add('active');
+                document.querySelector(`.map-point[data-branch="${branch}"]`).classList.add('active');
+                
+                // البحث عن بطاقة الفرع
+                const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
+                if (targetCard) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+        // ===== نهاية تفاعل الخريطة =====
+        
     </script>
 </body>
 </html>
