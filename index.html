@@ -3414,35 +3414,6 @@
             
             console.log("موقع SSMA جاهز للتشغيل!");
             
-            /        // ===== ⚡ تفاعل الخريطة الجديدة ⚡ =====
-        const mapPoints = document.querySelectorAll('.map-point');
-        const branchItems = document.querySelectorAll('.branch-item');
-        
-        // عند النقر على نقطة في الخريطة
-        mapPoints.forEach(point => {
-            point.addEventListener('click', function() {
-                const branch = this.dataset.branch;
-                
-                // إزالة التفعيل من الكل
-                mapPoints.forEach(p => p.classList.remove('active'));
-                branchItems.forEach(i => i.classList.remove('active'));
-                
-                // تفعيل العناصر المحددة
-                this.classList.add('active');
-                document.querySelector(`.branch-item[data-branch="${branch}"]`).classList.add('active');
-                
-                // البحث عن بطاقة الفرع
-                const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
-                if (targetCard) {
-                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    targetCard.style.boxShadow = '0 0 20px rgba(255, 205, 17, 0.5)';
-                    setTimeout(() => {
-                        targetCard.style.boxShadow = '';
-                    }, 1500);
-                }
-            });
-        });
-        
         // عند النقر على عنصر في القائمة الجانبية
         branchItems.forEach(item => {
             item.addEventListener('click', function() {
