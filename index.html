@@ -1565,90 +1565,33 @@
             
             <!-- World Map -->
             <!-- World Map -->
-<!-- خريطة العالم مع أسهم التوسع -->
+<!-- World Map -->
 <div class="world-map-container">
     <div class="world-map" id="worldMap">
-        
-        <!-- ===== 5 أسهم التوسع ===== -->
-        <!-- السهم 1: اليمن → السعودية -->
-        <div class="expansion-arrow arrow-1" style="top: 43%; left: 56%; transform: rotate(-20deg);">
-            <div class="arrow-head" style="border-color: transparent transparent #FFCD11 transparent;"></div>
-            <div class="arrow-line" style="width: 60px; background: #FFCD11;"></div>
+        <!-- Yemen -->
+        <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
+            <div class="map-tooltip">Yemen - 1982</div>
         </div>
-        
-        <!-- السهم 2: السعودية → عُمان -->
-        <div class="expansion-arrow arrow-2" style="top: 43%; left: 58%; transform: rotate(10deg);">
-            <div class="arrow-head" style="border-color: transparent transparent #4CAF50 transparent;"></div>
-            <div class="arrow-line" style="width: 40px; background: #4CAF50;"></div>
+        <!-- Saudi Arabia -->
+        <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
+            <div class="map-tooltip">Saudi Arabia - 1992</div>
         </div>
-        
-        <!-- السهم 3: عُمان → الهند -->
-        <div class="expansion-arrow arrow-3" style="top: 42%; left: 64%; transform: rotate(45deg);">
-            <div class="arrow-head" style="border-color: transparent transparent #2196F3 transparent;"></div>
-            <div class="arrow-line" style="width: 100px; background: #2196F3;"></div>
+        <!-- Oman -->
+        <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
+            <div class="map-tooltip">Oman - 2017</div>
         </div>
-        
-        <!-- السهم 4: الهند → الصين -->
-        <div class="expansion-arrow arrow-4" style="top: 39%; left: 72%; transform: rotate(70deg);">
-            <div class="arrow-head" style="border-color: transparent transparent #9C27B0 transparent;"></div>
-            <div class="arrow-line" style="width: 80px; background: #9C27B0;"></div>
+        <!-- China - Guangzhou -->
+        <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
+            <div class="map-tooltip">Guangzhou, China - 2020</div>
         </div>
-        
-        <!-- السهم 5: جوانزو → ييوو -->
-        <div class="expansion-arrow arrow-5" style="top: 37.5%; left: 74.5%; transform: rotate(180deg);">
-            <div class="arrow-head" style="border-color: transparent transparent #FF9800 transparent;"></div>
-            <div class="arrow-line" style="width: 30px; background: #FF9800;"></div>
+        <!-- China - Yiwu -->
+        <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
+            <div class="map-tooltip">Yiwu, China - 2022</div>
         </div>
-        
-        <!-- ===== 6 دول ===== -->
-        <!-- اليمن -->
-        <div class="map-location" style="position: absolute; top: 45%; left: 58%; transform: translate(-50%, -50%);">
-            <div style="width: 24px; height: 24px; background: red; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">🇾🇪</div>
-            </div>
-            <div class="map-tooltip">اليمن - 1982</div>
+        <!-- India -->
+        <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
+            <div class="map-tooltip">India - 2017</div>
         </div>
-        
-        <!-- السعودية -->
-        <div class="map-location" style="position: absolute; top: 42%; left: 55%; transform: translate(-50%, -50%);">
-            <div style="width: 22px; height: 22px; background: #FFCD11; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">🇸🇦</div>
-            </div>
-            <div class="map-tooltip">السعودية - 1992</div>
-        </div>
-        
-        <!-- عُمان -->
-        <div class="map-location" style="position: absolute; top: 44%; left: 60%; transform: translate(-50%, -50%);">
-            <div style="width: 22px; height: 22px; background: #4CAF50; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">🇴🇲</div>
-            </div>
-            <div class="map-tooltip">عُمان - 2017</div>
-        </div>
-        
-        <!-- الهند -->
-        <div class="map-location" style="position: absolute; top: 40%; left: 68%; transform: translate(-50%, -50%);">
-            <div style="width: 22px; height: 22px; background: #2196F3; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">🇮🇳</div>
-            </div>
-            <div class="map-tooltip">الهند - 2017</div>
-        </div>
-        
-        <!-- جوانزو -->
-        <div class="map-location" style="position: absolute; top: 38%; left: 75%; transform: translate(-50%, -50%);">
-            <div style="width: 22px; height: 22px; background: #9C27B0; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">🇨🇳</div>
-            </div>
-            <div class="map-tooltip">جوانزو - 2020</div>
-        </div>
-        
-        <!-- ييوو -->
-        <div class="map-location" style="position: absolute; top: 37%; left: 74%; transform: translate(-50%, -50%);">
-            <div style="width: 22px; height: 22px; background: #FF9800; border-radius: 50%; position: relative;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">🇨🇳</div>
-            </div>
-            <div class="map-tooltip">ييوو - 2022</div>
-        </div>
-        
     </div>
 </div>
             
