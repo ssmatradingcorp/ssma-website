@@ -1436,7 +1436,11 @@
             height: 2px;
             background: inherit;
         }
- 
+        .arrow-1 { color: #FFCD11; } /* أصفر */
+        .arrow-2 { color: #4CAF50; } /* أخضر */
+        .arrow-3 { color: #2196F3; } /* أزرق */
+        .arrow-4 { color: #9C27B0; } /* بنفسجي */
+        .arrow-5 { color: #FF9800; }
     </style>
     </style>
 </head>
@@ -1562,8 +1566,35 @@
             <!-- World Map -->
             <!-- World Map -->
 <!-- World Map -->
-<!-- ===== خريطة مبسطة وواضحة ===== -->
-
+<div class="world-map-container">
+    <div class="world-map" id="worldMap">
+        <!-- Yemen -->
+        <div class="map-point" style="top: 45%; left: 58%;" data-branch="yemen">
+            <div class="map-tooltip">Yemen - 1982</div>
+        </div>
+        <!-- Saudi Arabia -->
+        <div class="map-point" style="top: 42%; left: 55%;" data-branch="saudi">
+            <div class="map-tooltip">Saudi Arabia - 1992</div>
+        </div>
+        <!-- Oman -->
+        <div class="map-point" style="top: 44%; left: 60%;" data-branch="oman">
+            <div class="map-tooltip">Oman - 2017</div>
+        </div>
+        <!-- China - Guangzhou -->
+        <div class="map-point" style="top: 38%; left: 75%;" data-branch="guangzhou">
+            <div class="map-tooltip">Guangzhou, China - 2020</div>
+        </div>
+        <!-- China - Yiwu -->
+        <div class="map-point" style="top: 37%; left: 74%;" data-branch="yiwu">
+            <div class="map-tooltip">Yiwu, China - 2022</div>
+        </div>
+        <!-- India -->
+        <div class="map-point" style="top: 40%; left: 68%;" data-branch="india">
+            <div class="map-tooltip">India - 2017</div>
+        </div>
+    </div>
+</div>
+            
             <!-- Timeline -->
             <div class="timeline-container">
                 <h3 style="text-align: center; margin-bottom: var(--space-xl);" data-ar="رحلة توسعنا" data-en="Our Expansion Journey">رحلة توسعنا</h3>
@@ -1965,7 +1996,7 @@
 <section class="vehicles-section page-section" id="vehicles" style="display:none;">
     <div class="container">
         <!-- الهيرو -->
-        <div class="energy-hero" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('cars.jpg');">
+        <div class="energy-hero" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
             <div class="container">
                 <h1 data-ar="SSMA لتجارة السيارات وقطع الغيار" data-en="SSMA for Vehicle & Spare Parts Trading">
                     SSMA لتجارة السيارات وقطع الغيار
@@ -1991,7 +2022,7 @@
                 </p>
             </div>
             <div class="about-image">
-                <img src="cars.jpg" alt="معرض سيارات SSMA">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="معرض سيارات SSMA">
             </div>
         </div>
 
@@ -2044,7 +2075,7 @@
 
             <div class="about-content" style="margin-top: var(--space-xl);">
                 <div class="about-image">
-                    <img src="spaer.jpg" alt="مستودع قطع غيار SSMA">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مستودع قطع غيار SSMA">
                 </div>
                 <div class="about-text">
                     <p data-ar="نبحث عن أفضل قطع الغيار، من مصادر نثق بها، ونجعلها متاحة لكم. خبرتنا الطويلة في استيراد المعدات والمواد جعلتنا نعرف أين نجد الجودة، وكيف نضمن وصولها إليكم." data-en="We search for the best spare parts from trusted sources and make them available to you. Our long experience in importing equipment and materials has made us know where to find quality and how to ensure it reaches you.">
@@ -2114,7 +2145,7 @@
                         </p>
                     </div>
                     <div class="about-image">
-                        <img src="fax car.jpg" alt="فحص سيارات SSMA">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فحص سيارات SSMA">
                     </div>
                 </div>
             </div>
@@ -2131,7 +2162,7 @@
 
             <div class="about-content">
                 <div class="about-image">
-                    <img src="electrc car.jpg" alt="السيارات الكهربائية في SSMA">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="السيارات الكهربائية في SSMA">
                 </div>
                 <div class="about-text">
                     <p data-ar="وكما كنا رواداً في حلول الطاقة الشمسية، نطمح لأن نكون رواداً في توفير السيارات الكهربائية عندما تصبح متاحة بالسوق المناسب." data-en="Just as we were pioneers in solar energy solutions, we aspire to be pioneers in providing electric vehicles when they become available in the appropriate market.">
@@ -2254,7 +2285,7 @@
             </div>
 
             <div class="text-center" style="margin-top: var(--space-xxl);">
-                <img src="sell car.jpg" alt="فريق SSMA للسيارات" style="border-radius: 12px; max-height: 500px; object-fit: cover; width: 100%;">
+                <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="فريق SSMA للسيارات" style="border-radius: 12px; max-height: 500px; object-fit: cover; width: 100%;">
                 <p class="branch-tagline" style="margin-top: var(--space-md); text-align: center;" data-ar="فريق عمل SSMA في قسم السيارات يقدمون خدمة للعميل" data-en="SSMA's vehicle department team providing service to the customer">
                     فريق عمل SSMA في قسم السيارات يقدمون خدمة للعميل
                 </p>
@@ -2489,113 +2520,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ============ معرض المنتجات الشمسية الجديد ============ -->
-<div class="section-title" style="margin-top: var(--space-xxl);">
-    <h2 data-ar="منتجاتنا الشمسية" data-en="Our Solar Products">منتجاتنا الشمسية</h2>
-    <p data-ar="نوفر أفضل الأنظمة الشمسية من مصادر عالمية موثوقة" 
-       data-en="We provide the best solar systems from trusted global sources">
-        نوفر أفضل الأنظمة الشمسية من مصادر عالمية موثوقة
-    </p>
-</div>
-
-<div class="products-grid">
-    <!-- منتج 1: الألواح الشمسية -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="solar-panels.jpg" alt="الألواح الشمسية">
-        </div>
-        <div class="product-content">
-            <h3 data-ar="ألواح شمسية عالية الكفاءة" data-en="High Efficiency Solar Panels">
-                ألواح شمسية عالية الكفاءة
-            </h3>
-            <p data-ar="نوفر ألواح شمسية أحادية ومتعددة البلورات بكفاءة تصل إلى 21.5%، مع ضمان أداء 25 سنة وضمان مواد 12 سنة. مثالية للمناخ الحار في اليمن والخليج."
-               data-en="We provide mono and polycrystalline solar panels with up to 21.5% efficiency, with 25-year performance warranty and 12-year materials warranty. Ideal for the hot climate in Yemen and the Gulf.">
-                نوفر ألواح شمسية أحادية ومتعددة البلورات بكفاءة تصل إلى 21.5%، مع ضمان أداء 25 سنة وضمان مواد 12 سنة. مثالية للمناخ الحار في اليمن والخليج.
-            </p>
-            <div class="product-specs">
-                <div class="spec-item">
-                    <span class="spec-value">21.5%</span>
-                    <span class="spec-label" data-ar="الكفاءة" data-en="Efficiency">الكفاءة</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">25</span>
-                    <span class="spec-label" data-ar="سنة ضمان" data-en="Warranty">سنة ضمان</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">550W</span>
-                    <span class="spec-label" data-ar="الطاقة" data-en="Power">الطاقة</span>
-                </div>
-            </div>
-            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-               data-ar="استفسر عن الألواح" data-en="Inquire About Panels">استفسر عن الألواح</a>
-        </div>
-    </div>
-
-    <!-- منتج 2: الإنفيرترات -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="solar-inverter.jpg" alt="الإنفيرترات الشمسية">
-        </div>
-        <div class="product-content">
-            <h3 data-ar="منظمات وإنفيرترات ذكية" data-en="Smart Inverters & Controllers">
-                منظمات وإنفيرترات ذكية
-            </h3>
-            <p data-ar="أنظمة تحكم ذكية مع مراقبة عن بعد عبر تطبيق الجوال، كفاءة تصل إلى 98.5%، مقاومة للغبار والحرارة العالية. متوافقة مع جميع أنواع الألواح الشمسية."
-               data-en="Smart control systems with remote monitoring via mobile app, efficiency up to 98.5%, dust and high temperature resistant. Compatible with all types of solar panels.">
-                أنظمة تحكم ذكية مع مراقبة عن بعد عبر تطبيق الجوال، كفاءة تصل إلى 98.5%، مقاومة للغبار والحرارة العالية. متوافقة مع جميع أنواع الألواح الشمسية.
-            </p>
-            <div class="product-specs">
-                <div class="spec-item">
-                    <span class="spec-value">98.5%</span>
-                    <span class="spec-label" data-ar="الكفاءة" data-en="Efficiency">الكفاءة</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">10</span>
-                    <span class="spec-label" data-ar="سنة ضمان" data-en="Warranty">سنة ضمان</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">5-100KW</span>
-                    <span class="spec-label" data-ar="السعات" data-en="Capacities">السعات</span>
-                </div>
-            </div>
-            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-               data-ar="استفسر عن الإنفيرترات" data-en="Inquire About Inverters">استفسر عن الإنفيرترات</a>
-        </div>
-    </div>
-
-    <!-- منتج 3: بطاريات التخزين -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="solar-batteries.jpg" alt="بطاريات الطاقة الشمسية">
-        </div>
-        <div class="product-content">
-            <h3 data-ar="بطاريات ليثيوم متطورة" data-en="Advanced Lithium Batteries">
-                بطاريات ليثيوم متطورة
-            </h3>
-            <p data-ar="بطاريات ليثيوم فوسفات حديد (LiFePO4) بعمر يصل إلى 15 سنة، 6000 دورة شحن/تفريغ، آمنة تماماً بدون انفجار. مثالية للأنظمة المنعزلة والهجينة."
-               data-en="Lithium Iron Phosphate (LiFePO4) batteries with up to 15 years lifespan, 6000 charge/discharge cycles, completely safe without explosion risk. Ideal for off-grid and hybrid systems.">
-                بطاريات ليثيوم فوسفات حديد (LiFePO4) بعمر يصل إلى 15 سنة، 6000 دورة شحن/تفريغ، آمنة تماماً بدون انفجار. مثالية للأنظمة المنعزلة والهجينة.
-            </p>
-            <div class="product-specs">
-                <div class="spec-item">
-                    <span class="spec-value">15</span>
-                    <span class="spec-label" data-ar="سنة عمر" data-en="Lifespan">سنة عمر</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">6000</span>
-                    <span class="spec-label" data-ar="دورة شحن" data-en="Cycles">دورة شحن</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">5-200KWh</span>
-                    <span class="spec-label" data-ar="السعات" data-en="Capacities">السعات</span>
-                </div>
-            </div>
-            <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-               data-ar="استفسر عن البطاريات" data-en="Inquire About Batteries">استفسر عن البطاريات</a>
-        </div>
-    </div>
-</div>
-<!-- ============ نهاية معرض المنتجات الشمسية ============ -->
 
                 <!-- حاسبة التوفير -->
                 <div class="saving-calculator">
@@ -2878,7 +2802,6 @@
     </section>
 
     <!-- Footer -->
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -2904,6 +2827,7 @@
                         <a href="#" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
                         <a href="#" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
                         <a href="#" onclick="showSection('energy'); return false;" data-ar="الطاقة" data-en="Energy">الطاقة</a>
+                        <a href="#" onclick="showSection('vehicles'); return false;" data-ar="السيارات" data-en="Vehicles">السيارات</a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -3247,7 +3171,7 @@
             branchObserver.observe(card);
         });
 
-                // Initialize the page with home section visible
+        // Initialize the page with home section visible
         document.addEventListener('DOMContentLoaded', function() {
             showSection('home');
             
@@ -3255,31 +3179,21 @@
             if (window.location.hash === '#energy') {
                 showSection('energy');
             }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("الأسهم جاهزة!");
             
-            console.log("موقع SSMA جاهز للتشغيل!");
-            
-        // عند النقر على عنصر في القائمة الجانبية
-        branchItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const branch = this.dataset.branch;
-                
-                // إزالة التفعيل
-                branchItems.forEach(i => i.classList.remove('active'));
-                mapPoints.forEach(p => p.classList.remove('active'));
-                
-                // تفعيل العناصر المحددة
-                this.classList.add('active');
-                document.querySelector(`.map-point[data-branch="${branch}"]`).classList.add('active');
-                
-                // البحث عن بطاقة الفرع
-                const targetCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
-                if (targetCard) {
-                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+            // عند التمرير على الدولة
+            const countries = document.querySelectorAll('.map-location');
+            countries.forEach(country => {
+                country.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translate(-50%, -50%) scale(1.2)';
+                });
+                country.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
             });
         });
-        // ===== نهاية تفاعل الخريطة =====
-        
     </script>
 </body>
 </html>
