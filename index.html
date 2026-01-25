@@ -604,6 +604,54 @@
         }
         
         /* ===== PRODUCTS SECTION ===== */
+        /* ===== PRODUCTS TABS ===== */
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.product-tab {
+    background: var(--cat-gray);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cat-dark-gray);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-tab.active {
+    background: var(--cat-yellow);
+    color: var(--cat-black);
+}
+
+.product-tab:hover:not(.active) {
+    background: #e5e5e5;
+}
+
+/* ===== PRODUCTS GRID ===== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* رسالة عدم وجود منتجات */
+.no-products-message {
+    text-align: center;
+    padding: 60px;
+    grid-column: 1 / -1;
+    color: #666;
+    font-size: 18px;
+}
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1786,371 +1834,363 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="page-section" style="display:none;">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-ar="منتجاتنا الرئيسية" data-en="Our Main Products">منتجاتنا الرئيسية</h2>
-                <p data-ar="جودة عالية وأداء موثوق في جميع منتجاتنا" data-en="High quality and reliable performance in all our products">جودة عالية وأداء موثوق في جميع منتجاتنا</p>
-            </div>
-            <div class="products-grid">
-                <!-- RD20 Water Well Drilling Rig -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="rd20-pro-1500m.jpg" alt="RD20 Water Well Drilling Rig">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر" data-en="Water Well Drilling Rig - Model RD20 PRO - Depth 1500m">حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر</h3>
-                        <p data-ar="حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة." data-en="Advanced professional rig for deep water well drilling up to 1500 meters. Equipped with latest hydraulic rotary drilling technology, air-conditioned operator cabin, and integrated digital control system. Ideal for mega projects and deep groundwater exploration.">حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value">1500m</span>
-                                <span class="spec-label" data-ar="العمق" data-en="Depth">العمق</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value">PRO</span>
-                                <span class="spec-label" data-ar="الموديل" data-en="Model">الموديل</span>
-                            </div>
-                            <div class="spec-item">
-    <span class="spec-value" data-ar="هيدروليكي" data-en="Hydraulic">هيدروليكي</span>
-    <span class="spec-label" data-ar="النظام" data-en="System">النظام</span>
-</div>
-                        </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
-                    </div>
-                </div>
-                
-                <!-- Well Casing Pipes -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="casing-pipes.jpg" alt="Well Casing Pipes">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="أنابيب تغليف الآبار" data-en="Water Well Casing Pipes">أنابيب تغليف الآبار</h3>
-                        <p data-ar="نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية." data-en="We sell well casing pipes from 6 inch to 20 inch sizes. Durable and corrosion-resistant pipes, specifically designed for water well casing and preserving groundwater quality.">نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value">6-20"</span>
-                                <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="تغليف" data-en="Casing">تغليف</span>
-                                <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="مقاوم" data-en="Resistant">مقاوم</span>
-                                <span class="spec-label" data-ar="التآكل" data-en="Corrosion">التآكل</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
-                    </div>
-                </div>
-                
-                <!-- كمبريسور هواء -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="ari compresor.jpg" alt="Air Compressor">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="كمبريسور هواء 1250 CFM/400 PSI" data-en="Air Compressor 1250 CFM/400 PSI">كمبريسور هواء 1250 CFM/400 PSI</h3>
-                        <p data-ar="كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها." data-en="Air compressor with capacity of 1250 CFM and 400 PSI pressure, Ingersoll Rand with air booster starting from 1800m up to 3000m, Garden Denver rock drilling tools and accessories.">كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value">1250 CFM</span>
-                                <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value">400 PSI</span>
-                                <span class="spec-label" data-ar="الضغط" data-en="Pressure">الضغط</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value">1800-3000m</span>
-                                <span class="spec-label" data-ar="نطاق العمل" data-en="Working Range">نطاق العمل</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
-                    </div>
-                </div>
+  <!-- قسم المنتجات -->
+<section id="products" class="page-section" style="display:none;">
+    <div class="container">
+        <!-- العنوان -->
+        <div class="section-title">
+            <h2 data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</h2>
+            <p data-ar="اختر القسم لعرض المنتجات" data-en="Select category to view products">
+                اختر القسم لعرض المنتجات
+            </p>
+        </div>
 
-                <!-- Drill Pipes -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="drill-pipes1.jpg" alt="Drill Pipes">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="أنابيب حفر عالية الجودة" data-en="Professional Drill Pipes">أنابيب حفر عالية الجودة</h3>
-                        <p data-ar="نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة." data-en="We provide high-quality drill pipes for various well drilling projects. Manufactured according to API standards, durable and withstand high pressures. Suitable for deep water well drilling.">نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value">API</span>
-                                <span class="spec-label" data-ar="المعيار" data-en="Standard">المعيار</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="متنوعة" data-en="Various">متنوعة</span>
-                                <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value">API</span>
-                                <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="طلب تفاصيل" data-en="Request Details">طلب تفاصيل</a>
-                    </div>
-                </div>
+        <!-- تبويبات الأقسام -->
+        <div class="product-tabs">
+            <button class="product-tab active" onclick="filterProducts('all', this)">
+                <i class="fas fa-th"></i>
+                <span data-ar="الكل" data-en="All">الكل</span>
+            </button>
+            <button class="product-tab" onclick="filterProducts('drilling', this)">
+                <i class="fas fa-digging"></i>
+                <span data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</span>
+            </button>
+            <button class="product-tab" onclick="filterProducts('heavy', this)">
+                <i class="fas fa-tractor"></i>
+                <span data-ar="المعدات الثقيلة" data-en="Heavy Equipment">المعدات الثقيلة</span>
+            </button>
+            <button class="product-tab" onclick="filterProducts('solar', this)">
+                <i class="fas fa-solar-panel"></i>
+                <span data-ar="المنظومات الشمسية" data-en="Solar Systems">المنظومات الشمسية</span>
+            </button>
+            <button class="product-tab" onclick="filterProducts('vehicles', this)">
+                <i class="fas fa-truck"></i>
+                <span data-ar="السيارات والنقل" data-en="Vehicles & Transport">السيارات والنقل</span>
+            </button>
+            <button class="product-tab" onclick="filterProducts('pipes', this)">
+                <i class="fas fa-pipe"></i>
+                <span data-ar="الأنابيب" data-en="Pipes">الأنابيب</span>
+            </button>
+        </div>
 
-                <!-- Drilling Tools -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="drilling-tools-2.png" alt="Drilling Tools">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="أدوات حفر متعددة" data-en="Professional Drilling Tools">أدوات حفر متعددة</h3>
-                        <p data-ar="استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة DIY، تضمن أداء موثوقاً في التطبيقات المختلفة." data-en="Explore our high-quality drilling tools, engineered for durability and precision. Designed for both professionals and DIY enthusiasts, they ensure reliable performance in various applications.">استكشف أدوات الحفر عالية الجودة لدينا، المصممة هندسياً للمتانة والدقة. مصممة لكل من المحترفين وهواة DIY، تضمن أداء موثوقاً في التطبيقات المختلفة.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="عالي" data-en="High">عالي</span>
-                                <span class="spec-label" data-ar="الجودة" data-en="Quality">الجودة</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="متين" data-en="Durable">متين</span>
-                                <span class="spec-label" data-ar="المتانة" data-en="Durability">المتانة</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="دقيق" data-en="Precise">دقيق</span>
-                                <span class="spec-label" data-ar="الدقة" data-en="Precision">الدقة</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
-                    </div>
+        <!-- شبكة المنتجات -->
+        <div class="products-grid">
+            <!-- =========== أدوات الحفر =========== -->
+            <!-- 1. حفارة RD20 PRO -->
+            <div class="product-card" data-category="drilling">
+                <div class="product-image">
+                    <img src="rd20-pro-1500m.jpg" alt="حفارة RD20">
                 </div>
-
-                <!-- Advanced Drilling Equipment -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="f5e0638810103836021be46fc53b745b.jpg" alt="Advanced Drilling Equipment">
-                    </div>
-                    <div class="product-content">
-                        <h3 data-ar="معدات حفر متطورة" data-en="Advanced Drilling Equipment">معدات حفر متطورة</h3>
-                        <p data-ar="نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصاميم مبتكرة لأداء متميز في جميع الظروف." data-en="We offer a comprehensive range of modern drilling equipment that meets the highest quality and safety standards. Innovative designs for superior performance in all conditions.">نقدم مجموعة شاملة من معدات الحفر الحديثة التي تلبي أعلى معايير الجودة والسلامة. تصاميم مبتكرة لأداء متميز في جميع الظروف.</p>
-                        <div class="product-specs">
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="حديث" data-en="Modern">حديث</span>
-                                <span class="spec-label" data-ar="التقنية" data-en="Technology">التقنية</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="آمن" data-en="Safe">آمن</span>
-                                <span class="spec-label" data-ar="السلامة" data-en="Safety">السلامة</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-value" data-ar="مبتكر" data-en="Innovative">مبتكر</span>
-                                <span class="spec-label" data-ar="التصميم" data-en="Design">التصميم</span>
-                            </div>
+                <div class="product-content">
+                    <h3 data-ar="حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر" data-en="Water Well Drilling Rig - Model RD20 PRO - Depth 1500m">
+                        حفارة آبار مياه موديل RD20 PRO - عمق 1500 متر
+                    </h3>
+                    <p data-ar="حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة."
+                       data-en="Advanced professional rig for deep water well drilling up to 1500 meters. Equipped with latest hydraulic rotary drilling technology, air-conditioned operator cabin, and integrated digital control system. Ideal for mega projects and deep groundwater exploration.">
+                       حفارة احترافية متطورة لحفر آبار المياه العميقة حتى 1500 متر. مزودة بأحدث تقنيات الحفر الدوار الهيدروليكي، كابينة مشغل مكيفة، ونظام تحكم رقمي متكامل. مثالية للمشاريع الضخمة واستكشاف المياه الجوفية العميقة.
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">1500m</span>
+                            <span class="spec-label" data-ar="العمق" data-en="Depth">العمق</span>
                         </div>
-                        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="استفسر الآن" data-en="Inquire Now">استفسر الآن</a>
+                        <div class="spec-item">
+                            <span class="spec-value">PRO</span>
+                            <span class="spec-label" data-ar="الموديل" data-en="Model">الموديل</span>
+                        </div>
                     </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
                 </div>
-                 <div class="product-card">
-    <div class="product-image">
-        <img src="solar-system.jpg" alt="Solar Energy System">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="منظومة طاقة شمسية متكاملة 100 كيلوواط" data-en="Integrated 100KW Solar Energy System">منظومة طاقة شمسية متكاملة 100 كيلوواط</h3>
-        <p data-ar="حل طاقة شمسية متكامل يشمل الألواح الشمسية، الإنفيرترات، أنظمة التثبيت، والمراقبة الذكية للمصانع والفنادق"
-           data-en="Integrated solar energy solution including solar panels, inverters, mounting systems, and smart monitoring for factories and hotels">
-           حل طاقة شمسية متكامل يشمل الألواح الشمسية، الإنفيرترات، أنظمة التثبيت، والمراقبة الذكية للمصانع والفنادق
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value">100 KW</span>
-                <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
             </div>
-            <div class="spec-item">
-               <span class="spec-value" data-ar="25 سنة" data-en="25 Years">25 سنة</span>
-                <span class="spec-label" data-ar="ضمان" data-en="Warranty">ضمان</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value">80%</span>
-                <span class="spec-label" data-ar="توفير" data-en="Saving">توفير</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="اطلب دراسة جدوى" data-en="Request Feasibility Study">اطلب دراسة جدوى</a>
-    </div>
-</div>
-            <div class="product-card">
-    <div class="product-image">
-        <img src="lithium-battery.jpg" alt="Lithium Battery">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="بطارية ليثيوم 10 كيلوواط ساعي" data-en="10KWh Lithium Battery">بطارية ليثيوم 10 كيلوواط ساعي</h3>
-        <p data-ar="بطارية ليثيوم فوسفات حديد (LiFePO4) آمنة وطويلة العمر لتخزين الطاقة الشمسية، بعمر افتراضي 15 سنة"
-           data-en="Safe and long-life Lithium Iron Phosphate (LiFePO4) battery for solar energy storage, with 15-year lifespan">
-           بطارية ليثيوم فوسفات حديد (LiFePO4) آمنة وطويلة العمر لتخزين الطاقة الشمسية، بعمر افتراضي 15 سنة
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value">10 KWh</span>
-                <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value">6000</span>
-                <span class="spec-label" data-ar="دورة شحن" data-en="Cycles">دورة شحن</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="15 سنة" data-en="15 Years">15 سنة</span>
-                 <span class="spec-label" data-ar="العمر" data-en="Lifespan">العمر</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن البطارية" data-en="Inquire About Battery">استفسر عن البطارية</a>
-    </div>
-</div>
-                  <div class="product-card">
-    <div class="product-image">
-        <img src="bulldozer.jpg" alt="Bulldozer">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="بلدوزر كاتربيلر D6T" data-en="Caterpillar D6T Bulldozer">بلدوزر كاتربيلر D6T</h3>
-        <p data-ar="بلدوزر كاتربيلر موديل D6T بقوة 215 حصان، مثالي لأعمال التسوية والدفع الثقيل في المشاريع الإنشائية والتعدين"
-           data-en="Caterpillar D6T bulldozer with 215 HP power, ideal for grading and heavy pushing in construction and mining projects">
-           بلدوزر كاتربيلر موديل D6T بقوة 215 حصان، مثالي لأعمال التسوية والدفع الثقيل في المشاريع الإنشائية والتعدين
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value">215 HP</span>
-                <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="24 طن" data-en="24 Ton">24 طن</span>
-                <span class="spec-label" data-ar="الوزن" data-en="Weight">الوزن</span>
-            </div>
-            <div class="spec-item">
-               <span class="spec-value" data-ar="موديل 2023" data-en="Model 2023">موديل 2023</span>
-                <span class="spec-label" data-ar="الموديل" data-en="Model">الموديل</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن البلدوزر" data-en="Inquire About Bulldozer">استفسر عن البلدوزر</a>
-    </div>
-</div>
-            <div class="product-card">
-    <div class="product-image">
-        <img src="excavator.jpg" alt="Hydraulic Excavator">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="حفار هيدروليكي كاتربيلر 320" data-en="Caterpillar 320 Hydraulic Excavator">حفار هيدروليكي كاتربيلر 320</h3>
-        <p data-ar="حفار هيدروليكي متعدد الاستخدامات، مناسب لأعمال الحفر والتحميل والهدم، مع كابينة مكيفة ونظام هيدروليكي متطور"
-           data-en="Versatile hydraulic excavator suitable for digging, loading, and demolition work, with air-conditioned cabin and advanced hydraulic system">
-           حفار هيدروليكي متعدد الاستخدامات، مناسب لأعمال الحفر والتحميل والهدم، مع كابينة مكيفة ونظام هيدروليكي متطور
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-               <span class="spec-value" data-ar="1.2 م³" data-en="1.2 m³">1.2 م³</span>
-                <span class="spec-label" data-ar="سعة الدلو" data-en="Bucket Capacity">سعة الدلو</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value">160 HP</span>
-                <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-            </div>
-            <div class="spec-item">
-               <span class="spec-value" data-ar="8.5 م" data-en="8.5 m">8.5 م</span>
-                <span class="spec-label" data-ar="عمق الحفر" data-en="Dig Depth">عمق الحفر</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن الحفار" data-en="Inquire About Excavator">استفسر عن الحفار</a>
-    </div>
-</div>
-                <div class="product-card">
-    <div class="product-image">
-        <img src="wheel-loader.jpg" alt="Wheel Loader">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="لودر بعجلات كاتربيلر 966M" data-en="Caterpillar 966M Wheel Loader">لودر بعجلات كاتربيلر 966M</h3>
-        <p data-ar="لودر بعجلات عالي الأداء لعمليات التحميل والنقل في المحاجر والمناجم والمشاريع الإنشائية الكبرى"
-           data-en="High-performance wheel loader for loading and hauling operations in quarries, mines, and major construction projects">
-           لودر بعجلات عالي الأداء لعمليات التحميل والنقل في المحاجر والمناجم والمشاريع الإنشائية الكبرى
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value" data-ar="4.5 م³" data-en="4.5 m³">4.5 م³</span>
-                <span class="spec-label" data-ar="سعة الدلو" data-en="Bucket Capacity">سعة الدلو</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value">250 HP</span>
-                <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="25 طن" data-en="25 Ton">25 طن</span>
-                 <span class="spec-label" data-ar="حمولة" data-en="Payload">حمولة</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن اللودر" data-en="Inquire About Wheel Loader">استفسر عن اللودر</a>
-    </div>
-</div>
-            <div class="product-card">
-    <div class="product-image">
-        <img src="truck.jpg" alt="Truck">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="شاحنة نقل ثقيل 10 طن" data-en="10 Ton Heavy Duty Truck">شاحنة نقل ثقيل 10 طن</h3>
-        <p data-ar="شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين"
-           data-en="Heavy-duty truck with 10-ton load capacity, ideal for transporting equipment and construction materials, equipped with powerful diesel engine and robust suspension system">
-           شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value" data-ar="10 طن" data-en="10 Ton">10 طن</span>
-<span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value">300 HP</span>
-                <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="ديزل" data-en="Diesel">ديزل</span>
-<span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن الشاحنة" data-en="Inquire About Truck">استفسر عن الشاحنة</a>
-    </div>
-</div>
-                
-            <div class="product-card">
-    <div class="product-image">
-        <img src="dump-truck.jpg" alt="Dump Truck">
-    </div>
-    <div class="product-content">
-        <h3 data-ar="شاحنة قلابة 15 طن" data-en="15 Ton Dump Truck">شاحنة قلابة 15 طن</h3>
-        <p data-ar="شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال"
-           data-en="Dump truck specialized for construction and mining works, with 12 m³ box capacity, fast and efficient hydraulic dumping system">
-           شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال
-        </p>
-        <div class="product-specs">
-            <div class="spec-item">
-                <span class="spec-value" data-ar="15 طن" data-en="15 Ton">15 طن</span>
-                <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="12 م³" data-en="12 m³">12 م³</span>
-                <span class="spec-label" data-ar="سعة الصندوق" data-en="Box Capacity">سعة الصندوق</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-value" data-ar="هيدروليكي" data-en="Hydraulic">هيدروليكي</span>
-                <span class="spec-label" data-ar="النظام" data-en="System">النظام</span>
-            </div>
-        </div>
-        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-           data-ar="استفسر عن القلابة" data-en="Inquire About Dump Truck">استفسر عن القلابة</a>
-    </div>
-</div>
-            </div>
-        </div>
-    </section>
-    
 
+            <!-- 2. كمبريسور هواء -->
+            <div class="product-card" data-category="drilling">
+                <div class="product-image">
+                    <img src="ari compresor.jpg" alt="كمبريسور هواء">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="كمبريسور هواء 1250 CFM/400 PSI" data-en="Air Compressor 1250 CFM/400 PSI">
+                        كمبريسور هواء 1250 CFM/400 PSI
+                    </h3>
+                    <p data-ar="كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها."
+                       data-en="Air compressor with capacity of 1250 CFM and 400 PSI pressure, Ingersoll Rand with air booster starting from 1800m up to 3000m, Garden Denver rock drilling tools and accessories.">
+                       كمبريسور هواء بقدرة 1250 قدم مكعب في الدقيقة وضغط 400 باوند/بوصة مربعة، إنجرسول راند مع معزز هواء يبدأ من 1800م حتى 3000م، أدوات حفر الصخور جاردن دنفر وملحقاتها.
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">1250 CFM</span>
+                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">400 PSI</span>
+                            <span class="spec-label" data-ar="الضغط" data-en="Pressure">الضغط</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="طلب عرض سعر" data-en="Get Quote">طلب عرض سعر</a>
+                </div>
+            </div>
+
+            <!-- 3. أنابيب حفر -->
+            <div class="product-card" data-category="drilling">
+                <div class="product-image">
+                    <img src="drill-pipes1.jpg" alt="أنابيب حفر">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="أنابيب حفر عالية الجودة" data-en="Professional Drill Pipes">
+                        أنابيب حفر عالية الجودة
+                    </h3>
+                    <p data-ar="نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة."
+                       data-en="We provide high-quality drill pipes for various well drilling projects. Manufactured according to API standards, durable and withstand high pressures. Suitable for deep water well drilling.">
+                       نوفر أنابيب حفر عالية الجودة لمختلف مشاريع حفر الآبار. مصنوعة وفق معايير API، متينة وتتحمل الضغوط العالية. مناسبة لحفر آبار المياه العميقة.
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">API</span>
+                            <span class="spec-label" data-ar="المعيار" data-en="Standard">المعيار</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="متنوعة" data-en="Various">متنوعة</span>
+                            <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="طلب تفاصيل" data-en="Request Details">طلب تفاصيل</a>
+                </div>
+            </div>
+
+            <!-- =========== المعدات الثقيلة =========== -->
+            <!-- 1. بلدوزر كاتربيلر -->
+            <div class="product-card" data-category="heavy">
+                <div class="product-image">
+                    <img src="bulldozer.jpg" alt="بلدوزر كاتربيلر">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="بلدوزر كاتربيلر D6T" data-en="Caterpillar D6T Bulldozer">
+                        بلدوزر كاتربيلر D6T
+                    </h3>
+                    <p data-ar="بلدوزر كاتربيلر موديل D6T بقوة 215 حصان، مثالي لأعمال التسوية والدفع الثقيل في المشاريع الإنشائية والتعدين"
+                       data-en="Caterpillar D6T bulldozer with 215 HP power, ideal for grading and heavy pushing in construction and mining projects">
+                       بلدوزر كاتربيلر موديل D6T بقوة 215 حصان، مثالي لأعمال التسوية والدفع الثقيل في المشاريع الإنشائية والتعدين
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">215 HP</span>
+                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="24 طن" data-en="24 Ton">24 طن</span>
+                            <span class="spec-label" data-ar="الوزن" data-en="Weight">الوزن</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن البلدوزر" data-en="Inquire About Bulldozer">استفسر عن البلدوزر</a>
+                </div>
+            </div>
+
+            <!-- 2. حفار هيدروليكي -->
+            <div class="product-card" data-category="heavy">
+                <div class="product-image">
+                    <img src="excavator.jpg" alt="حفار هيدروليكي">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="حفار هيدروليكي كاتربيلر 320" data-en="Caterpillar 320 Hydraulic Excavator">
+                        حفار هيدروليكي كاتربيلر 320
+                    </h3>
+                    <p data-ar="حفار هيدروليكي متعدد الاستخدامات، مناسب لأعمال الحفر والتحميل والهدم، مع كابينة مكيفة ونظام هيدروليكي متطور"
+                       data-en="Versatile hydraulic excavator suitable for digging, loading, and demolition work, with air-conditioned cabin and advanced hydraulic system">
+                       حفار هيدروليكي متعدد الاستخدامات، مناسب لأعمال الحفر والتحميل والهدم، مع كابينة مكيفة ونظام هيدروليكي متطور
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="1.2 م³" data-en="1.2 m³">1.2 م³</span>
+                            <span class="spec-label" data-ar="سعة الدلو" data-en="Bucket Capacity">سعة الدلو</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">160 HP</span>
+                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن الحفار" data-en="Inquire About Excavator">استفسر عن الحفار</a>
+                </div>
+            </div>
+
+            <!-- 3. لودر بعجلات -->
+            <div class="product-card" data-category="heavy">
+                <div class="product-image">
+                    <img src="wheel-loader.jpg" alt="لودر بعجلات">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="لودر بعجلات كاتربيلر 966M" data-en="Caterpillar 966M Wheel Loader">
+                        لودر بعجلات كاتربيلر 966M
+                    </h3>
+                    <p data-ar="لودر بعجلات عالي الأداء لعمليات التحميل والنقل في المحاجر والمناجم والمشاريع الإنشائية الكبرى"
+                       data-en="High-performance wheel loader for loading and hauling operations in quarries, mines, and major construction projects">
+                       لودر بعجلات عالي الأداء لعمليات التحميل والنقل في المحاجر والمناجم والمشاريع الإنشائية الكبرى
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="4.5 م³" data-en="4.5 m³">4.5 م³</span>
+                            <span class="spec-label" data-ar="سعة الدلو" data-en="Bucket Capacity">سعة الدلو</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">250 HP</span>
+                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن اللودر" data-en="Inquire About Wheel Loader">استفسر عن اللودر</a>
+                </div>
+            </div>
+
+            <!-- =========== المنظومات الشمسية =========== -->
+            <!-- 1. منظومة طاقة شمسية -->
+            <div class="product-card" data-category="solar">
+                <div class="product-image">
+                    <img src="solar-system.jpg" alt="منظومة طاقة شمسية">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="منظومة طاقة شمسية متكاملة 100 كيلوواط" data-en="Integrated 100KW Solar Energy System">
+                        منظومة طاقة شمسية متكاملة 100 كيلوواط
+                    </h3>
+                    <p data-ar="حل طاقة شمسية متكامل يشمل الألواح الشمسية، الإنفيرترات، أنظمة التثبيت، والمراقبة الذكية للمصانع والفنادق"
+                       data-en="Integrated solar energy solution including solar panels, inverters, mounting systems, and smart monitoring for factories and hotels">
+                       حل طاقة شمسية متكامل يشمل الألواح الشمسية، الإنفيرترات، أنظمة التثبيت، والمراقبة الذكية للمصانع والفنادق
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">100 KW</span>
+                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="25 سنة" data-en="25 Years">25 سنة</span>
+                            <span class="spec-label" data-ar="ضمان" data-en="Warranty">ضمان</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="اطلب دراسة جدوى" data-en="Request Feasibility Study">اطلب دراسة جدوى</a>
+                </div>
+            </div>
+
+            <!-- 2. بطارية ليثيوم -->
+            <div class="product-card" data-category="solar">
+                <div class="product-image">
+                    <img src="lithium-battery.jpg" alt="بطارية ليثيوم">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="بطارية ليثيوم 10 كيلوواط ساعي" data-en="10KWh Lithium Battery">
+                        بطارية ليثيوم 10 كيلوواط ساعي
+                    </h3>
+                    <p data-ar="بطارية ليثيوم فوسفات حديد (LiFePO4) آمنة وطويلة العمر لتخزين الطاقة الشمسية، بعمر افتراضي 15 سنة"
+                       data-en="Safe and long-life Lithium Iron Phosphate (LiFePO4) battery for solar energy storage, with 15-year lifespan">
+                       بطارية ليثيوم فوسفات حديد (LiFePO4) آمنة وطويلة العمر لتخزين الطاقة الشمسية، بعمر افتراضي 15 سنة
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">10 KWh</span>
+                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">6000</span>
+                            <span class="spec-label" data-ar="دورة شحن" data-en="Cycles">دورة شحن</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن البطارية" data-en="Inquire About Battery">استفسر عن البطارية</a>
+                </div>
+            </div>
+
+            <!-- =========== السيارات والنقل =========== -->
+            <!-- 1. شاحنة نقل ثقيل -->
+            <div class="product-card" data-category="vehicles">
+                <div class="product-image">
+                    <img src="truck.jpg" alt="شاحنة نقل">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="شاحنة نقل ثقيل 10 طن" data-en="10 Ton Heavy Duty Truck">
+                        شاحنة نقل ثقيل 10 طن
+                    </h3>
+                    <p data-ar="شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين"
+                       data-en="Heavy-duty truck with 10-ton load capacity, ideal for transporting equipment and construction materials, equipped with powerful diesel engine and robust suspension system">
+                       شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="10 طن" data-en="10 Ton">10 طن</span>
+                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">300 HP</span>
+                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن الشاحنة" data-en="Inquire About Truck">استفسر عن الشاحنة</a>
+                </div>
+            </div>
+
+            <!-- 2. شاحنة قلابة -->
+            <div class="product-card" data-category="vehicles">
+                <div class="product-image">
+                    <img src="dump-truck.jpg" alt="شاحنة قلابة">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="شاحنة قلابة 15 طن" data-en="15 Ton Dump Truck">
+                        شاحنة قلابة 15 طن
+                    </h3>
+                    <p data-ar="شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال"
+                       data-en="Dump truck specialized for construction and mining works, with 12 m³ box capacity, fast and efficient hydraulic dumping system">
+                       شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="15 طن" data-en="15 Ton">15 طن</span>
+                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="12 م³" data-en="12 m³">12 م³</span>
+                            <span class="spec-label" data-ar="سعة الصندوق" data-en="Box Capacity">سعة الصندوق</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسر عن القلابة" data-en="Inquire About Dump Truck">استفسر عن القلابة</a>
+                </div>
+            </div>
+
+            <!-- =========== الأنابيب =========== -->
+            <!-- أنابيب تغليف الآبار -->
+            <div class="product-card" data-category="pipes">
+                <div class="product-image">
+                    <img src="casing-pipes.jpg" alt="أنابيب تغليف">
+                </div>
+                <div class="product-content">
+                    <h3 data-ar="أنابيب تغليف الآبار" data-en="Water Well Casing Pipes">
+                        أنابيب تغليف الآبار
+                    </h3>
+                    <p data-ar="نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية."
+                       data-en="We sell well casing pipes from 6 inch to 20 inch sizes. Durable and corrosion-resistant pipes, specifically designed for water well casing and preserving groundwater quality.">
+                       نبيع أنابيب التغليف الخاصة بالآبار من مقاس 6 بوصة إلى 20 بوصة. أنابيب متينة ومقاومة للتآكل، مصممة خصيصاً لتغليف آبار المياه والحفاظ على جودة المياه الجوفية.
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">6-20"</span>
+                            <span class="spec-label" data-ar="المقاسات" data-en="Sizes">المقاسات</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value" data-ar="تغليف" data-en="Casing">تغليف</span>
+                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+                       data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
+                </div>
+            </div>
+        </div>
+        <!-- نهاية شبكة المنتجات -->
+    </div>
+</section>
     <!-- Services Section -->
     <section class="services page-section" id="services" style="display:none;">
         <div class="container">
@@ -3475,6 +3515,35 @@
             card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             branchObserver.observe(card);
         });
+                // ===== فلترة المنتجات =====
+        function filterProducts(category, element) {
+            // 1. تحديث التبويبات النشطة
+            var allTabs = document.querySelectorAll('.product-tab');
+            allTabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            element.classList.add('active');
+            
+            // 2. فلترة المنتجات
+            var products = document.querySelectorAll('.product-card');
+            var hasProducts = false;
+            
+            products.forEach(function(product) {
+                if (category === 'all') {
+                    product.style.display = 'block';
+                    hasProducts = true;
+                } else {
+                    var productCat = product.getAttribute('data-category');
+                    if (productCat && productCat.includes(category)) {
+                        product.style.display = 'block';
+                        hasProducts = true;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                }
+            });
+        }
+
 
         // Initialize the page with home section visible
         document.addEventListener('DOMContentLoaded', function() {
