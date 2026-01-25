@@ -1845,31 +1845,31 @@
             </p>
         </div>
 
-        <!-- تبويبات الأقسام -->
+                <!-- تبويبات الأقسام -->
         <div class="product-tabs">
-            <button class="product-tab active" onclick="filterProducts('all', this)">
-                <i class="fas fa-th"></i>
-                <span data-ar="الكل" data-en="All">الكل</span>
-            </button>
-            <button class="product-tab" onclick="filterProducts('drilling', this)">
+            <button class="product-tab active" onclick="filterProducts('drilling', this)">
                 <i class="fas fa-digging"></i>
                 <span data-ar="أدوات الحفر" data-en="Drilling Tools">أدوات الحفر</span>
             </button>
+            
+            <button class="product-tab" onclick="filterProducts('supplies', this)">
+                <i class="fas fa-tools"></i>
+                <span data-ar="مستلزمات الحفر" data-en="Drilling Supplies">مستلزمات الحفر</span>
+            </button>
+            
             <button class="product-tab" onclick="filterProducts('heavy', this)">
                 <i class="fas fa-tractor"></i>
                 <span data-ar="المعدات الثقيلة" data-en="Heavy Equipment">المعدات الثقيلة</span>
             </button>
+            
             <button class="product-tab" onclick="filterProducts('solar', this)">
                 <i class="fas fa-solar-panel"></i>
                 <span data-ar="المنظومات الشمسية" data-en="Solar Systems">المنظومات الشمسية</span>
             </button>
+            
             <button class="product-tab" onclick="filterProducts('vehicles', this)">
                 <i class="fas fa-truck"></i>
                 <span data-ar="السيارات والنقل" data-en="Vehicles & Transport">السيارات والنقل</span>
-            </button>
-            <button class="product-tab" onclick="filterProducts('pipes', this)">
-                <i class="fas fa-pipe"></i>
-                <span data-ar="الأنابيب" data-en="Pipes">الأنابيب</span>
             </button>
         </div>
 
@@ -2161,7 +2161,7 @@
 
             <!-- =========== الأنابيب =========== -->
             <!-- أنابيب تغليف الآبار -->
-            <div class="product-card" data-category="pipes">
+            <div class="product-card" data-category="drilling">
                 <div class="product-image">
                     <img src="casing-pipes.jpg" alt="أنابيب تغليف">
                 </div>
@@ -2187,6 +2187,23 @@
                        data-ar="استفسار عن الأسعار" data-en="Inquire About Prices">استفسار عن الأسعار</a>
                 </div>
             </div>
+            <!-- =========== مستلزمات الحفر =========== -->
+<div class="product-card" data-category="supplies">
+    <div class="product-image">
+        <img src="drill-bits.jpg" alt="رؤوس حفر">
+    </div>
+    <div class="product-content">
+        <h3 data-ar="رؤوس حفر DTH متعددة المقاسات" data-en="DTH Drill Bits Various Sizes">
+            رؤوس حفر DTH متعددة المقاسات
+        </h3>
+        <p data-ar="رؤوس حفر عالية الجودة لجميع أنواع الصخور، مقاسات من 4 إلى 12 بوصة."
+           data-en="High quality drill bits for all rock types, sizes from 4 to 12 inch.">
+           رؤوس حفر عالية الجودة لجميع أنواع الصخور، مقاسات من 4 إلى 12 بوصة.
+        </p>
+        <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
+           data-ar="استفسر عن الرؤوس" data-en="Inquire About Bits">استفسر عن الرؤوس</a>
+    </div>
+</div>
         </div>
         <!-- نهاية شبكة المنتجات -->
     </div>
