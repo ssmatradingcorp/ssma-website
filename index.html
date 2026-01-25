@@ -1489,6 +1489,24 @@
         .arrow-3 { color: #2196F3; } /* أزرق */
         .arrow-4 { color: #9C27B0; } /* بنفسجي */
         .arrow-5 { color: #FF9800; }
+        .no-products-message {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+    grid-column: 1 / -1;
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease; 
+}
+
+@keyframes fadeIn {              
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
     </style>
     </style>
 </head>
@@ -3533,35 +3551,106 @@
             branchObserver.observe(card);
         });
                
-                    // ===== فلترة المنتجات =====
-        function filterProducts(category, element) {
-            // 1. تحديث التبويبات النشطة
-            var allTabs = document.querySelectorAll('.product-tab');
-            allTabs.forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-            element.classList.add('active');
-            
-            // 2. فلترة المنتجات
-            var products = document.querySelectorAll('.product-card');
-            var hasProducts = false;
-            
-            products.forEach(function(product) {
-                if (category === 'all') {
-                    product.style.display = 'block';
-                    hasProducts = true;
-                } else {
-                    var productCat = product.getAttribute('data-category');
-                    if (productCat && productCat.includes(category)) {
-                        product.style.display = 'block';
-                        hasProducts = true;
-                    } else {
-                        product.style.display = 'none';
-                    }
-                }
-            });
+            // ===== دالة فلترة المنتجات الصحيحة =====
+function filterProducts(category, element) {
+    // 1. تحديث التبويبات النشطة
+    document.querySelectorAll('.product-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    if (element) {
+        element.classList.add('active');
+    }
+    
+    // 2. الحصول على جميع المنتجات
+    const products = document.querySelectorAll('.product-card');
+    let hasVisibleProducts = false;
+    
+    // 3. فلترة المنتجات
+    products.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        
+        if (productCategory === category) {
+            product.style.display = 'block';
+            product.style.opacity = '1';
+            hasVisibleProducts = true;
+        } else {
+            product.style.display = 'none';
+            product.style.opacity = '0';
         }
+    });
+    
+    // 4. التحقق من وجود منتجات
+    if (!hasVisibleProducts) {
+        const lang = localStorage.getItem('preferredLanguage') || 'ar';
+        const container = document.querySelector('.products-grid');
+        let message = container.querySelector('.no-products-message');
+        
+        if (!message) {
+            message = document.createElement('div');
+            message.className = 'no-products-message';
+            message.innerHTML = lang === 'ar' 
+                ? '<p>لا توجد منتجات في هذا القسم حالياً</p>'
+                : '<p>No products in this category yet</p>';
+            container.appendChild(message);
+        }
+        message.style.display = 'block';
+    } else {
+        const message = document.querySelector('.no-products-message');
+        if (message) message.style.display = 'none';
+    }
+}
 
+// ===== دالة عرض القسم عند فتحه =====
+function showSection(sectionId) {
+    // إخفاء جميع الأقسام
+    document.querySelectorAll('.page-section').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // إظهار القسم المطلوب
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+        
+        // إذا كان قسم المنتجات، افلتر حسب أدوات الحفر
+        if (sectionId === 'products') {
+            setTimeout(() => {
+                const firstTab = document.querySelector('.product-tab');
+                if (firstTab) {
+                    firstTab.classList.add('active');
+                    filterProducts('drilling', firstTab);
+                }
+            }, 50);
+        }
+    }
+    
+    // تحديث القائمة النشطة
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    const activeLink = document.querySelector(`.nav-link[onclick*="'${sectionId}'"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+    
+    // إغلاق القائمة المتنقلة
+    const navMenu = document.getElementById('navMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+    
+    return false;
+}
+
+// ===== عند تحميل الصفحة =====
+document.addEventListener('DOMContentLoaded', function() {
+    // بدء من القسم الرئيسي
+    showSection('home');
+});
 
         // Initialize the page with home section visible
         document.addEventListener('DOMContentLoaded', function() {
