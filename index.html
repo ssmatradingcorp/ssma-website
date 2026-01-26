@@ -4174,5 +4174,123 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     </script>
+// ===== حل فوري للمواصفات المعطوبة =====
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔧 جاري إصلاح المواصفات...');
+    
+    // حل قوي لكل المنتجات
+    const allProducts = document.querySelectorAll('.product-card');
+    
+    allProducts.forEach(product => {
+        const specs = product.querySelector('.product-specs');
+        if (specs) {
+            // 1. إصلاح الحاوية الرئيسية
+            specs.style.display = 'flex';
+            specs.style.flexDirection = 'row';
+            specs.style.justifyContent = 'space-around';
+            specs.style.alignItems = 'stretch';
+            specs.style.gap = '15px';
+            specs.style.margin = '20px 0';
+            specs.style.flexWrap = 'wrap';
+            
+            // 2. إصلاح كل عنصر مواصفات
+            const specItems = specs.querySelectorAll('.spec-item');
+            specItems.forEach(item => {
+                // إعادة تعيين CSS
+                item.style.cssText = `
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    text-align: center !important;
+                    min-width: 100px;
+                    max-width: 120px;
+                    padding: 15px 10px !important;
+                    background: rgba(255, 205, 17, 0.1) !important;
+                    border-radius: 8px !important;
+                    border: 1px solid rgba(255, 205, 17, 0.3) !important;
+                    margin: 5px !important;
+                `;
+                
+                // 3. إصلاح كل span داخل المواصفات
+                const spans = item.querySelectorAll('span');
+                spans.forEach((span, index) => {
+                    if (span.classList.contains('spec-value')) {
+                        span.style.cssText = `
+                            display: block !important;
+                            width: 100% !important;
+                            font-size: 18px !important;
+                            font-weight: 700 !important;
+                            color: #FFCD11 !important;
+                            margin-bottom: 5px !important;
+                            line-height: 1.2 !important;
+                        `;
+                    } else if (span.classList.contains('spec-label')) {
+                        span.style.cssText = `
+                            display: block !important;
+                            width: 100% !important;
+                            font-size: 12px !important;
+                            color: #333 !important;
+                            line-height: 1.4 !important;
+                        `;
+                    } else {
+                        // أي span آخر
+                        span.style.display = 'block';
+                        span.style.width = '100%';
+                    }
+                });
+            });
+        }
+    });
+    
+    console.log('✅ تم إصلاح جميع المواصفات بنجاح!');
+    
+    // إضافة styles ديناميكية للتأكد
+    const style = document.createElement('style');
+    style.textContent = `
+        /* تأكيد إصلاح CSS */
+        .product-card .product-specs {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-around !important;
+            align-items: stretch !important;
+            gap: 15px !important;
+            margin: 20px 0 !important;
+            flex-wrap: wrap !important;
+        }
+        
+        .product-card .spec-item {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            min-width: 100px !important;
+            padding: 12px 8px !important;
+            margin: 5px !important;
+        }
+        
+        .product-card .spec-value,
+        .product-card .spec-label {
+            display: block !important;
+            width: 100% !important;
+        }
+        
+        .product-card .spec-value {
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            color: #FFCD11 !important;
+            margin-bottom: 5px !important;
+        }
+        
+        .product-card .spec-label {
+            font-size: 12px !important;
+            color: #333 !important;
+            line-height: 1.4 !important;
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
 </body>
 </html>
