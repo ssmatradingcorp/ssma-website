@@ -1558,14 +1558,94 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero page-section" id="home">
-        <div class="container">
-            <h1 data-ar="شركة SSMA - الحلول المتكاملة لحفر الآبار والمقاولات منذ 1982" data-en="SSMA Corporation - Integrated Drilling & Contracting Solutions Since 1982">شركة SSMA - الحلول المتكاملة لحفر الآبار والمقاولات منذ 1982</h1>
-            <p data-ar="قادة في مجال حلول المياه الجوفية والمقاولات مع خبرة تمتد لأكثر من 40 عام. نقدم خدمات متكاملة في حفر الآبار، المقاولات العامة، الطاقة الشمسية، والاستيراد والتصدير." data-en="Leaders in groundwater solutions and contracting with over 40 years of experience. We provide integrated services in well drilling, general contracting, solar energy, and import-export.">قادة في مجال حلول المياه الجوفية والمقاولات مع خبرة تمتد لأكثر من 40 عام. نقدم خدمات متكاملة في حفر الآبار، المقاولات العامة، الطاقة الشمسية، والاستيراد والتصدير.</p>
-            <a href="#" class="btn btn-yellow" onclick="showSection('about'); return false;" data-ar="تعرف على SSMA" data-en="About SSMA">تعرف على SSMA</a>
+    <!-- الهيرو الجديد - تصميم عالمي -->
+<section class="global-hero page-section" id="home" style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;">
+    
+    <!-- خلفية الفيديو أو الصورة -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+        <!-- إذا عندك فيديو -->
+        <!-- <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="hero-video.mp4" type="video/mp4">
+        </video> -->
+        
+        <!-- أو صورة عالية الجودة -->
+        <div style="width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero-bg.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    
+    <!-- طبقة التعتيم -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); z-index: 2;"></div>
+    
+    <!-- المحتوى -->
+    <div class="container" style="position: relative; z-index: 3; color: white; padding: 40px 20px;">
+        
+        <!-- الشعار الصغير -->
+        <div style="margin-bottom: 20px;">
+            <span style="background: var(--cat-yellow); color: var(--cat-black); padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 14px; display: inline-block;">
+                <i class="fas fa-globe"></i>
+                <span data-ar="منذ 1982" data-en="Since 1982">منذ 1982</span>
+            </span>
         </div>
-    </section>
+        
+        <!-- العنوان الرئيسي -->
+        <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; max-width: 800px;"
+            data-ar="SSMA: جسر اليمن إلى العالم في حلول المياه والطاقة"
+            data-en="SSMA: Yemen's Bridge to the World in Water & Energy Solutions">
+            SSMA: جسر اليمن إلى العالم في حلول المياه والطاقة
+        </h1>
+        
+        <!-- الوصف -->
+        <p style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 40px; max-width: 700px; opacity: 0.9;"
+           data-ar="شركة يمنية برؤية عالمية، نربط الشرق الأوسط بأسواق الصين والهند عبر 6 فروع في 3 قارات"
+           data-en="A Yemeni company with global vision, connecting the Middle East to China and India markets through 6 branches across 3 continents">
+           شركة يمنية برؤية عالمية، نربط الشرق الأوسط بأسواق الصين والهند عبر 6 فروع في 3 قارات
+        </p>
+        
+        <!-- الأزرار -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <a href="#projects" class="btn btn-yellow" style="padding: 16px 35px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;"
+               data-ar="استكشف مشاريعنا" data-en="Explore Our Projects">
+               <i class="fas fa-rocket"></i>
+               <span>استكشف مشاريعنا</span>
+            </a>
+            
+            <a href="#contact" class="btn" style="background: transparent; border: 2px solid white; color: white; padding: 16px 35px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;"
+               data-ar="كن شريكنا" data-en="Partner With Us">
+               <i class="fas fa-handshake"></i>
+               <span>كن شريكنا</span>
+            </a>
+        </div>
+        
+        <!-- الإحصائيات السريعة -->
+        <div style="display: flex; gap: 40px; margin-top: 60px; flex-wrap: wrap;">
+            <div class="quick-stat">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--cat-yellow);">6</div>
+                <div style="font-size: 0.9rem; opacity: 0.8;" data-ar="فروع عالمية" data-en="Global Branches">فروع عالمية</div>
+            </div>
+            <div class="quick-stat">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--cat-yellow);">40+</div>
+                <div style="font-size: 0.9rem; opacity: 0.8;" data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</div>
+            </div>
+            <div class="quick-stat">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--cat-yellow);">3</div>
+                <div style="font-size: 0.9rem; opacity: 0.8;" data-ar="قارات" data-en="Continents">قارات</div>
+            </div>
+            <div class="quick-stat">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--cat-yellow);">150+</div>
+                <div style="font-size: 0.9rem; opacity: 0.8;" data-ar="فريق متخصص" data-en="Expert Team">فريق متخصص</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- زر التمرير للأسفل -->
+    <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3; color: white; animation: bounce 2s infinite;">
+        <a href="#announcement" style="color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <span style="font-size: 0.9rem; opacity: 0.8;" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
 
+</section>
     <!-- Announcement Banner -->
     <section class="announcement-banner page-section" id="announcement">
         <div class="container announcement-content">
