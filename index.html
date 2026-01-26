@@ -4173,7 +4173,132 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
-    </script>
+<script>
+// ===== دوال الموقع =====
+// Language Switching
+const langButtons = document.querySelectorAll('.lang-btn');
+const body = document.body;
+
+function switchLanguage(lang) {
+    if (lang === 'en') {
+        body.classList.add('english');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'en');
+    } else {
+        body.classList.remove('english');
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+    }
+    
+    // Update active button
+    langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+        const text = element.dataset[lang];
+        if (text) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = text;
+            } else if (element.tagName === 'LABEL') {
+                element.textContent = text;
+            } else {
+                element.textContent = text;
+            }
+        }
+    });
+    
+    // Update page title
+    document.title = lang === 'ar' 
+        ? "شركة SSMA | الحلول المتكاملة لحفر الآبار والمقاولات" 
+        : "SSMA Corporation | Integrated Drilling & Contracting Solutions";
+    
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Initialize language
+const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+switchLanguage(savedLang);
+
+// Add click events to language buttons
+langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        switchLanguage(btn.dataset.lang);
+    });
+});
+
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+});
+
+// Contact Form
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        const currentLang = localStorage.getItem('preferredLanguage') || 'ar';
+        const message = currentLang === 'ar'
+            ? `شكراً ${data.name}! تم استلام رسالتك.`
+            : `Thank you ${data.name}! Your message has been received.`;
+        
+        alert(message);
+        contactForm.reset();
+    });
+}
+
+// World Map Interaction
+const mapPoints = document.querySelectorAll('.map-point');
+mapPoints.forEach(point => {
+    point.addEventListener('click', () => {
+        // Remove active class from all points
+        mapPoints.forEach(p => p.classList.remove('active'));
+        
+        // Add active class to clicked point
+        point.classList.add('active');
+        
+        // Get the branch name from data attribute
+        const branch = point.getAttribute('data-branch');
+        
+        // Find corresponding branch card and scroll to it
+        const branchCard = document.querySelector(`.branch-card[data-country="${branch}"]`);
+        if (branchCard) {
+            branchCard.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+            
+            // Add highlight effect
+            branchCard.style.boxShadow = '0 0 30px rgba(255, 205, 17, 0.5)';
+            setTimeout(() => {
+                branchCard.style.boxShadow = '';
+            }, 2000);
+        }
+    });
+    
+    // Add hover effect
+    point.addEventListener('mouseenter', () => {
+        point.style.transform = 'translate(-50%, -50%) scale(1.3)';
+    });
+    
+    point.addEventListener('mouseleave', () => {
+        if (!point.classList.contains('active')) {
+            point.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    });
+});
+
 // ===== حل فوري للمواصفات المعطوبة =====
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔧 جاري إصلاح المواصفات...');
