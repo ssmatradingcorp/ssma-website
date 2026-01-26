@@ -1507,6 +1507,59 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+        /* ===== إصلاح كامل للمواصفات في جميع المنتجات ===== */
+.product-card .product-specs {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 20px 0 !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+}
+
+.product-card .spec-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-width: 100px !important;
+    padding: 12px 8px !important;
+    background: rgba(255, 205, 17, 0.1) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 205, 17, 0.2) !important;
+}
+
+.product-card .spec-value {
+    display: block !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--cat-yellow) !important;
+    margin-bottom: 5px !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+}
+
+.product-card .spec-label {
+    display: block !important;
+    font-size: 12px !important;
+    color: var(--cat-dark-gray) !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+}
+
+/* حل قوي لكل عناصر المواصفات حتى لو كانت بدون classes */
+.product-card .product-specs > div,
+.product-card .product-specs > p,
+.product-card .product-specs > span {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    min-width: 100px !important;
+    padding: 10px !important;
+}
     </style>
     </style>
 </head>
