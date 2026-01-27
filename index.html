@@ -1550,7 +1550,7 @@
                     <a href="#" class="nav-link" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
                     <a href="#" class="nav-link" onclick="showSection('services'); return false;" data-ar="الخدمات" data-en="Services">الخدمات</a>
                     <a href="#" class="nav-link" onclick="showSection('energy'); return false;" data-ar="الطاقة" data-en="Energy">الطاقة</a>
-                    <a href="#" class="nav-link" onclick="showVehiclesSection(); return false;" data-ar="السيارات" data-en="Vehicles">السيارات</a>
+                    <a href="#" class="nav-link" onclick="showSection('vehicles'); return false;" data-ar="السيارات" data-en="Vehicles">السيارات</a>
                     <a href="#" class="nav-cta" onclick="showSection('contact'); return false;" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
                 </nav>
             </div>
@@ -2368,61 +2368,6 @@
                        data-ar="استفسر عن اللودر" data-en="Inquire About Wheel Loader">استفسر عن اللودر</a>
                 </div>
             </div>
-            <!-- 1. شاحنة نقل ثقيل -->
-            <div class="product-card" data-category="heavy">
-                <div class="product-image">
-                    <img src="truck.jpg" alt="شاحنة نقل">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="شاحنة نقل ثقيل 10 طن" data-en="10 Ton Heavy Duty Truck">
-                        شاحنة نقل ثقيل 10 طن
-                    </h3>
-                    <p data-ar="شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين"
-                       data-en="Heavy-duty truck with 10-ton load capacity, ideal for transporting equipment and construction materials, equipped with powerful diesel engine and robust suspension system">
-                       شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="10 طن" data-en="10 Ton">10 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">300 HP</span>
-                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="استفسر عن الشاحنة" data-en="Inquire About Truck">استفسر عن الشاحنة</a>
-                </div>
-            </div>
-
-            <!-- 2. شاحنة قلابة -->
-            <div class="product-card" data-category="heavy">
-                <div class="product-image">
-                    <img src="dump-truck.jpg" alt="شاحنة قلابة">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="شاحنة قلابة 15 طن" data-en="15 Ton Dump Truck">
-                        شاحنة قلابة 15 طن
-                    </h3>
-                    <p data-ar="شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال"
-                       data-en="Dump truck specialized for construction and mining works, with 12 m³ box capacity, fast and efficient hydraulic dumping system">
-                       شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="15 طن" data-en="15 Ton">15 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="12 م³" data-en="12 m³">12 م³</span>
-                            <span class="spec-label" data-ar="سعة الصندوق" data-en="Box Capacity">سعة الصندوق</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="استفسر عن القلابة" data-en="Inquire About Dump Truck">استفسر عن القلابة</a>
-                </div>
-            </div>
 
             <!-- =========== المنظومات الشمسية =========== -->
             <!-- 1. منظومة طاقة شمسية -->
@@ -2482,140 +2427,27 @@
             </div>
 
             <!-- =========== السيارات والنقل =========== -->
-           <!-- =========== قسم السيارات والنقل =========== -->
-<section id="vehicles-products" class="page-section" style="display:none;">
-    <div class="container">
-        <!-- العنوان -->
-        <div class="section-title">
-            <h2 data-ar="السيارات والنقل" data-en="Vehicles & Transportation">السيارات والنقل</h2>
-            <p data-ar="مجموعة متكاملة من وسائل النقل لجميع الاحتياجات" data-en="Complete range of transportation solutions for all needs">
-                مجموعة متكاملة من وسائل النقل لجميع الاحتياجات
-            </p>
-        </div>
-
-        <!-- تبويبات أقسام السيارات -->
-        <div class="product-tabs">
-            <button class="product-tab active" onclick="filterVehicleProducts('trucks', this)">
-                <i class="fas fa-truck-moving"></i>
-                <span data-ar="دينات النقل" data-en="Trucks">دينات النقل</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('pickup', this)">
-                <i class="fas fa-truck-pickup"></i>
-                <span data-ar="بيك أب" data-en="Pickup Trucks">بيك أب</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('cars', this)">
-                <i class="fas fa-car"></i>
-                <span data-ar="سيارات ركاب" data-en="Passenger Cars">سيارات ركاب</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('suv', this)">
-                <i class="fas fa-truck-monster"></i>
-                <span data-ar="دفع رباعي" data-en="SUVs">دفع رباعي</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('threewheel', this)">
-                <i class="fas fa-motorcycle"></i>
-                <span data-ar="ثلاث عجلات" data-en="Three-Wheelers">ثلاث عجلات</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('vans', this)">
-                <i class="fas fa-shuttle-van"></i>
-                <span data-ar="فانات" data-en="Vans">فانات</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('parts', this)">
-                <i class="fas fa-cogs"></i>
-                <span data-ar="قطع غيار" data-en="Spare Parts">قطع غيار</span>
-            </button>
-            
-            <button class="product-tab" onclick="filterVehicleProducts('bundles', this)">
-                <i class="fas fa-gift"></i>
-                <span data-ar="باقات متكاملة" data-en="Bundles">باقات متكاملة</span>
-            </button>
-        </div>
-
-        <!-- شبكة منتجات السيارات -->
-        <div class="products-grid">
-            
-            <!-- =========== 🚛 دينات النقل الثقيل =========== -->
-            
-            <!-- 1. دينة 3 طن -->
-            <div class="product-card" data-vehicle-category="trucks">
+            <!-- 1. شاحنة نقل ثقيل -->
+            <div class="product-card" data-category="vehicles">
                 <div class="product-image">
-                    <img src="3-ton-truck.jpg" alt="دينة 3 طن">
+                    <img src="truck.jpg" alt="شاحنة نقل">
                 </div>
                 <div class="product-content">
-                    <h3 data-ar="دينة نقل 3 طن" data-en="3 Ton Cargo Truck">دينة نقل 3 طن</h3>
-                    <p data-ar="دينة نقل خفيفة مثالية للتوصيل داخل المدن، حمولة 3 أطنان، محرك ديزل اقتصادي، استهلاك وقود منخفض، مناسبة للشركات الصغيرة والمتوسطة."
-                       data-en="Light cargo truck ideal for city deliveries, 3-ton capacity, economical diesel engine, low fuel consumption, suitable for small and medium businesses.">
-                       دينة نقل خفيفة مثالية للتوصيل داخل المدن، حمولة 3 أطنان، محرك ديزل اقتصادي، استهلاك وقول منخفض، مناسبة للشركات الصغيرة والمتوسطة.
+                    <h3 data-ar="شاحنة نقل ثقيل 10 طن" data-en="10 Ton Heavy Duty Truck">
+                        شاحنة نقل ثقيل 10 طن
+                    </h3>
+                    <p data-ar="شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين"
+                       data-en="Heavy-duty truck with 10-ton load capacity, ideal for transporting equipment and construction materials, equipped with powerful diesel engine and robust suspension system">
+                       شاحنة نقل ثقيل بقدرة تحميل 10 أطنان، مثالية لنقل المعدات والمواد الإنشائية، مزودة بمحرك ديزل قوي ونظام تعليق متين
                     </p>
                     <div class="product-specs">
                         <div class="spec-item">
-                            <span class="spec-value">3 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
+                            <span class="spec-value" data-ar="10 طن" data-en="10 Ton">10 طن</span>
+                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-value">ديزل</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="خفيفة" data-en="Light">خفيفة</span>
-                            <span class="spec-label" data-ar="الفئة" data-en="Class">الفئة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="استفسر عن الدينة" data-en="Inquire About Truck">استفسر عن الدينة</a>
-                </div>
-            </div>
-
-            <!-- 2. دينة 5 طن -->
-            <div class="product-card" data-vehicle-category="trucks">
-                <div class="product-image">
-                    <img src="5-ton-truck.jpg" alt="دينة 5 طن">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="دينة نقل 5 طن" data-en="5 Ton Cargo Truck">دينة نقل 5 طن</h3>
-                    <p data-ar="دينة نقل متوسطة الحجم، حمولة 5 أطنان، مقصورة مريحة، نظام فرامل هوائي، مناسبة للتوزيع الإقليمي ونقل البضائع بين المدن."
-                       data-en="Medium-sized cargo truck, 5-ton capacity, comfortable cabin, air brake system, suitable for regional distribution and intercity cargo transport.">
-                       دينة نقل متوسطة الحجم، حمولة 5 أطنان، مقصورة مريحة، نظام فرامل هوائي، مناسبة للتوزيع الإقليمي ونقل البضائع بين المدن.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">5 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="هوائي" data-en="Air">هوائي</span>
-                            <span class="spec-label" data-ar="الفرامل" data-en="Brakes">الفرامل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب عرض سعر" data-en="Request Quote">طلب عرض سعر</a>
-                </div>
-            </div>
-
-            <!-- 3. دينة 10 طن -->
-            <div class="product-card" data-vehicle-category="trucks">
-                <div class="product-image">
-                    <img src="10-ton-truck.jpg" alt="دينة 10 طن">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="دينة نقل 10 طن" data-en="10 Ton Heavy Truck">دينة نقل 10 طن</h3>
-                    <p data-ar="شاحنة نقل ثقيل، حمولة 10 أطنان، محرك قوي 6 سلندر، ناقل حركة يدوي 8 سرعات، مثالية للمقاولات والمشاريع الإنشائية."
-                       data-en="Heavy-duty truck, 10-ton capacity, powerful 6-cylinder engine, 8-speed manual transmission, ideal for contracting and construction projects.">
-                       شاحنة نقل ثقيل، حمولة 10 أطنان، محرك قوي 6 سلندر، ناقل حركة يدوي 8 سرعات، مثالية للمقاولات والمشاريع الإنشائية.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">10 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">6 سلندر</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
+                            <span class="spec-value">300 HP</span>
+                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
                         </div>
                     </div>
                     <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
@@ -2623,51 +2455,27 @@
                 </div>
             </div>
 
-            <!-- 4. دينة 20 طن -->
-            <div class="product-card" data-vehicle-category="trucks">
+            <!-- 2. شاحنة قلابة -->
+            <div class="product-card" data-category="vehicles">
                 <div class="product-image">
-                    <img src="20-ton-truck.jpg" alt="دينة 20 طن">
+                    <img src="dump-truck.jpg" alt="شاحنة قلابة">
                 </div>
                 <div class="product-content">
-                    <h3 data-ar="دينة نقل 20 طن" data-en="20 Ton Mega Truck">دينة نقل 20 طن</h3>
-                    <p data-ar="شاحنة عملاقة للمشاريع الضخمة، حمولة 20 طن، محرك ديزل توربو، نظام تعليق هوائي، مناسبة للمناجم والمشاريع الكبرى."
-                       data-en="Giant truck for massive projects, 20-ton capacity, turbo diesel engine, air suspension system, suitable for mines and major projects.">
-                       شاحنة عملاقة للمشاريع الضخمة، حمولة 20 طن، محرك ديزل توربو، نظام تعليق هوائي، مناسبة للمناجم والمشاريع الكبرى.
+                    <h3 data-ar="شاحنة قلابة 15 طن" data-en="15 Ton Dump Truck">
+                        شاحنة قلابة 15 طن
+                    </h3>
+                    <p data-ar="شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال"
+                       data-en="Dump truck specialized for construction and mining works, with 12 m³ box capacity, fast and efficient hydraulic dumping system">
+                       شاحنة قلابة مخصصة لأعمال الإنشاءات والتعدين، بسعة صندوق 12 م³، نظام قلابة هيدروليكي سريع وفعال
                     </p>
                     <div class="product-specs">
                         <div class="spec-item">
-                            <span class="spec-value">20 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
+                            <span class="spec-value" data-ar="15 طن" data-en="15 Ton">15 طن</span>
+                            <span class="spec-label" data-ar="الحمولة" data-en="Load Capacity">الحمولة</span>
                         </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="توربو" data-en="Turbo">توربو</span>
-                            <span class="spec-label" data-ar="الديزل" data-en="Diesel">الديزل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب دراسة مشروع" data-en="Request Project Study">طلب دراسة مشروع</a>
-                </div>
-            </div>
-
-            <!-- 5. دينة قلاب -->
-            <div class="product-card" data-vehicle-category="trucks">
-                <div class="product-image">
-                    <img src="dump-truck-heavy.jpg" alt="دينة قلاب">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="دينة قلاب للتربة" data-en="Dump Truck for Soil">دينة قلاب للتربة</h3>
-                    <p data-ar="شاحنة قلابة للبناء والتعدين، سعة الصندوق 12 م³، نظام قلابة هيدروليكي قوي، هيكل متين للتربة والحجارة."
-                       data-en="Dump truck for construction and mining, 12 m³ box capacity, powerful hydraulic dumping system, robust structure for soil and stones.">
-                       شاحنة قلابة للبناء والتعدين، سعة الصندوق 12 م³، نظام قلابة هيدروليكي قوي، هيكل متين للتربة والحجارة.
-                    </p>
-                    <div class="product-specs">
                         <div class="spec-item">
                             <span class="spec-value" data-ar="12 م³" data-en="12 m³">12 م³</span>
-                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="هيدروليكي" data-en="Hydraulic">هيدروليكي</span>
-                            <span class="spec-label" data-ar="النظام" data-en="System">النظام</span>
+                            <span class="spec-label" data-ar="سعة الصندوق" data-en="Box Capacity">سعة الصندوق</span>
                         </div>
                     </div>
                     <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
@@ -2675,934 +2483,6 @@
                 </div>
             </div>
 
-            <!-- 6. دينة ثلاجة -->
-            <div class="product-card" data-vehicle-category="trucks">
-                <div class="product-image">
-                    <img src="refrigerator-truck.jpg" alt="دينة ثلاجة">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="دينة ثلاجة للمواد الغذائية" data-en="Refrigerated Truck for Food">دينة ثلاجة للمواد الغذائية</h3>
-                    <p data-ar="شاحنة مبردة للأطعمة والمشروبات، نظام تبريد حتى -20°C، عزل حراري ممتاز، مثالية للمجمدات واللحوم والأدوية."
-                       data-en="Refrigerated truck for foods and beverages, cooling system down to -20°C, excellent thermal insulation, ideal for frozen goods, meats, and medicines.">
-                       شاحنة مبردة للأطعمة والمشروبات، نظام تبريد حتى -20°C، عزل حراري ممتاز، مثالية للمجمدات واللحوم والأدوية.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">-20°C</span>
-                            <span class="spec-label" data-ar="التبريد" data-en="Cooling">التبريد</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="مبرد" data-en="Refrigerated">مبرد</span>
-                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب للمجمدات" data-en="Request for Frozen Goods">طلب للمجمدات</a>
-                </div>
-            </div>
-
-            <!-- =========== 🚚 سيارات البيك أب =========== -->
-            
-            <!-- 7. تويوتا هيلوكس -->
-            <div class="product-card" data-vehicle-category="pickup">
-                <div class="product-image">
-                    <img src="toyota-hilux.jpg" alt="تويوتا هيلوكس">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="تويوتا هيلوكس 2024" data-en="Toyota Hilux 2024">تويوتا هيلوكس 2024</h3>
-                    <p data-ar="بيك أب تويوتا الأشهر، محرك 2.8 لتر توربو ديزل، 4x4، صندوق حمولة 1.5 طن، متانة فائقة لجميع الطرقات."
-                       data-en="Toyota's most famous pickup, 2.8L turbo diesel engine, 4x4, 1.5-ton payload, exceptional durability for all roads.">
-                       بيك أب تويوتا الأشهر، محرك 2.8 لتر توربو ديزل، 4x4، صندوق حمولة 1.5 طن، متانة فائقة لجميع الطرقات.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2.8L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">1.5 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Payload">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">4x4</span>
-                            <span class="spec-label" data-ar="الدفع" data-en="Drive">الدع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="استفسر عن الهيلوكس" data-en="Inquire About Hilux">استفسر عن الهيلوكس</a>
-                </div>
-            </div>
-
-            <!-- 8. فورد رينجر -->
-            <div class="product-card" data-vehicle-category="pickup">
-                <div class="product-image">
-                    <img src="ford-ranger.jpg" alt="فورد رينجر">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="فورد رينجر 2023" data-en="Ford Ranger 2023">فورد رينجر 2023</h3>
-                    <p data-ar="بيك أب أمريكي بقوة 210 حصان، محرك 2.0 لتر توربو، تكنولوجيا متطورة، مقصورة فاخرة، مثالي للعمل والترفيه."
-                       data-en="American pickup with 210 HP power, 2.0L turbo engine, advanced technology, luxurious cabin, ideal for work and recreation.">
-                       بيك أب أمريكي بقوة 210 حصان، محرك 2.0 لتر توربو، تكنولوجيا متطورة، مقصورة فاخرة، مثالي للعمل والترفيه.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">210 HP</span>
-                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.0L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="عرض سعر الرينجر" data-en="Ranger Price Quote">عرض سعر الرينجر</a>
-                </div>
-            </div>
-
-            <!-- 9. نيسان نافارا -->
-            <div class="product-card" data-vehicle-category="pickup">
-                <div class="product-image">
-                    <img src="nissan-navara.jpg" alt="نيسان نافارا">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="نيسان نافارا 2024" data-en="Nissan Navara 2024">نيسان نافارا 2024</h3>
-                    <p data-ar="بيك أب ياباني متين، محرك 2.5 لتر ديزل، نظام تعليق خلفي متطور، راحة في القيادة، اقتصاد في الاستهلاك."
-                       data-en="Japanese durable pickup, 2.5L diesel engine, advanced rear suspension system, comfortable driving, fuel efficient.">
-                       بيك أب ياباني متين، محرك 2.5 لتر ديزل، نظام تعليق خلفي متطور، راحة في القيادة، اقتصاد في الاستهلاك.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2.5L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="ديزل" data-en="Diesel">ديزل</span>
-                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب النافارا" data-en="Request Navara">طلب النافارا</a>
-                </div>
-            </div>
-
-            <!-- 10. ميتسوبيشي L200 -->
-            <div class="product-card" data-vehicle-category="pickup">
-                <div class="product-image">
-                    <img src="mitsubishi-L200.jpg" alt="ميتسوبيشي L200">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="ميتسوبيشي L200 4x4" data-en="Mitsubishi L200 4x4">ميتسوبيشي L200 4x4</h3>
-                    <p data-ar="بيك أب رياضية، دفع رباعي دائم، محرك 2.4 لتر، تصميم عدواني، قدرة عالية على الطرق الوعرة والرملية."
-                       data-en="Sporty pickup, permanent 4x4 drive, 2.4L engine, aggressive design, high capability on rough and sandy roads.">
-                       بيك أب رياضية، دفع رباعي دائم، محرك 2.4 لتر، تصميم عدواني، قدرة عالية على الطرق الوعرة والرملية.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2.4L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="دائم" data-en="Permanent">دائم</span>
-                            <span class="spec-label" data-ar="4x4" data-en="4x4">4x4</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للطرق الصحراوية" data-en="For Desert Roads">للطرق الصحراوية</a>
-                </div>
-            </div>
-
-            <!-- 11. شيفروليه كولورادو -->
-            <div class="product-card" data-vehicle-category="pickup">
-                <div class="product-image">
-                    <img src="chevrolet-colorado.jpg" alt="شيفروليه كولورادو">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="شيفروليه كولورادو 2024" data-en="Chevrolet Colorado 2024">شيفروليه كولورادو 2024</h3>
-                    <p data-ar="بيك أب أمريكي حديث، محرك 3.6 لتر V6، قوة 308 حصان، تكنولوجيا متقدمة، أداء متميز على الطرق المختلفة."
-                       data-en="Modern American pickup, 3.6L V6 engine, 308 HP power, advanced technology, excellent performance on various roads.">
-                       بيك أب أمريكي حديث، محرك 3.6 لتر V6، قوة 308 حصان، تكنولوجيا متقدمة، أداء متميز على الطرق المختلفة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">308 HP</span>
-                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">3.6L V6</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="عرض الكولورادو" data-en="Colorado Offer">عرض الكولورادو</a>
-                </div>
-            </div>
-
-            <!-- =========== 🚗 سيارات الركاب =========== -->
-            
-            <!-- 12. تويوتا كامري -->
-            <div class="product-card" data-vehicle-category="cars">
-                <div class="product-image">
-                    <img src="toyota-camry.jpg" alt="تويوتا كامري">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="تويوتا كامري 2024" data-en="Toyota Camry 2024">تويوتا كامري 2024</h3>
-                    <p data-ar="سيارة سيدان فاخرة، محرك 2.5 لتر 4 سلندر، اقتصادية في الاستهلاك، مقصورة مريحة، تقنية متقدمة، مثالية للعائلات."
-                       data-en="Luxury sedan car, 2.5L 4-cylinder engine, fuel efficient, comfortable cabin, advanced technology, ideal for families.">
-                       سيارة سيدان فاخرة، محرك 2.5 لتر 4 سلندر، اقتصادية في الاستهلاك، مقصورة مريحة، تقنية متقدمة، مثالية للعائلات.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2.5L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="اقتصادية" data-en="Economic">اقتصادية</span>
-                            <span class="spec-label" data-ar="الاستهلاك" data-en="Consumption">الاستهلاك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للعائلات" data-en="For Families">للعائلات</a>
-                </div>
-            </div>
-
-            <!-- 13. هيونداي النترا -->
-            <div class="product-card" data-vehicle-category="cars">
-                <div class="product-image">
-                    <img src="hyundai-elantra.jpg" alt="هيونداي النترا">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="هيونداي النترا 2024" data-en="Hyundai Elantra 2024">هيونداي النترا 2024</h3>
-                    <p data-ar="سيارة سيدان اقتصادية، تصميم حديث، محرك 2.0 لتر، توفير عالي في الوقود، ضمان 5 سنوات، مثالية للاستخدام اليومي."
-                       data-en="Economic sedan car, modern design, 2.0L engine, high fuel savings, 5-year warranty, ideal for daily use.">
-                       سيارة سيدان اقتصادية، تصميم حديث، محرك 2.0 لتر، توفير عالي في الوقود، ضمان 5 سنوات، مثالية للاستخدام اليومي.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">5 سنوات</span>
-                            <span class="spec-label" data-ar="الضمان" data-en="Warranty">الضمان</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.0L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="سيارة يومية" data-en="Daily Car">سيارة يومية</a>
-                </div>
-            </div>
-
-            <!-- 14. كيا سيراتو -->
-            <div class="product-card" data-vehicle-category="cars">
-                <div class="product-image">
-                    <img src="kia-cerato.jpg" alt="كيا سيراتو">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="كيا سيراتو 2023" data-en="Kia Cerato 2023">كيا سيراتو 2023</h3>
-                    <p data-ar="سيارة سيدان أنيقة، محرك 1.6 لتر توربو، مقصورة فاخرة، أنظمة أمان متطورة، سعر مناسب مع ميزات عالية الجودة."
-                       data-en="Elegant sedan car, 1.6L turbo engine, luxurious cabin, advanced safety systems, reasonable price with high-quality features.">
-                       سيارة سيدان أنيقة، محرك 1.6 لتر توربو، مقصورة فاخرة، أنظمة أمان متطورة، سعر مناسب مع ميزات عالية الجودة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">1.6L توربو</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="أنيقة" data-en="Elegant">أنيقة</span>
-                            <span class="spec-label" data-ar="التصميم" data-en="Design">التصميم</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="سعر مناسب" data-en="Reasonable Price">سعر مناسب</a>
-                </div>
-            </div>
-
-            <!-- 15. هوندا سيفيك -->
-            <div class="product-card" data-vehicle-category="cars">
-                <div class="product-image">
-                    <img src="honda-civic.jpg" alt="هوندا سيفيك">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="هوندا سيفيك 2024" data-en="Honda Civic 2024">هوندا سيفيك 2024</h3>
-                    <p data-ar="سيارة يابانية أصيلة، محرك 1.5 لتر توربو، متانة عالية، اقتصادية، ذات سمعة طيبة في الاعتمادية والجودة."
-                       data-en="Authentic Japanese car, 1.5L turbo engine, high durability, economical, excellent reputation for reliability and quality.">
-                       سيارة يابانية أصيلة، محرك 1.5 لتر توربو، متانة عالية، اقتصادية، ذات سمعة طيبة في الاعتمادية والجودة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">1.5L توربو</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="يابانية" data-en="Japanese">يابانية</span>
-                            <span class="spec-label" data-ar="الأصل" data-en="Origin">الأصل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="سيارة يابانية" data-en="Japanese Car">سيارة يابانية</a>
-                </div>
-            </div>
-
-            <!-- 16. مرسيدس C-Class -->
-            <div class="product-card" data-vehicle-category="cars">
-                <div class="product-image">
-                    <img src="mercedes-cclass.jpg" alt="مرسيدس C-Class">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="مرسيدس C-Class 2024" data-en="Mercedes C-Class 2024">مرسيدس C-Class 2024</h3>
-                    <p data-ar="سيارة فاخرة من مرسيدس، محرك 2.0 لتر توربو، مقصورة فاخرة، تكنولوجيا القيادة الذاتية، رمز للرفاهية والأداء."
-                       data-en="Luxury car from Mercedes, 2.0L turbo engine, luxurious cabin, autonomous driving technology, symbol of luxury and performance.">
-                       سيارة فاخرة من مرسيدس، محرك 2.0 لتر توربو، مقصورة فاخرة، تكنولوجيا القيادة الذاتية، رمز للرفاهية والأداء.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2.0L توربو</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="فاخرة" data-en="Luxury">فاخرة</span>
-                            <span class="spec-label" data-ar="الفئة" data-en="Class">الفئة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للرفاهية" data-en="For Luxury">للرفاهية</a>
-                </div>
-            </div>
-
-            <!-- =========== 🚙 سيارات الدفع الرباعي =========== -->
-            
-            <!-- 17. تويوتا لاندكروزر -->
-            <div class="product-card" data-vehicle-category="suv">
-                <div class="product-image">
-                    <img src="toyota-landcruiser.jpg" alt="تويوتا لاندكروزر">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="تويوتا لاندكروزر 2024" data-en="Toyota Land Cruiser 2024">تويوتا لاندكروزر 2024</h3>
-                    <p data-ar="ملك الطرق الوعرة، محرك V8 5.7 لتر، دفع رباعي دائم، قدرة فائقة على التضاريس الصعبة، متانة أسطورية."
-                       data-en="King of rough roads, V8 5.7L engine, permanent 4x4 drive, exceptional capability on difficult terrain, legendary durability.">
-                       ملك الطرق الوعرة، محرك V8 5.7 لتر، دفع رباعي دائم، قدرة فائقة على التضاريس الصعبة، متانة أسطورية.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">5.7L V8</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="دائم" data-en="Permanent">دائم</span>
-                            <span class="spec-label" data-ar="4x4" data-en="4x4">4x4</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="ملك الطرق" data-en="King of Roads">ملك الطرق</a>
-                </div>
-            </div>
-
-            <!-- 18. نيسان باترول -->
-            <div class="product-card" data-vehicle-category="suv">
-                <div class="product-image">
-                    <img src="nissan-patrol.jpg" alt="نيسان باترول">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="نيسان باترول V8" data-en="Nissan Patrol V8">نيسان باترول V8</h3>
-                    <p data-ar="سيارة الصحراء، محرك V8 5.6 لتر، قوة 400 حصان، رفاهية فائقة، قدرة عالية على الرمال والطرق الوعرة."
-                       data-en="Desert car, V8 5.6L engine, 400 HP power, exceptional luxury, high capability on sand and rough roads.">
-                       سيارة الصحراء، محرك V8 5.6 لتر، قوة 400 حصان، رفاهية فائقة، قدرة عالية على الرمال والطرق الوعرة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">400 HP</span>
-                            <span class="spec-label" data-ar="القوة" data-en="Power">القوة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">5.6L V8</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="سيارة الصحراء" data-en="Desert Car">سيارة الصحراء</a>
-                </div>
-            </div>
-
-            <!-- 19. تويوتا فورتشنر -->
-            <div class="product-card" data-vehicle-category="suv">
-                <div class="product-image">
-                    <img src="toyota-fortuner.jpg" alt="تويوتا فورتشنر">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="تويوتا فورتشنر 7 راكب" data-en="Toyota Fortuner 7-Seater">تويوتا فورتشنر 7 راكب</h3>
-                    <p data-ar="دفع رباعي عائلي، 7 مقاعد، محرك 2.8 لتر ديزل، مزيج من الراحة والقدرة، مثالية للعائلات الكبيرة."
-                       data-en="Family 4x4, 7 seats, 2.8L diesel engine, blend of comfort and capability, ideal for large families.">
-                       دفع رباعي عائلي، 7 مقاعد، محرك 2.8 لتر ديزل، مزيج من الراحة والقدرة، مثالية للعائلات الكبيرة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">7 مقاعد</span>
-                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.8L ديزل</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للعائلة" data-en="For Family">للعائلة</a>
-                </div>
-            </div>
-
-            <!-- 20. ميتسوبيشي باجيرو -->
-            <div class="product-card" data-vehicle-category="suv">
-                <div class="product-image">
-                    <img src="mitsubishi-pajero.jpg" alt="ميتسوبيشي باجيرو">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="ميتسوبيشي باجيرو رياضية" data-en="Mitsubishi Pajero Sport">ميتسوبيشي باجيرو رياضية</h3>
-                    <p data-ar="سيارة رياضية متعددة الاستخدامات، محرك 3.2 لتر ديزل، ناقل حركة أتوماتيكي 5 سرعات، تصميم رياضي وقدرة فائقة."
-                       data-en="Versatile sports SUV, 3.2L diesel engine, 5-speed automatic transmission, sporty design and exceptional capability.">
-                       سيارة رياضية متعددة الاستخدامات، محرك 3.2 لتر ديزل، ناقل حركة أتوماتيكي 5 سرعات، تصميم رياضي وقدرة فائقة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">3.2L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="رياضية" data-en="Sport">رياضية</span>
-                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للرياضة والمغامرة" data-en="For Sport & Adventure">للرياضة والمغامرة</a>
-                </div>
-            </div>
-
-            <!-- 21. هافال H6 -->
-            <div class="product-card" data-vehicle-category="suv">
-                <div class="product-image">
-                    <img src="haval-h6.jpg" alt="هافال H6">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="هافال H6 صينية حديثة" data-en="Haval H6 Modern Chinese">هافال H6 صينية حديثة</h3>
-                    <p data-ar="سيارة صينية حديثة بتقنية متطورة، محرك 1.5 لتر توربو، تكنولوجيا ذكية، سعر مناسب مع ميزات فاخرة."
-                       data-en="Modern Chinese car with advanced technology, 1.5L turbo engine, smart technology, reasonable price with luxury features.">
-                       سيارة صينية حديثة بتقنية متطورة، محرك 1.5 لتر توربو، تكنولوجيا ذكية، سعر مناسب مع ميزات فاخرة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">1.5L توربو</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="صينية" data-en="Chinese">صينية</span>
-                            <span class="spec-label" data-ar="الأصل" data-en="Origin">الأصل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="تقنية حديثة" data-en="Modern Technology">تقنية حديثة</a>
-                </div>
-            </div>
-
-            <!-- =========== 🛺 سيارات 3 عجلات =========== -->
-            
-            <!-- 22. باجاج هندية -->
-            <div class="product-card" data-vehicle-category="threewheel">
-                <div class="product-image">
-                    <img src="bajaj-auto.jpg" alt="باجاج هندية">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="باجاج هندية للبضائع" data-en="Bajaj Indian for Goods">باجاج هندية للبضائع</h3>
-                    <p data-ar="مركبة ثلاثية العجلات هندية، محرك 200 سي سي، حمولة 500 كجم، اقتصادية في الاستهلاك، مثالية للبضائع الصغيرة والتوصيل."
-                       data-en="Indian three-wheel vehicle, 200cc engine, 500kg capacity, fuel efficient, ideal for small goods and delivery.">
-                       مركبة ثلاثية العجلات هندية، محرك 200 سي سي، حمولة 500 كجم، اقتصادية في الاستهلاك، مثالية للبضائع الصغيرة والتوصيل.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">500 كجم</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">200 سي سي</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للتوصيل" data-en="For Delivery">للتوصيل</a>
-                </div>
-            </div>
-
-            <!-- 23. TVS King -->
-            <div class="product-card" data-vehicle-category="threewheel">
-                <div class="product-image">
-                    <img src="tvs-king.jpg" alt="TVS King">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="TVS King حمولة 500 كجم" data-en="TVS King 500kg Capacity">TVS King حمولة 500 كجم</h3>
-                    <p data-ar="مركبة ثلاثية قوية، محرك 200 سي سي، صندوق حمولة كبير، متانة عالية، مناسبة للأسواق والتجار الصغار."
-                       data-en="Powerful three-wheel vehicle, 200cc engine, large cargo box, high durability, suitable for markets and small traders.">
-                       مركبة ثلاثية قوية، محرك 200 سي سي، صندوق حمولة كبير، متانة عالية، مناسبة للأسواق والتجار الصغار.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="كبيرة" data-en="Large">كبيرة</span>
-                            <span class="spec-label" data-ar="الصندوق" data-en="Box">الصندوق</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">500 كجم</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للتجار" data-en="For Traders">للتجار</a>
-                </div>
-            </div>
-
-            <!-- 24. باوجوني صينية -->
-            <div class="product-card" data-vehicle-category="threewheel">
-                <div class="product-image">
-                    <img src="baojun-auto.jpg" alt="باوجوني صينية">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="باوجوني صينية للأسواق" data-en="Baojun Chinese for Markets">باوجوني صينية للأسواق</h3>
-                    <p data-ar="مركبة صينية اقتصادية، محرك 150 سي سي، تكلفة تشغيل منخفضة، مثالية للأسواق الشعبية والباعة المتجولين."
-                       data-en="Chinese economical vehicle, 150cc engine, low operating cost, ideal for popular markets and street vendors.">
-                       مركبة صينية اقتصادية، محرك 150 سي سي، تكلفة تشغيل منخفضة، مثالية للأسواق الشعبية والباعة المتجولين.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">150 سي سي</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="اقتصادية" data-en="Economical">اقتصادية</span>
-                            <span class="spec-label" data-ar="التشغيل" data-en="Operation">التشغيل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للباعة المتجولين" data-en="For Street Vendors">للباعة المتجولين</a>
-                </div>
-            </div>
-
-            <!-- 25. رافان عربية -->
-            <div class="product-card" data-vehicle-category="threewheel">
-                <div class="product-image">
-                    <img src="rahavan-auto.jpg" alt="رافان عربية">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="رافان عربية لليمن والسعودية" data-en="Rahavan Arabian for Yemen & Saudi">رافان عربية لليمن والسعودية</h3>
-                    <p data-ar="مركبة عربية مصممة للطقس الحار، متانة عالية، قطع غيار متوفرة محلياً، مناسبة لظروف اليمن والخليج."
-                       data-en="Arabian vehicle designed for hot weather, high durability, spare parts available locally, suitable for Yemen and Gulf conditions.">
-                       مركبة عربية مصممة للطقس الحار، متانة عالية، قطع غيار متوفرة محلياً، مناسبة لظروف اليمن والخليج.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="عربية" data-en="Arabian">عربية</span>
-                            <span class="spec-label" data-ar="التصميم" data-en="Design">التصميم</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="للغلاف" data-en="Hot Weather">للطقس الحار</span>
-                            <span class="spec-label" data-ar="مناسبة" data-en="Suitable">مناسبة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="لظروف الخليج" data-en="For Gulf Conditions">لظروف الخليج</a>
-                </div>
-            </div>
-
-            <!-- 26. ميني ترك -->
-            <div class="product-card" data-vehicle-category="threewheel">
-                <div class="product-image">
-                    <img src="mini-truck.jpg" alt="ميني ترك">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="ميني ترك للبضائع الخفيفة" data-en="Mini Truck for Light Goods">ميني ترك للبضائع الخفيفة</h3>
-                    <p data-ar="مركبة صغيرة الحجم، حمولة 300 كجم، سهولة المناورة في الأزقة الضيقة، مثالية للمدن المزدحمة."
-                       data-en="Small-sized vehicle, 300kg capacity, easy maneuverability in narrow alleys, ideal for crowded cities.">
-                       مركبة صغيرة الحجم، حمولة 300 كجم، سهولة المناورة في الأزقة الضيقة، مثالية للمدن المزدحمة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">300 كجم</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="صغيرة" data-en="Small">صغيرة</span>
-                            <span class="spec-label" data-ar="الحجم" data-en="Size">الحجم</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للمدن المزدحمة" data-en="For Crowded Cities">للمدن المزدحمة</a>
-                </div>
-            </div>
-
-            <!-- =========== 🚐 فانات نقل الركاب والبضائع =========== -->
-            
-            <!-- 27. تويوتا هايس -->
-            <div class="product-card" data-vehicle-category="vans">
-                <div class="product-image">
-                    <img src="toyota-hiace.jpg" alt="تويوتا هايس">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="تويوتا هايس 12-15 راكب" data-en="Toyota Hiace 12-15 Passenger">تويوتا هايس 12-15 راكب</h3>
-                    <p data-ar="فان نقل ركاب، سعة 12-15 راكب، محرك 2.7 لتر، متانة عالية، مثالية للنقل الجماعي والعائلات الكبيرة."
-                       data-en="Passenger transport van, 12-15 passenger capacity, 2.7L engine, high durability, ideal for group transport and large families.">
-                       فان نقل ركاب، سعة 12-15 راكب، محرك 2.7 لتر، متانة عالية، مثالية للنقل الجماعي والعائلات الكبيرة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">15 راكب</span>
-                            <span class="spec-label" data-ar="السعة" data-en="Capacity">السعة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.7L</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للنقل الجماعي" data-en="For Group Transport">للنقل الجماعي</a>
-                </div>
-            </div>
-
-            <!-- 28. نيسان Urvan -->
-            <div class="product-card" data-vehicle-category="vans">
-                <div class="product-image">
-                    <img src="nissan-urvan.jpg" alt="نيسان Urvan">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="نيسان Urvan نقل جماعي" data-en="Nissan Urvan Group Transport">نيسان Urvan نقل جماعي</h3>
-                    <p data-ar="فان ياباني للنقل الجماعي، سعة 15 راكب، محرك ديزل 2.5 لتر، اقتصاد في الاستهلاك، متانة يابانية."
-                       data-en="Japanese van for group transport, 15 passenger capacity, 2.5L diesel engine, fuel efficient, Japanese durability.">
-                       فان ياباني للنقل الجماعي، سعة 15 راكب، محرك ديزل 2.5 لتر، اقتصاد في الاستهلاك، متانة يابانية.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="ياباني" data-en="Japanese">ياباني</span>
-                            <span class="spec-label" data-ar="الأصل" data-en="Origin">الأصل</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.5L ديزل</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="ياباني متين" data-en="Japanese Durable">ياباني متين</a>
-                </div>
-            </div>
-
-            <!-- 29. هايس شحن -->
-            <div class="product-card" data-vehicle-category="vans">
-                <div class="product-image">
-                    <img src="hiace-cargo.jpg" alt="هايس شحن">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="هايس شحن بدون مقاعد" data-en="Hiace Cargo No Seats">هايس شحن بدون مقاعد</h3>
-                    <p data-ar="فان شحن تجاري، بدون مقاعد، مساحة حمولة كبيرة، مثالي للبضائع والتجارة، باب خلفي واسع للتحميل."
-                       data-en="Commercial cargo van, no seats, large cargo space, ideal for goods and trade, wide rear door for loading.">
-                       فان شحن تجاري، بدون مقاعد، مساحة حمولة كبيرة، مثالي للبضائع والتجارة، باب خلفي واسع للتحميل.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="تجاري" data-en="Commercial">تجاري</span>
-                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="كبيرة" data-en="Large">كبيرة</span>
-                            <span class="spec-label" data-ar="المساحة" data-en="Space">المساحة</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للتجارة" data-en="For Trade">للتجارة</a>
-                </div>
-            </div>
-
-            <!-- 30. فورد ترانزيت -->
-            <div class="product-card" data-vehicle-category="vans">
-                <div class="product-image">
-                    <img src="ford-transit.jpg" alt="فورد ترانزيت">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="فورد ترانزيت حمولة متوسطة" data-en="Ford Transit Medium Capacity">فورد ترانزيت حمولة متوسطة</h3>
-                    <p data-ar="فان أمريكي متين، حمولة متوسطة 2 طن، محرك 2.2 لتر ديزل، اقتصاد في التشغيل، مثالي للشركات المتوسطة."
-                       data-en="American durable van, medium 2-ton capacity, 2.2L diesel engine, economical operation, ideal for medium companies.">
-                       فان أمريكي متين، حمولة متوسطة 2 طن، محرك 2.2 لتر ديزل، اقتصاد في التشغيل، مثالي للشركات المتوسطة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">2 طن</span>
-                            <span class="spec-label" data-ar="الحمولة" data-en="Capacity">الحمولة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">2.2L ديزل</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للشركات" data-en="For Companies">للشركات</a>
-                </div>
-            </div>
-
-            <!-- 31. مرسيدس سبرينتر -->
-            <div class="product-card" data-vehicle-category="vans">
-                <div class="product-image">
-                    <img src="mercedes-sprinter.jpg" alt="مرسيدس سبرينتر">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="مرسيدس سبرينتر للمشاريع" data-en="Mercedes Sprinter for Projects">مرسيدس سبرينتر للمشاريع</h3>
-                    <p data-ar="فان فاخر للمشاريع الكبيرة، محرك 3.0 لتر V6 ديزل، رفاهية وأداء، مثالي للشركات الكبرى والمشاريع الضخمة."
-                       data-en="Luxury van for large projects, 3.0L V6 diesel engine, luxury and performance, ideal for large companies and mega projects.">
-                       فان فاخر للمشاريع الكبيرة، محرك 3.0 لتر V6 ديزل، رفاهية وأداء، مثالي للشركات الكبرى والمشاريع الضخمة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">3.0L V6</span>
-                            <span class="spec-label" data-ar="المحرك" data-en="Engine">المحرك</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="فاخر" data-en="Luxury">فاخر</span>
-                            <span class="spec-label" data-ar="النوع" data-en="Type">النوع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للمشاريع الضخمة" data-en="For Mega Projects">للمشاريع الضخمة</a>
-                </div>
-            </div>
-
-            <!-- =========== 🔧 قطع الغيار المتخصصة =========== -->
-            
-            <!-- 32. محركات ديزل -->
-            <div class="product-card" data-vehicle-category="parts">
-                <div class="product-image">
-                    <img src="diesel-engine.jpg" alt="محركات ديزل">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="محركات ديزل للشاحنات" data-en="Diesel Engines for Trucks">محركات ديزل للشاحنات</h3>
-                    <p data-ar="محركات ديزل جديدة ومجددة للدينات والشاحنات، جميع الموديلات، ضمان شامل، أداء موثوق، توفير في الوقود."
-                       data-en="New and reconditioned diesel engines for trucks and heavy vehicles, all models, comprehensive warranty, reliable performance, fuel efficient.">
-                       محركات ديزل جديدة ومجددة للدينات والشاحنات، جميع الموديلات، ضمان شامل، أداء موثوق، توفير في الوقود.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="جديدة" data-en="New">جديدة</span>
-                            <span class="spec-label" data-ar="ومجددة" data-en="& Reconditioned">ومجددة</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="ضمان" data-en="Warranty">ضمان</span>
-                            <span class="spec-label" data-ar="شامل" data-en="Comprehensive">شامل</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب المحرك" data-en="Request Engine">طلب المحرك</a>
-                </div>
-            </div>
-
-            <!-- 33. علب السرعة -->
-            <div class="product-card" data-vehicle-category="parts">
-                <div class="product-image">
-                    <img src="gearbox.jpg" alt="علب السرعة">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="علب سرعة للشاحنات" data-en="Gearboxes for Trucks">علب سرعة للشاحنات</h3>
-                    <p data-ar="علب سرعة يدوية وأوتوماتيكية للدينات، جميع الأنواع والمقاسات، ضمان على الفك والتركيب، خدمة تركيب متخصصة."
-                       data-en="Manual and automatic gearboxes for trucks, all types and sizes, warranty on installation, professional installation service.">
-                       علب سرعة يدوية وأوتوماتيكية للدينات، جميع الأنواع والمقاسات، ضمان على الفك والتركيب، خدمة تركيب متخصصة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="يدوية" data-en="Manual">يدوية</span>
-                            <span class="spec-label" data-ar="أتوماتيكية" data-en="Automatic">أتوماتيكية</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="تركيب" data-en="Installation">تركيب</span>
-                            <span class="spec-label" data-ar="متضمن" data-en="Included">متضمن</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب علبة سرعة" data-en="Request Gearbox">طلب علبة سرعة</a>
-                </div>
-            </div>
-
-            <!-- 34. أنظمة الفرامل -->
-            <div class="product-card" data-vehicle-category="parts">
-                <div class="product-image">
-                    <img src="brake-system.jpg" alt="أنظمة الفرامل">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="أنظمة فرامل هوائية" data-en="Air Brake Systems">أنظمة فرامل هوائية</h3>
-                    <p data-ar="أنظمة فرامل هوائية وهيدروليكية للشاحنات الثقيلة، قطع أصلية، تركيب متخصص، ضمان على النظام كاملاً."
-                       data-en="Air and hydraulic brake systems for heavy trucks, original parts, professional installation, warranty on complete system.">
-                       أنظمة فرامل هوائية وهيدروليكية للشاحنات الثقيلة، قطع أصلية، تركيب متخصص، ضمان على النظام كاملاً.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="هوائية" data-en="Air">هوائية</span>
-                            <span class="spec-label" data-ar="هيدروليكية" data-en="Hydraulic">هيدروليكية</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value" data-ar="أصلية" data-en="Original">أصلية</span>
-                            <span class="spec-label" data-ar="القطع" data-en="Parts">القطع</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للسلامة" data-en="For Safety">للسلامة</a>
-                </div>
-            </div>
-
-            <!-- =========== 💡 باقات متكاملة =========== -->
-            
-            <!-- 35. باقة المقاولين -->
-            <div class="product-card" data-vehicle-category="bundles">
-                <div class="product-image">
-                    <img src="contractor-bundle.jpg" alt="باقة المقاولين">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="باقة المقاولين المتكاملة" data-en="Complete Contractor Bundle">باقة المقاولين المتكاملة</h3>
-                    <p data-ar="حزمة متكاملة للمقاولين: دينة 5 طن + بيك أب هيلوكس + سيارة 3 عجلات + خدمة صيانة لمدة سنة."
-                       data-en="Complete bundle for contractors: 5-ton truck + Hilux pickup + three-wheeler + 1-year maintenance service.">
-                       حزمة متكاملة للمقاولين: دينة 5 طن + بيك أب هيلوكس + سيارة 3 عجلات + خدمة صيانة لمدة سنة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">3 مركبات</span>
-                            <span class="spec-label" data-ar="عدد" data-en="Vehicles">عدد</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">سنة صيانة</span>
-                            <span class="spec-label" data-ar="مجانية" data-en="Free">مجانية</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">توفير 15%</span>
-                            <span class="spec-label" data-ar="خصم" data-en="Discount">خصم</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="طلب الباقة" data-en="Request Bundle">طلب الباقة</a>
-                </div>
-            </div>
-
-            <!-- 36. باقة النقل -->
-            <div class="product-card" data-vehicle-category="bundles">
-                <div class="product-image">
-                    <img src="transport-bundle.jpg" alt="باقة النقل">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="باقة النقل اللوجستي" data-en="Logistics Transport Bundle">باقة النقل اللوجستي</h3>
-                    <p data-ar="3 دينات 10 طن + سائقين مؤقتين + تأمين شامل + نظام تتبع GPS + إدارة عمليات لمدة 6 أشهر."
-                       data-en="3 trucks 10-ton + temporary drivers + comprehensive insurance + GPS tracking system + 6-month operations management.">
-                       3 دينات 10 طن + سائقين مؤقتين + تأمين شامل + نظام تتبع GPS + إدارة عمليات لمدة 6 أشهر.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">3 دينات</span>
-                            <span class="spec-label" data-ar="شاحنات" data-en="Trucks">شاحنات</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">GPS</span>
-                            <span class="spec-label" data-ar="تتبع" data-en="Tracking">تتبع</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">تأمين شامل</span>
-                            <span class="spec-label" data-ar="متضمن" data-en="Included">متضمن</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للشركات الكبرى" data-en="For Large Companies">للشركات الكبرى</a>
-                </div>
-            </div>
-
-            <!-- 37. باقة المشاريع الصغيرة -->
-            <div class="product-card" data-vehicle-category="bundles">
-                <div class="product-image">
-                    <img src="small-business-bundle.jpg" alt="باقة المشاريع الصغيرة">
-                </div>
-                <div class="product-content">
-                    <h3 data-ar="باقة المشاريع الصغيرة" data-en="Small Projects Bundle">باقة المشاريع الصغيرة</h3>
-                    <p data-ar="بيك أب هيلوكس + سيارة هايس شحن + تدريب سائق + تمويل ميسر + دعم فني لمدة سنة كاملة."
-                       data-en="Hilux pickup + Hiace cargo van + driver training + facilitated financing + 1-year technical support.">
-                       بيك أب هيلوكس + سيارة هايس شحن + تدريب سائق + تمويل ميسر + دعم فني لمدة سنة كاملة.
-                    </p>
-                    <div class="product-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">مركبتين</span>
-                            <span class="spec-label" data-ar="عدد" data-en="Vehicles">عدد</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">تمويل ميسر</span>
-                            <span class="spec-label" data-ar="متاح" data-en="Available">متاح</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">سنة دعم</span>
-                            <span class="spec-label" data-ar="فني" data-en="Technical">فني</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;"
-                       data-ar="للمشاريع الناشئة" data-en="For Startups">للمشاريع الناشئة</a>
-                </div>
-            </div>
-
-        </div> <!-- نهاية products-grid -->
-    </div> <!-- نهاية container -->
-</section> <!-- نهاية قسم السيارات -->
-
-<script>
-// دالة فلترة منتجات السيارات
-function filterVehicleProducts(category, element) {
-    // تحديث التبويبات النشطة
-    document.querySelectorAll('.product-tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
-    if (element) {
-        element.classList.add('active');
-    }
-    
-    // فلترة المنتجات
-    const products = document.querySelectorAll('.product-card[data-vehicle-category]');
-    let hasVisibleProducts = false;
-    
-    products.forEach(product => {
-        const productCategory = product.getAttribute('data-vehicle-category');
-        
-        if (productCategory === category) {
-            product.style.display = 'block';
-            product.style.opacity = '1';
-            hasVisibleProducts = true;
-        } else {
-            product.style.display = 'none';
-            product.style.opacity = '0';
-        }
-    });
-    
-    // التحقق من وجود منتجات
-    if (!hasVisibleProducts) {
-        const lang = localStorage.getItem('preferredLanguage') || 'ar';
-        const container = document.querySelector('.products-grid');
-        let message = container.querySelector('.no-products-message');
-        
-        if (!message) {
-            message = document.createElement('div');
-            message.className = 'no-products-message';
-            message.innerHTML = lang === 'ar' 
-                ? '<p>لا توجد منتجات في هذا القسم حالياً</p>'
-                : '<p>No products in this category yet</p>';
-            container.appendChild(message);
-        }
-        message.style.display = 'block';
-    } else {
-        const message = document.querySelector('.no-products-message');
-        if (message) message.style.display = 'none';
-    }
-}
-
-// عند فتح قسم السيارات، افلتر حسب الدينات أولاً
-function showVehiclesSection() {
-    showSection('vehicles-products');
-    setTimeout(() => {
-        const firstTab = document.querySelector('.product-tab[onclick*="trucks"]');
-        if (firstTab) {
-            firstTab.classList.add('active');
-            filterVehicleProducts('trucks', firstTab);
-        }
-    }, 50);
-}
-</script>
             <!-- =========== الأنابيب =========== -->
           
             <!-- =========== مستلزمات الحفر =========== -->
@@ -3758,8 +2638,7 @@ function showVehiclesSection() {
     </div>
 </div>
         <!-- كلامبس السلامة للأنابيب -->
-<!-- كلامبس السلامة للأنابيب - في أدوات الحفر -->
-<div class="product-card" data-category="drilling">
+<div class="product-card" data-category="supplies">
     <div class="product-image">
         <img src="safety-clamps.jpg" alt="Safety Clamps">
     </div>
@@ -3789,6 +2668,9 @@ function showVehiclesSection() {
            data-ar="طلب الكتالوج" data-en="Request Catalog">طلب الكتالوج</a>
     </div>
 </div>
+        <!-- نهاية شبكة المنتجات -->
+    </div>
+</section>
     <!-- Services Section -->
     <section class="services page-section" id="services" style="display:none;">
         <div class="container">
@@ -4336,7 +3218,7 @@ function showVehiclesSection() {
                             <a href="#" class="btn btn-yellow" onclick="showSection('contact'); return false;" data-ar="اطلب عرض سعر" data-en="Request Quote">اطلب عرض سعر</a>
                         </div>
                     </div>
- 
+
                     <div class="system-card">
                         <div class="system-header">
                             <h3 data-ar="أنظمة المزارع والمشاريع الزراعية" data-en="Farm & Agricultural Systems">أنظمة المزارع والمشاريع الزراعية</h3>
