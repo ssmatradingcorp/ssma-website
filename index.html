@@ -4702,57 +4702,124 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h4 data-ar="موارد الموظفين" data-en="Employee Resources">موارد الموظفين</h4>
-                    <div class="footer-links">
-                        <a href="#" data-ar="تابع SSMA على وسائل التواصل" data-en="Follow SSMA on Social Media">تابع SSMA على وسائل التواصل</a>
-                        <a href="#" data-ar="الاستراتيجية والغرض" data-en="Strategy & Purpose">الاستراتيجية والغرض</a>
-                        <a href="#" data-ar="التاريخ" data-en="History">التاريخ</a>
-                        <a href="#" data-ar="مدونة السلوك" data-en="Code of Conduct">مدونة السلوك</a>
-                    </div>
-                    <div class="social-links">
-                        
-                       <a href="https://wa.me/967777766695" class="social-icon">
-    <i class="fab fa-whatsapp"></i>
-</a>                       
+    <div class="container">
+        <div class="footer-grid">
+            
+            <!-- القسم 1: معلومات الشركة -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <div class="logo-icon-small">SSMA</div>
+                    <div>
+                        <h4>SSMA CORPORATION</h4>
+                        <p>الحلول المتكاملة لحفر الآبار والمقاولات</p>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h4 data-ar="الشركة" data-en="Company">الشركة</h4>
-                    <div class="footer-links">
-                        <a href="#" onclick="showSection('about'); return false;" data-ar="عن SSMA" data-en="About SSMA">عن SSMA</a>
-                        <a href="#" onclick="showSection('branches'); return false;" data-ar="فروعنا العالمية" data-en="Global Branches">فروعنا العالمية</a>
-                        <a href="#" onclick="showSection('products'); return false;" data-ar="المنتجات" data-en="Products">المنتجات</a>
-                        <a href="#" onclick="showSection('energy'); return false;" data-ar="الطاقة" data-en="Energy">الطاقة</a>
-                        <a href="#" onclick="showSection('vehicles'); return false;" data-ar="السيارات" data-en="Vehicles">السيارات</a>
-                    </div>
+                <p class="footer-desc">شركة رائدة منذ 1982 في مجال المياه الجوفية والمقاولات والتجارة العالمية.</p>
+                
+                <!-- وسائل التواصل الرئيسية -->
+                <div class="footer-social">
+                    <a href="https://wa.me/967777766695" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> واتساب الآن
+                    </a>
+                    <a href="tel:+967777766695" class="call-btn">
+                        <i class="fas fa-phone"></i> اتصل بنا
+                    </a>
                 </div>
-                <div class="footer-column">
-                    <h4 data-ar="المستثمرون" data-en="Investors">المستثمرون</h4>
-                    <div class="footer-links">
-                        <a href="#" data-ar="معلومات الأسهم" data-en="Stock Information">معلومات الأسهم</a>
-                        <a href="#" data-ar="المعلومات المالية" data-en="Financial Information">المعلومات المالية</a>
-                        <a href="#" data-ar="خدمات المساهمين" data-en="Shareholder Services">خدمات المساهمين</a>
-                        <a href="#" data-ar="التقارير السنوية" data-en="Annual Reports">التقارير السنوية</a>
-                    </div>
+            </div>
+            
+            <!-- القسم 2: خدماتنا -->
+            <div class="footer-column">
+                <h4>خدماتنا</h4>
+                <div class="footer-links">
+                    <a href="#" onclick="showSection('services')">
+                        <i class="fas fa-water"></i> حفر الآبار المائية
+                    </a>
+                    <a href="#" onclick="showSection('services')">
+                        <i class="fas fa-hard-hat"></i> المقاولات العامة
+                    </a>
+                    <a href="#" onclick="showSection('services')">
+                        <i class="fas fa-tools"></i> استيراد/تصدير المعدات
+                    </a>
+                    <a href="#" onclick="showSection('services')">
+                        <i class="fas fa-solar-panel"></i> الطاقة الشمسية
+                    </a>
+                    <a href="#" onclick="showSection('services')">
+                        <i class="fas fa-oil-well"></i> عمليات الحفر المتخصصة
+                    </a>
                 </div>
-                <div class="footer-column">
-                    <h4 data-ar="الأخبار" data-en="News">الأخبار</h4>
-                    <div class="footer-links">
-                        <a href="#" data-ar="الأخبار والمميزات" data-en="News & Features">الأخبار والمميزات</a>
-                        <a href="#" data-ar="بيانات صحفية" data-en="Press Releases">بيانات صحفية</a>
-                        <a href="#" data-ar="وسائل التواصل الاجتماعي" data-en="Social Media">وسائل التواصل الاجتماعي</a>
-                        <a href="#" data-ar="الأسئلة الشائعة" data-en="FAQs">الأسئلة الشائعة</a>
+            </div>
+            
+            <!-- القسم 3: فروع سريعة -->
+            <div class="footer-column">
+                <h4>فروعنا</h4>
+                <div class="footer-branches">
+                    <div class="branch-item">
+                        <span class="branch-flag">🇾🇪</span>
+                        <span class="branch-name">اليمن - المقر الرئيسي</span>
+                        <span class="branch-year">منذ 1982</span>
+                    </div>
+                    <div class="branch-item">
+                        <span class="branch-flag">🇸🇦</span>
+                        <span class="branch-name">السعودية</span>
+                        <span class="branch-year">منذ 1992</span>
+                    </div>
+                    <div class="branch-item">
+                        <span class="branch-flag">🇴🇲</span>
+                        <span class="branch-name">عُمان</span>
+                        <span class="branch-year">منذ 2017</span>
+                    </div>
+                    <div class="branch-item">
+                        <span class="branch-flag">🇨🇳</span>
+                        <span class="branch-name">الصين</span>
+                        <span class="branch-year">منذ 2020</span>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p data-ar="جميع الحقوق محفوظة © 2024 شركة SSMA للتجارة والمقاولات" data-en="All Rights Reserved © 2024 SSMA Trading & Contracting Corporation">جميع الحقوق محفوظة © 2024 شركة SSMA للتجارة والمقاولات</p>
+            
+            <!-- القسم 4: تواصل معنا -->
+            <div class="footer-column">
+                <h4>تواصل معنا</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> <strong>هاتف:</strong> +967 7777 666 95</p>
+                    <p><i class="fas fa-envelope"></i> <strong>بريد إلكتروني:</strong> ssma.wells@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>العنوان:</strong> صنعاء، اليمن</p>
+                    <p><i class="fas fa-clock"></i> <strong>ساعات العمل:</strong> 8 صباحاً - 5 مساءً</p>
+                </div>
+                
+                <!-- وسائل التواصل الاجتماعي -->
+                <div class="social-icons">
+                    <a href="https://facebook.com/SSMACorporation" title="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/967777766695" title="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:ssma.wells@gmail.com" title="إيميل">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+967777766695" title="اتصال">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- حقوق النشر -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2024 SSMA Corporation. جميع الحقوق محفوظة.</p>
+                <p>تصميم وتطوير بواسطة فريق SSMA التقني</p>
+            </div>
+            <div class="footer-links-bottom">
+                <a href="#">سياسة الخصوصية</a> | 
+                <a href="#">شروط الاستخدام</a> | 
+                <a href="#" onclick="showSection('contact')">الشكاوى والمقترحات</a>
             </div>
         </div>
-    </footer>
+        
+    </div>
+</footer>
 
     <script>
         // دالة عرض وإخفاء الأقسام
