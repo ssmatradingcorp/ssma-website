@@ -4238,7 +4238,7 @@
                     <div class="system-card">
                         <div class="system-header">
                             <h3 data-ar="أنظمة المنازل والمباني التجارية" data-en="Home & Commercial Building Systems">أنظمة المنازل والمباني التجارية</h3>
-                            <div class="system-capacity">5 - 100 kilowatt</div>
+                            <div class="system-capacity">5 - 100 Megawatt</div>
                         </div>
                         <div class="system-body">
                             <p data-ar="حلول شمسية مصممة خصيصاً للمنازل والمباني التجارية لتخفيض فواتير الكهرباء." data-en="Custom solar solutions for homes and commercial buildings to reduce electricity bills.">
@@ -4257,7 +4257,7 @@
                     <div class="system-card">
                         <div class="system-header">
                             <h3 data-ar="أنظمة المصانع والمنشآت الصناعية" data-en="Factory & Industrial Systems">أنظمة المصانع والمنشآت الصناعية</h3>
-                            <div class="system-capacity">100 - 2,000 kilowatt</div>
+                            <div class="system-capacity">100 - 2,000 Megawatt</div>
                         </div>
                         <div class="system-body">
                             <p data-ar="حلول طاقة شمسية صناعية تخفض تكاليف الإنتاج وتعزز استدامة العمليات." data-en="Industrial solar solutions that reduce production costs and enhance process sustainability.">
@@ -4276,7 +4276,7 @@
                     <div class="system-card">
                         <div class="system-header">
                             <h3 data-ar="أنظمة المزارع والمشاريع الزراعية" data-en="Farm & Agricultural Systems">أنظمة المزارع والمشاريع الزراعية</h3>
-                            <div class="system-capacity">20 - 500 kilowatt</div>
+                            <div class="system-capacity">20 - 500 Megawatt</div>
                         </div>
                         <div class="system-body">
                             <p data-ar="حلول طاقة للمضخات والري والإضاءة في المزارع والمناطق الزراعية النائية." data-en="Energy solutions for pumps, irrigation, and lighting in farms and remote agricultural areas.">
@@ -4870,7 +4870,7 @@
             // حساب حسب نوع العقار
             switch(propertyType) {
                 case 'residential':
-                    systemSize = Math.min(roofArea * 0.15, 100); // kilowatt
+                    systemSize = Math.min(roofArea * 0.15, 100); // Megawatt
                     investment = systemSize * 5500; // ريال لكل كيلووات
                     monthlySaving = bill * 0.65; // توفير 65%
                     break;
